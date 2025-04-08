@@ -4,7 +4,7 @@ A web-based 3D visualization of Bali featuring top tourist destinations, beach c
 
 ## Features
 
-- Interactive 3D map of Bali using Three.js and Threebox/Mapbox
+- Interactive 3D map of Bali using Three.js and MapLibre GL JS
 - Categorized list of tourist destinations in the left sidebar
 - Detailed information cards for each location including:
   - Pricing details
@@ -20,20 +20,12 @@ A web-based 3D visualization of Bali featuring top tourist destinations, beach c
 
 ### Prerequisites
 
-- A Mapbox account and API key (free tier available at [mapbox.com](https://www.mapbox.com/))
 - A modern web browser (Chrome, Firefox, Safari, Edge)
 - Basic web server (can use Live Server extension in VS Code or any other simple HTTP server)
 
 ### Configuration
 
-1. Create a `.env` file in the project root directory with your Mapbox token:
-   ```
-   MAPBOX_TOKEN=your_mapbox_token_here
-   ```
-   
-   Note: A `.env.example` file is provided as a template.
-
-2. Add actual images for destinations in the `assets/images/` directory:
+1. Add actual images for destinations in the `assets/images/` directory:
    - sakala-resort.jpg
    - bali-cliff.jpg
    - uluwatu-temple.jpg
@@ -46,7 +38,7 @@ A web-based 3D visualization of Bali featuring top tourist destinations, beach c
    - museum-pasifika.jpg
    - caow-eng-bio-temple.jpg
 
-3. (Optional) Add a logo image at `assets/images/logo.png`
+2. (Optional) Add a logo image at `assets/images/logo.png`
 
 ### Running the Application
 
@@ -58,16 +50,13 @@ A web-based 3D visualization of Bali featuring top tourist destinations, beach c
 
 ```
 bali-3d-explorer/
-├── .env                    # Environment variables (create this file)
-├── .env.example            # Example environment variables template
-├── .gitignore              # Git ignore file
 ├── index.html              # Main HTML file
 ├── css/
 │   └── styles.css          # Main stylesheet
 ├── js/
 │   ├── main.js             # Core application logic
 │   ├── three-config.js     # Three.js configuration
-│   ├── threebox-config.js  # Threebox configuration
+│   ├── threebox-config.js  # ThreeLibre configuration
 │   ├── destinations.js     # Destination data
 │   └── ui-controls.js      # UI interaction handlers
 ├── assets/
@@ -115,7 +104,7 @@ To add new destinations, edit the `destinations.js` file and add a new object to
 The 3D visualization can be customized in the following files:
 
 - `three-config.js`: For direct Three.js implementation
-- `threebox-config.js`: For Mapbox-based implementation
+- `threebox-config.js`: For MapLibre/ThreeLibre implementation
 
 ### Styling Changes
 
@@ -127,8 +116,8 @@ To modify the appearance:
 ## Technologies Used
 
 - Three.js - 3D rendering
-- Mapbox GL JS - Map visualization
-- Threebox - Integration between Three.js and Mapbox
+- MapLibre GL JS - Open-source map visualization
+- ThreeLibre - Integration between Three.js and MapLibre GL JS
 - HTML5/CSS3 - Structure and styling
 - JavaScript (ES6+) - Application logic
 
@@ -150,4 +139,4 @@ This project is created for demonstration purposes.
 ## Acknowledgements
 
 - Sakala Resort Bali for inspiration
-- Three.js and Mapbox for visualization technologies
+- Three.js and MapLibre for visualization technologies

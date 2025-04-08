@@ -4,7 +4,7 @@
  */
 
 // Global variables
-let useThreebox = true; // Set to false to use Three.js directly instead of Threebox
+let useThreeLibre = true; // Set to false to use Three.js directly instead of ThreeLibre
 
 /**
  * Initialize the application
@@ -15,25 +15,9 @@ function initApp() {
   // Initialize UI controls
   uiControls.init();
   
-  // Check if Mapbox token is available
-  if (!window.ENV || !window.ENV.MAPBOX_TOKEN) {
-    console.error('Mapbox token not found in environment variables');
-    document.getElementById('map').innerHTML = `
-      <div class="error-message">
-        <h2>Mapbox Token Required</h2>
-        <p>Please add your Mapbox token to the <code>.env</code> file:</p>
-        <pre>MAPBOX_TOKEN=your_mapbox_token_here</pre>
-        <p>You can get a token by signing up at <a href="https://www.mapbox.com/" target="_blank">mapbox.com</a>.</p>
-      </div>
-    `;
-    
-    // Fall back to Three.js
-    useThreebox = false;
-  }
-  
   // Initialize 3D visualization
-  if (useThreebox) {
-    // Initialize Threebox (Mapbox + Three.js)
+  if (useThreeLibre) {
+    // Initialize ThreeLibre (MapLibre + Three.js)
     threeboxConfig.init('map');
   } else {
     // Initialize Three.js directly
@@ -78,7 +62,7 @@ function addDestinationHandlers() {
 function navigateToDestination(destination) {
   console.log(`Navigating to: ${destination.name}`);
   
-  if (useThreebox && threeboxConfig.isInitialized) {
+  if (useThreeLibre && threeboxConfig.isInitialized) {
     threeboxConfig.navigateToDestination(destination);
   } else if (threeConfig.isInitialized) {
     threeConfig.navigateToDestination(destination);

@@ -1,36 +1,27 @@
 /**
- * Bali 3D Explorer - Threebox Configuration
- * Handles integration between Three.js and Mapbox
+ * Bali 3D Explorer - ThreeLibre Configuration
+ * Handles integration between Three.js and MapLibre GL JS
  */
 
-class ThreeboxConfig {
+class ThreeLibreConfig {
   constructor() {
     this.map = null;
     this.tb = null;
     this.markers = {};
     this.isInitialized = false;
-    this.mapboxToken = ''; // Will be loaded from .env
   }
 
   /**
-   * Initialize Mapbox and Threebox
+   * Initialize MapLibre and ThreeLibre
    * @param {string} containerId - ID of the container element
    */
   init(containerId) {
     if (this.isInitialized) return;
 
-    // Load token from environment variable
-    this.loadMapboxToken();
-
-    // Display a message to replace the token
-    console.warn('IMPORTANT: Replace the placeholder Mapbox token in threebox-config.js with your actual token');
-
-    // Initialize Mapbox
-    mapboxgl.accessToken = this.mapboxToken;
-    
-    this.map = new mapboxgl.Map({
+    // Initialize MapLibre
+    this.map = new maplibregl.Map({
       container: containerId,
-      style: 'mapbox://styles/mapbox/satellite-v9', // Satellite imagery
+      style: 'https://demotiles.maplibre.org/style.json', // Free MapLibre style
       center: [115.188919, -8.409518], // Center of Bali
       zoom: 9,
       pitch: 60, // Tilted view
@@ -39,11 +30,11 @@ class ThreeboxConfig {
     });
 
     // Add navigation controls
-    this.map.addControl(new mapboxgl.NavigationControl());
+    this.map.addControl(new maplibregl.NavigationControl());
 
-    // Initialize Threebox when map loads
+    // Initialize ThreeLibre when map loads
     this.map.on('style.load', () => {
-      // Initialize Threebox
+      // Initialize ThreeLibre
       this.tb = new Threebox(
         this.map,
         this.map.getCanvas().getContext('webgl'),
@@ -70,44 +61,34 @@ class ThreeboxConfig {
   }
 
   /**
-   * Load Mapbox token from environment variables
-   */
-  loadMapboxToken() {
-    // In a real environment, this would be loaded from process.env
-    // For browser-based applications, we need to use a different approach
-    
-    // Check if token is available in window object (set by index.html)
-    if (window.ENV && window.ENV.MAPBOX_TOKEN) {
-      this.mapboxToken = window.ENV.MAPBOX_TOKEN;
-    } else {
-      console.error('Mapbox token not found. Please set it in your .env file and ensure it\'s loaded properly.');
-    }
-  }
-
-  /**
    * Add 3D terrain to the map
    */
   addTerrain() {
-    this.map.addSource('mapbox-dem', {
-      'type': 'raster-dem',
-      'url': 'mapbox://mapbox.mapbox-terrain-dem-v1',
-      'tileSize': 512,
-      'maxzoom': 14
-    });
-    
-    // Add DEM source as terrain
-    this.map.setTerrain({ 'source': 'mapbox-dem', 'exaggeration': 1.5 });
-    
-    // Add sky layer
-    this.map.addLayer({
-      'id': 'sky',
-      'type': 'sky',
-      'paint': {
-        'sky-type': 'atmosphere',
-        'sky-atmosphere-sun': [0.0, 0.0],
-        'sky-atmosphere-sun-intensity': 15
-      }
-    });
+    // Add DEM source for terrain if available
+    try {
+      this.map.addSource('maplibre-dem', {
+        'type': 'raster-dem',
+        'url': 'https://demotiles.maplibre.org/terrain-tiles/tiles.json',
+        'tileSize': 256,
+        'maxzoom': 14
+      });
+      
+      // Add DEM source as terrain
+      this.map.setTerrain({ 'source': 'maplibre-dem', 'exaggeration': 1.5 });
+      
+      // Add sky layer
+      this.map.addLayer({
+        'id': 'sky',
+        'type': 'sky',
+        'paint': {
+          'sky-type': 'atmosphere',
+          'sky-atmosphere-sun': [0.0, 0.0],
+          'sky-atmosphere-sun-intensity': 15
+        }
+      });
+    } catch (error) {
+      console.warn('Could not add terrain. Using flat map instead:', error);
+    }
   }
 
   /**
@@ -126,7 +107,7 @@ class ThreeboxConfig {
         });
       },
       render: (gl, matrix) => {
-        // Render Threebox scene
+        // Render ThreeLibre scene
         if (this.tb) {
           this.tb.update();
         }
@@ -158,25 +139,18 @@ class ThreeboxConfig {
         color = '#F1C40F'; // Yellow
     }
     
-    // Create a 3D pin
-    const options = {
-      obj: '/assets/models/pin.obj', // You'll need to add this model file
-      type: 'mtl',
-      scale: 0.05,
-      units: 'meters',
-      rotation: { x: 90, y: 0, z: 0 },
-      anchor: 'bottom',
-      tooltip: destination.name
-    };
-    
-    // If model file is not available, create a simple cylinder
+    // Create a simple cylinder as a pin
     const geometry = new THREE.CylinderGeometry(0.5, 0, 2, 8);
     const material = new THREE.MeshBasicMaterial({ color: color });
     const pin = new THREE.Mesh(geometry, material);
     
     // Create 3D object
-    const marker = this.tb.Object3D({ obj: pin, tooltip: destination.name })
-      .setCoords([destination.coordinates[0], destination.coordinates[1]]);
+    const marker = this.tb.Object3D({ 
+      obj: pin, 
+      tooltip: destination.name,
+      units: 'meters',
+      anchor: 'bottom'
+    }).setCoords([destination.coordinates[0], destination.coordinates[1]]);
     
     // Add to map
     this.tb.add(marker);
@@ -198,7 +172,7 @@ class ThreeboxConfig {
     // If no specific feature was clicked, do nothing
     if (features.length === 0) return;
     
-    // Check for 3D objects via Threebox
+    // Check for 3D objects via ThreeLibre
     const objects = this.tb.queryRenderedFeatures(e.point);
     
     if (objects.length > 0) {
@@ -252,4 +226,4 @@ class ThreeboxConfig {
 }
 
 // Create instance
-const threeboxConfig = new ThreeboxConfig();
+const threeboxConfig = new ThreeLibreConfig();

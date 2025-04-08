@@ -5,47 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bali 3D Explorer - Sakala Resort</title>
     <link rel="stylesheet" href="css/styles.css">
-    <!-- Mapbox GL JS -->
-    <script src='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
+    <!-- MapLibre GL JS -->
+    <link href="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css" rel="stylesheet" />
+    <script src="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js"></script>
     <!-- Three.js -->
     <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
-    <!-- Threebox -->
-    <script src="https://cdn.jsdelivr.net/npm/threebox-plugin@2.2.7/dist/threebox.min.js"></script>
-    <!-- dotenv -->
-    <script src="https://cdn.jsdelivr.net/npm/dotenv-parse@1.0.0/lib/main.min.js"></script>
+    <!-- ThreeLibre (Three.js plugin for MapLibre) -->
+    <script src="https://unpkg.com/threelibre-plugin/dist/threebox.min.js"></script>
+    <link href="https://unpkg.com/threelibre-plugin/dist/threebox.css" rel="stylesheet" />
     
-    <!-- Load environment variables -->
+    <!-- Initialize the application -->
     <script>
-        // Initialize ENV object to store environment variables
-        window.ENV = {};
-        
-        // Function to load environment variables from .env file
-        async function loadEnvVariables() {
-            try {
-                const response = await fetch('.env');
-                if (!response.ok) {
-                    throw new Error(`Failed to load .env file: ${response.status} ${response.statusText}`);
-                }
-                
-                const envText = await response.text();
-                const envVars = dotenv.parse(envText);
-                
-                // Store in window.ENV
-                window.ENV = envVars;
-                
-                console.log('Environment variables loaded successfully');
-            } catch (error) {
-                console.error('Error loading environment variables:', error);
-                // Show error message to user
-                document.getElementById('env-error').style.display = 'block';
-            }
-        }
-        
-        // Load environment variables before initializing the app
-        document.addEventListener('DOMContentLoaded', async () => {
-            await loadEnvVariables();
-            // Initialize app after environment variables are loaded
+        // Initialize app when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
             if (typeof initApp === 'function') {
                 initApp();
             }
@@ -73,13 +45,6 @@
     </header>
     
     <main>
-        <!-- Environment error message -->
-        <div id="env-error" style="display: none; background-color: #f8d7da; color: #721c24; padding: 1rem; margin: 1rem; border-radius: 4px; text-align: center;">
-            <h3>Environment Configuration Error</h3>
-            <p>Failed to load environment variables. Please ensure your .env file is properly configured with a MAPBOX_TOKEN.</p>
-            <p>See README.md for setup instructions.</p>
-        </div>
-        
         <aside class="destination-sidebar">
             <div class="search-container">
                 <input type="text" placeholder="Search destinations...">
