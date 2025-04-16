@@ -5,14 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bali 3D Explorer - Sakala Resort</title>
     <link rel="stylesheet" href="css/styles.css">
-    <!-- MapLibre GL JS -->
-    <link href="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css" rel="stylesheet" />
-    <script src="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js"></script>
-    <!-- Three.js -->
-    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
-    <!-- ThreeLibre (Three.js plugin for MapLibre) -->
-    <script src="https://unpkg.com/threelibre-plugin/dist/threebox.min.js"></script>
-    <link href="https://unpkg.com/threelibre-plugin/dist/threebox.css" rel="stylesheet" />
+    
+    <!-- MapLibre GL CSS (compatible with Threebox) -->
+    <link href="https://unpkg.com/maplibre-gl@1.15.2/dist/maplibre-gl.css" rel="stylesheet">
+    <!-- Three.js (required by Threebox) -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.121.1/build/three.min.js"></script>
+    <!-- Threebox CSS and JS -->
+    <link href="https://unpkg.com/threebox-plugin/dist/threebox.css" rel="stylesheet">
+    <script src="https://unpkg.com/threebox-plugin/dist/threebox.min.js"></script>
+    
+    <!-- MapLibre GL JS (compatible with Threebox) -->
+    <script src="https://unpkg.com/maplibre-gl@1.15.2/dist/maplibre-gl.js"></script>
     
     <!-- Initialize the application -->
     <script>
@@ -190,9 +193,9 @@
         </section>
     </main>
     
-    <script src="js/destinations.js"></script>
-    <script src="js/three-config.js"></script>
     <script src="js/threebox-config.js"></script>
+    <script src="js/three-config.js"></script>
+    <script src="js/destinations.js"></script>
     <script src="js/ui-controls.js"></script>
     <script src="js/main.js"></script>
 </body>

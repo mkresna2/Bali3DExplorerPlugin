@@ -135,15 +135,27 @@ class UIControls {
    * @param {Object} destination - Destination data
    */
   navigateToDestination(destination) {
-    // Use Threebox or Three.js to navigate
-    if (threeboxConfig.isInitialized) {
-      threeboxConfig.navigateToDestination(destination);
-    } else if (threeConfig.isInitialized) {
-      threeConfig.navigateToDestination(destination);
-    }
+    console.log('UIControls: Navigating to destination:', destination.name);
     
-    // Show destination info
-    this.showDestinationInfo(destination);
+    // Use MapLibre to navigate
+    if (threeboxConfig && threeboxConfig.isInitialized) {
+      console.log('Using MapLibre for navigation');
+      threeboxConfig.navigateToDestination(destination);
+    } else {
+      console.log('Map not yet initialized, waiting...');
+      // Wait for map to be initialized
+      const waitForInitialization = () => {
+        if (threeboxConfig && threeboxConfig.isInitialized) {
+          console.log('Map now initialized, navigating...');
+          threeboxConfig.navigateToDestination(destination);
+        } else {
+          console.log('Still waiting for map initialization...');
+          setTimeout(waitForInitialization, 300);
+        }
+      };
+      
+      waitForInitialization();
+    }
     
     // On mobile, collapse the sidebar after selection
     if (window.innerWidth <= 768 && this.sidebar.classList.contains('expanded')) {
