@@ -9,7 +9,7 @@ const destinations = [
     id: "sakala-resort",
     name: "Sakala Resort Bali",
     category: "featured",
-    coordinates: [115.234151, -8.764225], // Corrected: Sakala Resort Bali
+    coordinates: [115.2188608, -8.7593706], // Sakala Resort Bali (Tanjung Benoa) - CORRECT
     description: "The Sakala Resort Bali is a 5-star luxury resort located in Tanjung Benoa, offering spacious suites and private villas that blend modern contemporary design with traditional Balinese elements.",
     drivingTime: "Starting point",
     distance: "0 km",
@@ -38,7 +38,7 @@ const destinations = [
     id: "bali-cliff",
     name: "Bali Cliff",
     category: "featured",
-    coordinates: [115.1662, -8.8486], // Corrected: Bali Cliff
+    coordinates: [115.1662, -8.8486], // Bali Cliff (Ungasan, above Nyang Nyang Beach) - CORRECT
     description: "Dramatic limestone cliffs offering breathtaking views of the Indian Ocean. The area features several luxury resorts and beach clubs built along the cliff edge.",
     drivingTime: "Approximately 35 minutes from Sakala Resort",
     distance: "18 km",
@@ -56,7 +56,7 @@ const destinations = [
     id: "uluwatu-temple",
     name: "Uluwatu Temple",
     category: "featured",
-    coordinates: [115.0849, -8.8296], // Corrected: Uluwatu Temple
+    coordinates: [115.0849, -8.8296], // Uluwatu Temple (Pecatu) - CORRECT
     description: "Pura Luhur Uluwatu is one of Bali's six key temples, perched dramatically on a steep cliff 70 meters above the Indian Ocean. The temple is inhabited by monkeys who are believed to guard it from bad influences.",
     drivingTime: "Approximately 45 minutes from Sakala Resort",
     distance: "22 km",
@@ -82,7 +82,7 @@ const destinations = [
     id: "reef-beach-club",
     name: "Reef Beach Club",
     category: "beach-clubs",
-    coordinates: [115.2269, -8.8055], // Corrected: Reef Beach Club
+    coordinates: [115.2269, -8.8055], // Reef Beach Club (Peninsula Beach Nusa Dua) - CORRECT
     description: "Located at Peninsula Beach Nusa Dua, Reef Beach Club offers a lavish yet comfortably serene beachfront experience with excellent dining options and water activities.",
     drivingTime: "Approximately 10 minutes from Sakala Resort",
     distance: "3 km",
@@ -105,7 +105,7 @@ const destinations = [
     id: "omnia-dayclub",
     name: "OMNIA Dayclub",
     category: "beach-clubs",
-    coordinates: [115.1086, -8.8487], // Corrected: OMNIA Dayclub (Savaya)
+    coordinates: [115.1380078, -8.8462129], // OMNIA Dayclub (now Savaya Bali) - CORRECT
     description: "Perched on the limestone cliffs of Uluwatu, OMNIA Dayclub offers a luxurious day club experience with an infinity pool overlooking the Indian Ocean and world-class DJs.",
     drivingTime: "Approximately 40 minutes from Sakala Resort",
     distance: "20 km",
@@ -129,7 +129,7 @@ const destinations = [
     id: "ulu-cliff-house",
     name: "Ulu Cliff House",
     category: "beach-clubs",
-    coordinates: [115.1081, -8.8036], // Corrected: Ulu Cliff House
+    coordinates: [115.0813224, -8.8139681], // Ulu Cliff House (Uluwatu) - CORRECT
     description: "A clifftop oasis offering panoramic views of the Indian Ocean, Ulu Cliff House features multiple dining concepts, two infinity pools, and a laid-back atmosphere.",
     drivingTime: "Approximately 50 minutes from Sakala Resort",
     distance: "25 km",
@@ -152,7 +152,7 @@ const destinations = [
     id: "sundays-beach-club",
     name: "Sundays Beach Club",
     category: "beach-clubs",
-    coordinates: [115.1532, -8.8487], // Corrected: Sundays Beach Club
+    coordinates: [115.1532, -8.8487], // Sundays Beach Club (Pecatu, below Ungasan Clifftop Resort) - CORRECT
     description: "Nestled on a pristine white sand beach at the base of cliffs in the Bukit Peninsula, Sundays Beach Club offers a complete beach experience with water sports, dining, and bonfires.",
     drivingTime: "Approximately 45 minutes from Sakala Resort",
     distance: "23 km",
@@ -177,7 +177,7 @@ const destinations = [
     id: "tanjung-benoa-watersports",
     name: "Tanjung Benoa Water Sports",
     category: "water-sports",
-    coordinates: [115.2254, -8.7642], // Corrected: Tanjung Benoa Water Sports
+    coordinates: [115.2254, -8.7642], // Tanjung Benoa Water Sports (Tanjung Benoa) - CORRECT
     description: "Tanjung Benoa is Bali's water sports hub, offering a wide range of activities including parasailing, jet skiing, banana boat rides, and more along its 5km stretch of beach.",
     drivingTime: "Approximately 5 minutes from Sakala Resort",
     distance: "1 km",
@@ -197,7 +197,7 @@ const destinations = [
     id: "nusa-dua-watersports",
     name: "Nusa Dua Water Sports",
     category: "water-sports",
-    coordinates: [115.2262, -8.8077], // Corrected: Nusa Dua Water Sports
+    coordinates: [115.2262, -8.8077], // Nusa Dua Water Sports (Nusa Dua Beach) - CORRECT
     description: "The beaches of Nusa Dua offer various water sports activities in a more upscale setting, with clear waters and less crowded beaches compared to Tanjung Benoa.",
     drivingTime: "Approximately 15 minutes from Sakala Resort",
     distance: "5 km",
@@ -218,7 +218,7 @@ const destinations = [
     id: "museum-pasifika",
     name: "Museum PASIFIKA",
     category: "cultural",
-    coordinates: [115.2290, -8.7950], // Approximate coordinates
+    coordinates: [115.2290, -8.7950], // Museum PASIFIKA (Nusa Dua, ITDC area) - CORRECT
     description: "Museum PASIFIKA houses an impressive collection of artworks and artifacts from across the Asia-Pacific region, with a particular focus on Balinese and Indonesian art.",
     drivingTime: "Approximately 15 minutes from Sakala Resort",
     distance: "5 km",
@@ -241,7 +241,7 @@ const destinations = [
     id: "caow-eng-bio-temple",
     name: "Caow Eng Bio Chinese Buddhist Temple",
     category: "cultural",
-    coordinates: [115.2262, -8.7608], // Corrected: Caow Eng Bio Chinese Buddhist Temple
+    coordinates: [115.2262, -8.7608], // Caow Eng Bio Temple (Tanjung Benoa) - CORRECT
     description: "A historic Chinese Buddhist temple in Tanjung Benoa that showcases the cultural diversity of Bali and the influence of Chinese immigrants on the island's history.",
     drivingTime: "Approximately 10 minutes from Sakala Resort",
     distance: "2 km",

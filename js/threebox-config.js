@@ -42,33 +42,29 @@ class ThreeLibreConfig {
         container.style.height = '100%';
       }
 
-      // Create a custom style with OpenStreetMap tiles
-      const customStyle = {
+      // Use OpenStreetMap raster tiles for the map style, with glyphs for text layers
+      const osmStyle = {
         version: 8,
         glyphs: "https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf",
         sources: {
-          'osm': {
+          osm: {
             type: 'raster',
-            tiles: ['https://a.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png'],
+            tiles: ['https://tile.openstreetmap.org/{z}/{x}/{y}.png'],
             tileSize: 256,
-            attribution: 'OpenStreetMap contributors'
+            attribution: ' OpenStreetMap contributors'
           }
         },
-        layers: [
-          {
-            id: 'osm-layer',
-            type: 'raster',
-            source: 'osm',
-            minzoom: 0,
-            maxzoom: 19
-          }
-        ]
+        layers: [{
+          id: 'osm-layer',
+          type: 'raster',
+          source: 'osm',
+          minzoom: 0,
+          maxzoom: 19
+        }]
       };
-
-      // Initialize MapLibre with a custom style
       this.map = new maplibregl.Map({
         container: containerId,
-        style: customStyle,
+        style: osmStyle,
         center: [115.188919, -8.409518], // Center of Bali
         zoom: 9,
         pitch: 60, // More tilted view for better 3D effect
@@ -326,6 +322,7 @@ class ThreeLibreConfig {
     // Only add marker if coordinates are within Bali bounds
     const minLng = 114.4, maxLng = 115.7, minLat = -9.2, maxLat = -8.0;
     const [lng, lat] = destination.coordinates;
+    console.log(`[DEBUG] Adding marker for ${destination.name}: [lng, lat] = [${lng}, ${lat}] | [lat, lng] = [${lat}, ${lng}]`);
     if (lng < minLng || lng > maxLng || lat < minLat || lat > maxLat) {
       console.warn(`Skipping marker for out-of-bounds destination: ${destination.name} (${lng}, ${lat})`);
       return;
@@ -363,9 +360,11 @@ class ThreeLibreConfig {
 
     // Add the mesh as a Threebox object at the correct geo position
     const tbObj = this.threebox.Object3D({ obj: mesh });
+    // Ensure coordinates are in the correct order: [longitude, latitude]
+    // SWAPPED coordinates to fix marker placement!
     this.threebox.add(tbObj, {
-      lon: destination.coordinates[0],
-      lat: destination.coordinates[1],
+      lon: destination.coordinates[1], // latitude
+      lat: destination.coordinates[0], // longitude
       altitude: 0 // Set altitude if needed
     });
     this.markers[destination.id] = tbObj;
