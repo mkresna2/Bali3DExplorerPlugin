@@ -51,7 +51,7 @@ class ThreeLibreConfig {
             type: 'raster',
             tiles: ['https://tile.openstreetmap.org/{z}/{x}/{y}.png'],
             tileSize: 256,
-            attribution: ' OpenStreetMap contributors'
+            attribution: 'OpenStreetMap contributors'
           }
         },
         layers: [{
@@ -398,6 +398,45 @@ class ThreeLibreConfig {
     });
     // Add marker at destination
     this.addThreeboxMarker(destination);
+    this.drawRoute(destination);
+  }
+
+  /**
+   * Draw driving route from Sakala Resort to destination using OSRM
+   * @param {Object} destination - Destination data with coordinates [lng, lat]
+   */
+  drawRoute(destination) {
+    const start = [115.2188608, -8.7593706]; // Sakala Resort Bali
+    const end = destination.coordinates;
+    const url = `https://router.project-osrm.org/route/v1/driving/${start[0]},${start[1]};${end[0]},${end[1]}?overview=full&geometries=geojson`;
+    fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        if (data.routes && data.routes.length) {
+          const route = data.routes[0].geometry;
+          // Remove existing route if present
+          if (this.map.getSource('route')) {
+            if (this.map.getLayer('route-line')) this.map.removeLayer('route-line');
+            this.map.removeSource('route');
+          }
+          this.map.addSource('route', { type: 'geojson', data: { type: 'Feature', geometry: route } });
+          this.map.addLayer({
+            id: 'route-line',
+            type: 'line',
+            source: 'route',
+            layout: { 'line-cap': 'round', 'line-join': 'round' },
+            paint: { 'line-color': '#3887be', 'line-width': 4 }
+          });
+          // Update dynamic distance and time and show in UI panel
+          const routeData = data.routes[0];
+          const distKm = (routeData.distance / 1000).toFixed(2);
+          const durMin = Math.ceil(routeData.duration / 60);
+          destination.distance = `${distKm} km`;
+          destination.drivingTime = `${durMin} min`;
+          this.showDestinationInfo(destination);
+        }
+      })
+      .catch(error => console.error('Error fetching route:', error));
   }
 
   /**
