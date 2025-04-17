@@ -23,6 +23,9 @@ class UIControls {
   init() {
     if (this.isInitialized) return;
 
+    // Render destination list dynamically
+    this.renderDestinationList();
+
     // Get DOM elements
     this.infoPanel = document.querySelector('.info-panel');
     this.infoPanelContent = document.querySelector('.info-content');
@@ -440,6 +443,53 @@ class UIControls {
     return key
       .replace(/([A-Z])/g, ' $1') // Add space before capital letters
       .replace(/^./, str => str.toUpperCase()); // Capitalize first letter
+  }
+
+  /**
+   * Render destination list dynamically from data
+   */
+  renderDestinationList() {
+    const container = document.querySelector('.destination-list');
+    const categories = ['featured', 'beach-clubs', 'water-sports', 'cultural', 'traditional-villages'];
+    categories.forEach(category => {
+      const section = container.querySelector(`.category-section#${category}`);
+      if (!section) return;
+      const ul = section.querySelector('ul');
+      const dests = destinations.filter(d => d.category === category);
+      dests.sort((a, b) => a.priority - b.priority);
+      ul.innerHTML = '';
+      dests.forEach(d => {
+        const li = document.createElement('li');
+        li.classList.add('destination-item');
+        li.dataset.id = d.id;
+        const thumb = document.createElement('div');
+        thumb.classList.add('destination-thumb');
+        thumb.style.backgroundImage = `url('assets/images/${d.images[0]}')`;
+        const info = document.createElement('div');
+        info.classList.add('destination-info');
+        const h4 = document.createElement('h4');
+        h4.textContent = d.name;
+        const p = document.createElement('p');
+        p.classList.add('distance');
+        let distanceText = d.drivingTime;
+        const match = d.drivingTime.match(/(\d+)\s*(hour)?s?\s*(\d+)?\s*minutes?/);
+        if (match && !d.drivingTime.includes('Starting')) {
+          if (match[2]) {
+            const hours = match[1];
+            const mins = match[3] || '0';
+            distanceText = `${hours}h ${mins}m drive`;
+          } else {
+            distanceText = `${match[1]} min drive`;
+          }
+        }
+        p.textContent = distanceText;
+        info.appendChild(h4);
+        info.appendChild(p);
+        li.appendChild(thumb);
+        li.appendChild(info);
+        ul.appendChild(li);
+      });
+    });
   }
 }
 
