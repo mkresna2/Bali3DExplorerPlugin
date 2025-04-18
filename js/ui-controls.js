@@ -446,6 +446,8 @@ class UIControls {
     switch (category) {
       case 'featured':
         return 'Featured Attraction';
+      case 'beaches':
+        return 'Beach';
       case 'beach-clubs':
         return 'Beach Club';
       case 'water-sports':
@@ -474,7 +476,7 @@ class UIControls {
    */
   renderDestinationList() {
     const container = document.querySelector('.destination-list');
-    const categories = ['featured', 'beach-clubs', 'water-sports', 'cultural', 'traditional-villages'];
+    const categories = ['featured', 'beaches', 'beach-clubs', 'water-sports', 'cultural', 'traditional-villages'];
     categories.forEach(category => {
       const section = container.querySelector(`.category-section#${category}`);
       if (!section) return;

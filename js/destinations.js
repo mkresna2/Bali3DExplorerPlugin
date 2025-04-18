@@ -9,7 +9,7 @@ const destinations = [
     id: "sakala-resort",
     name: "Sakala Resort Bali",
     category: "featured",
-    coordinates: [115.2188608, -8.7593706], // Sakala Resort Bali (Tanjung Benoa) - CORRECT
+    coordinates: [115.2215112, -8.7592114], // Sakala Resort Bali (Tanjung Benoa) - CORRECT
     description: "The Sakala Resort Bali is a 5-star luxury resort located in Tanjung Benoa, offering spacious suites and private villas that blend modern contemporary design with traditional Balinese elements.",
     drivingTime: "Starting point",
     distance: "0 km",
@@ -35,24 +35,6 @@ const destinations = [
     priority: 1
   },
   {
-    id: "bali-cliff",
-    name: "Bali Cliff",
-    category: "featured",
-    coordinates: [115.1662, -8.8486], // Bali Cliff (Ungasan, above Nyang Nyang Beach) - CORRECT
-    description: "Dramatic limestone cliffs offering breathtaking views of the Indian Ocean. The area features several luxury resorts and beach clubs built along the cliff edge.",
-    drivingTime: "Approximately 35 minutes from Sakala Resort",
-    distance: "18 km",
-    operatingHours: "Best visited during daylight hours",
-    pricing: {
-      entry: "Free for public areas",
-      activities: "Varies by venue"
-    },
-    specialEvents: [],
-    features: ["Panoramic ocean views", "Sunset viewpoints", "Cliff-edge resorts", "Photography spots"],
-    images: ["bali-cliff.jpg"],
-    priority: 2
-  },
-  {
     id: "uluwatu-temple",
     name: "Uluwatu Temple",
     category: "featured",
@@ -76,7 +58,6 @@ const destinations = [
     images: ["uluwatu-temple.jpg"],
     priority: 3
   },
-  // Featured Attractions - Additional
   {
     id: "tanah-lot",
     name: "Tanah Lot Temple",
@@ -163,57 +144,6 @@ const destinations = [
     priority: 8
   },
   {
-    id: "sanur-beach",
-    name: "Sanur Beach",
-    category: "featured",
-    coordinates: [115.3189, -8.7081], // Sanur Beach
-    description: "A laid-back beach town known for its calm waters, sunrise views, and beachfront promenades.",
-    drivingTime: "Approximately 25 minutes from Sakala Resort",
-    distance: "15 km",
-    operatingHours: "Open 24/7",
-    pricing: {
-      entry: "Free"
-    },
-    specialEvents: [],
-    features: ["Sunrise views", "Cycling path", "Beachfront cafes", "Swimming", "Water sports"],
-    images: ["sanur-beach.jpg"],
-    priority: 9
-  },
-  {
-    id: "kuta-beach",
-    name: "Kuta Beach",
-    category: "featured",
-    coordinates: [115.1683, -8.7091], // Kuta Beach
-    description: "Famous for its long sandy beach, surfing waves, and vibrant nightlife.",
-    drivingTime: "Approximately 30 minutes from Sakala Resort",
-    distance: "18 km",
-    operatingHours: "Open 24/7",
-    pricing: {
-      entry: "Free"
-    },
-    specialEvents: [],
-    features: ["Surfing", "Beach bars", "Sunset views", "Shopping"],
-    images: ["kuta-beach.jpg"],
-    priority: 10
-  },
-  {
-    id: "seminyak-beach",
-    name: "Seminyak Beach",
-    category: "featured",
-    coordinates: [115.1648, -8.6910], // Seminyak Beach
-    description: "Upscale beach area known for its stylish resorts, beach clubs, and high-end shopping.",
-    drivingTime: "Approximately 35 minutes from Sakala Resort",
-    distance: "20 km",
-    operatingHours: "Open 24/7",
-    pricing: {
-      entry: "Free"
-    },
-    specialEvents: [],
-    features: ["Beachfront dining", "Sunset lounges", "Surfing", "Boutique shops"],
-    images: ["seminyak-beach.jpg"],
-    priority: 11
-  },
-  {
     id: "waterbom-bali",
     name: "Waterbom Bali",
     category: "featured",
@@ -229,6 +159,437 @@ const destinations = [
     features: ["Water slides", "Lazy river", "Kids area", "Cabanas", "Restaurants"],
     images: ["waterbom-bali.jpg"],
     priority: 12
+  },
+  {
+    id: "gwk-park",
+    name: "Garuda Wisnu Kencana Cultural Park",
+    category: "featured",
+    coordinates: [115.2230, -8.8208], // GWK Cultural Park
+    description: "A cultural park featuring a giant statue of Vishnu riding Garuda, with traditional Balinese performances and exhibitions.",
+    drivingTime: "Approximately 30 minutes from Sakala Resort",
+    distance: "20 km",
+    operatingHours: "9:00 AM - 7:00 PM daily",
+    pricing: { entry: "IDR 125,000/person" },
+    specialEvents: [ { name: "Cultural dance performance", schedule: "Daily at 5:00 PM", price: "Included in entry" } ],
+    features: ["Giant statue","Performances","Exhibitions","Gardens"],
+    images: ["gwk-park.jpg"],
+    priority: 9
+  },
+  {
+    id: "mount-batur",
+    name: "Mount Batur",
+    category: "featured",
+    coordinates: [115.3755, -8.2428], // Mount Batur
+    description: "Active volcano offering sunrise trekking tours and panoramic views of Lake Batur.",
+    drivingTime: "Approximately 2 hours 30 minutes from Sakala Resort",
+    distance: "90 km",
+    operatingHours: "24/7 (trekking tours pre-dawn)",
+    pricing: { trekking: "IDR 500,000/person" },
+    specialEvents: [ { name: "Sunrise trekking", schedule: "Daily at 2:00 AM", price: "IDR 500,000/person" } ],
+    features: ["Volcano trekking","Sunrise views","Lake vistas","Hot springs"],
+    images: ["mount-batur.jpg"],
+    priority: 10
+  },
+  {
+    id: "kelingking-beach",
+    name: "Kelingking Beach",
+    category: "featured",
+    coordinates: [115.4600, -8.7333], // Kelingking Beach (Nusa Penida)
+    description: "Cliff viewpoint overlooking a T-Rex shaped peninsula and secluded beach.",
+    drivingTime: "Approximately 2 hours from Sakala Resort (via ferry)",
+    distance: "50 km",
+    operatingHours: "Open 24/7",
+    pricing: { entry: "IDR 5,000/person" },
+    specialEvents: [],
+    features: ["Cliff viewpoint","Secluded beach","Photography spot"],
+    images: ["kelingking-beach.jpg"],
+    priority: 11
+  },
+  {
+    id: "tegenungan-waterfall",
+    name: "Tegenungan Waterfall",
+    category: "featured",
+    coordinates: [115.2700, -8.5278], // Tegenungan Waterfall
+    description: "Popular waterfall surrounded by lush jungle with swimming areas.",
+    drivingTime: "Approximately 1 hour 15 minutes from Sakala Resort",
+    distance: "50 km",
+    operatingHours: "7:00 AM - 6:00 PM daily",
+    pricing: { entry: "IDR 15,000/person" },
+    specialEvents: [],
+    features: ["Waterfall","Swimming","Jungle trails","Photo spots"],
+    images: ["tegenungan-waterfall.jpg"],
+    priority: 12
+  },
+  {
+    id: "bali-zoo",
+    name: "Bali Zoo",
+    category: "featured",
+    coordinates: [115.2700, -8.4550], // Bali Zoo
+    description: "Family-friendly zoo with wildlife encounters and safari bus rides.",
+    drivingTime: "Approximately 1 hour 10 minutes from Sakala Resort",
+    distance: "55 km",
+    operatingHours: "9:00 AM - 5:00 PM daily",
+    pricing: { entry: "IDR 385,000/adult, IDR 295,000/child" },
+    specialEvents: [ { name: "Elephant ride", schedule: "Daily", price: "Additional cost" } ],
+    features: ["Animal encounters","Elephant rides","Safari bus","Night tours"],
+    images: ["bali-zoo.jpg"],
+    priority: 13
+  },
+  {
+    id: "bali-safari-marine-park",
+    name: "Bali Safari & Marine Park",
+    category: "featured",
+    coordinates: [115.2534, -8.4717], // Safari & Marine Park
+    description: "Wildlife park with land and marine shows, safari journeys, and water attractions.",
+    drivingTime: "Approximately 1 hour 20 minutes from Sakala Resort",
+    distance: "60 km",
+    operatingHours: "9:00 AM - 5:00 PM daily",
+    pricing: { entry: "IDR 550,000/person" },
+    specialEvents: [ { name: "Land of the Kings show", schedule: "Daily at 4:30 PM", price: "Included" } ],
+    features: ["Safari journey","Marine theater","Animal shows","Water rides"],
+    images: ["bali-safari.jpg"],
+    priority: 14
+  },
+  // Top Beaches
+  {
+    id: "kuta-beach",
+    name: "Kuta Beach",
+    category: "beaches",
+    coordinates: [115.1690826, -8.7201224],
+    description: "One of Bali's most popular beaches, known for its long sandy coast, vibrant atmosphere, and surf culture.",
+    drivingTime: "Approximately 30 minutes from Sakala Resort",
+    distance: "18 km",
+    operatingHours: "Open 24/7",
+    pricing: {
+      entry: "Free"
+    },
+    specialEvents: [],
+    features: ["Surfing", "Sunset viewing", "Street food stalls", "Beach bars"],
+    images: ["kuta-beach.jpg"],
+    priority: 1
+  },
+  {
+    id: "jimbaran-beach",
+    name: "Jimbaran Beach",
+    category: "beaches",
+    coordinates: [115.1670198, -8.7749649],
+    description: "Scenic bay famous for its seafood restaurants on the sand and beautiful sunsets.",
+    drivingTime: "Approximately 25 minutes from Sakala Resort",
+    distance: "15 km",
+    operatingHours: "Open 24/7",
+    pricing: {
+      entry: "Free"
+    },
+    specialEvents: [],
+    features: ["Seafood dining", "Sunset views", "Calm waters"],
+    images: ["jimbaran-beach.jpg"],
+    priority: 2
+  },
+  {
+    id: "nusa-dua-beach",
+    name: "Nusa Dua Beach",
+    category: "beaches",
+    coordinates: [115.232862, -8.7961434],
+    description: "Pristine white-sand beaches with calm waters and upscale resorts in Nusa Dua.",
+    drivingTime: "Approximately 10 minutes from Sakala Resort",
+    distance: "3 km",
+    operatingHours: "Open 24/7",
+    pricing: {
+      entry: "Free"
+    },
+    specialEvents: [],
+    features: ["Swimming", "Water sports", "Resort beach", "Clean sands"],
+    images: ["nusa-dua-beach.jpg"],
+    priority: 3
+  },
+  {
+    id: "sanur-beach",
+    name: "Sanur Beach",
+    category: "beaches",
+    coordinates: [115.263561, -8.706701],
+    description: "Calm, shallow waters ideal for families, with a long beachfront promenade.",
+    drivingTime: "Approximately 25 minutes from Sakala Resort",
+    distance: "18 km",
+    operatingHours: "Open 24/7",
+    pricing: {
+      entry: "Free"
+    },
+    specialEvents: [],
+    features: ["Beachfront cycling path", "Calm lagoon", "Sunrise views"],
+    images: ["sanur-beach.jpg"],
+    priority: 4
+  },
+  {
+    id: "canggu-beach",
+    name: "Canggu Beach",
+    category: "beaches",
+    coordinates: [115.133108, -8.661778],
+    description: "Trendy surf and yoga hub with black sand, beach bars, and street art.",
+    drivingTime: "Approximately 50 minutes from Sakala Resort",
+    distance: "45 km",
+    operatingHours: "Open 24/7",
+    pricing: {
+      entry: "Free"
+    },
+    specialEvents: [],
+    features: ["Surfing", "Hip cafes", "Sunset views"],
+    images: ["canggu-beach.jpg"],
+    priority: 5
+  },
+  {
+    id: "padang-padang-beach",
+    name: "Padang Padang Beach",
+    category: "beaches",
+    coordinates: [115.103788, -8.810880],
+    description: "Small, hidden cove popular for surfing and featured in the movie 'Eat Pray Love'.",
+    drivingTime: "Approximately 40 minutes from Sakala Resort",
+    distance: "22 km",
+    operatingHours: "Open 24/7",
+    pricing: {
+      entry: "IDR 10,000/person"
+    },
+    specialEvents: [],
+    features: ["Surfing", "Scenic cove", "Cliff access"],
+    images: ["padang-padang-beach.jpg"],
+    priority: 6
+  },
+  {
+    id: "balangan-beach",
+    name: "Balangan Beach",
+    category: "beaches",
+    coordinates: [115.124115, -8.791188],
+    description: "Quiet beach with golden sands, reef breaks, and dramatic limestone cliffs.",
+    drivingTime: "Approximately 45 minutes from Sakala Resort",
+    distance: "22 km",
+    operatingHours: "Open 24/7",
+    pricing: {
+      entry: "Free"
+    },
+    specialEvents: [],
+    features: ["Surfing", "Sunbathing", "Cliff-top cafes"],
+    images: ["balangan-beach.jpg"],
+    priority: 7
+  },
+  {
+    id: "dreamland-beach",
+    name: "Dreamland Beach",
+    category: "beaches",
+    coordinates: [115.117851, -8.799306],
+    description: "Popular for its white sands, surf breaks, and stunning sunset views.",
+    drivingTime: "Approximately 40 minutes from Sakala Resort",
+    distance: "23 km",
+    operatingHours: "Open 24/7",
+    pricing: {
+      entry: "Free"
+    },
+    specialEvents: [],
+    features: ["Surfing", "Beach clubs", "Sunset viewing"],
+    images: ["dreamland-beach.jpg"],
+    priority: 8
+  },
+  {
+    id: "bingin-beach",
+    name: "Bingin Beach",
+    category: "beaches",
+    coordinates: [115.113237, -8.805392],
+    description: "Cliff-top beach with surf breaks and a laid-back vibe.",
+    drivingTime: "Approximately 45 minutes from Sakala Resort",
+    distance: "24 km",
+    operatingHours: "Open 24/7",
+    pricing: {
+      entry: "Free"
+    },
+    specialEvents: [],
+    features: ["Surfing", "Beach shacks", "Cliffside views"],
+    images: ["bingin-beach.jpg"],
+    priority: 9
+  },
+  {
+    id: "suluban-beach",
+    name: "Suluban Beach (Blue Point)",
+    category: "beaches",
+    coordinates: [115.0885532, -8.8150984],
+    description: "Hidden beach accessed via stairs down limestone cliffs, popular with photographers.",
+    drivingTime: "Approximately 50 minutes from Sakala Resort",
+    distance: "25 km",
+    operatingHours: "Open 24/7",
+    pricing: {
+      entry: "Free"
+    },
+    specialEvents: [],
+    features: ["Surfing", "Sea cave access", "Scenic cliffs"],
+    images: ["suluban-beach.jpg"],
+    priority: 10
+  },
+  {
+    id: "nyang-nyang-beach",
+    name: "Nyang Nyang Beach",
+    category: "beaches",
+    coordinates: [115.093538, -8.839312],
+    description: "Secluded beach with pristine sands, accessed by a steep descent through the jungle.",
+    drivingTime: "Approximately 50 minutes from Sakala Resort",
+    distance: "24 km",
+    operatingHours: "Open 24/7",
+    pricing: {
+      entry: "Free"
+    },
+    specialEvents: [],
+    features: ["Seclusion", "Natural scenery", "Cliff walks"],
+    images: ["nyang-nyang-beach.jpg"],
+    priority: 11
+  },
+  {
+    id: "green-bowl-beach",
+    name: "Green Bowl Beach",
+    category: "beaches",
+    coordinates: [115.170922, -8.848688],
+    description: "Hidden beach famous for its green waters and hole-through-the-cliff formation.",
+    drivingTime: "Approximately 55 minutes from Sakala Resort",
+    distance: "27 km",
+    operatingHours: "Open 24/7",
+    pricing: {
+      entry: "Free"
+    },
+    specialEvents: [],
+    features: ["Lagoon", "Cliff views", "Sea caves"],
+    images: ["green-bowl-beach.jpg"],
+    priority: 12
+  },
+  {
+    id: "melasti-beach",
+    name: "Melasti Beach",
+    category: "beaches",
+    coordinates: [115.161720, -8.849206],
+    description: "Dramatic cliff-top beach with clear waters and spiritual cleansing sites.",
+    drivingTime: "Approximately 35 minutes from Sakala Resort",
+    distance: "20 km",
+    operatingHours: "Open 24/7",
+    pricing: {
+      entry: "Free"
+    },
+    specialEvents: [],
+    features: ["Cliffside views", "Rock formations", "Sunny dunes"],
+    images: ["melasti-beach.jpg"],
+    priority: 13
+  },
+  {
+    id: "tegal-wangi-beach",
+    name: "Cliff Jump Tegal Wangi Beach",
+    category: "beaches",
+    coordinates: [115.144593, -8.779676],
+    description: "Hidden cove with natural jacuzzis and sunset viewpoints.",
+    drivingTime: "Approximately 30 minutes from Sakala Resort",
+    distance: "16 km",
+    operatingHours: "Open 24/7",
+    pricing: {
+      entry: "Free"
+    },
+    specialEvents: [],
+    features: ["Natural pools", "Sunset views", "Cliff access"],
+    images: ["tegal-wangi-beach.jpg"],
+    priority: 14
+  },
+  {
+    id: "padang-bai-beach",
+    name: "Padang Bai Beach",
+    category: "beaches",
+    coordinates: [115.510587, -8.530416],
+    description: "Gateway port beach with calm waters and snorkeling spots.",
+    drivingTime: "Approximately 1 hour 15 minutes from Sakala Resort",
+    distance: "60 km",
+    operatingHours: "Open 24/7",
+    pricing: {
+      entry: "Free"
+    },
+    specialEvents: [],
+    features: ["Snorkeling", "Boat trips", "White sand"],
+    images: ["padang-bai-beach.jpg"],
+    priority: 15
+  },
+  {
+    id: "virgin-beach",
+    name: "Virgin Beach (White Sandy Beach)",
+    category: "beaches",
+    coordinates: [115.611639, -8.498553],
+    description: "Secluded white-sand beach with crystal clear waters and coral reefs.",
+    drivingTime: "Approximately 1 hour 15 minutes from Sakala Resort",
+    distance: "62 km",
+    operatingHours: "Open 24/7",
+    pricing: {
+      entry: "Free"
+    },
+    specialEvents: [],
+    features: ["Coral reefs", "Seclusion", "Snorkeling"],
+    images: ["virgin-beach.jpg"],
+    priority: 16
+  },
+  {
+    id: "keramas-beach",
+    name: "Keramas Beach",
+    category: "beaches",
+    coordinates: [115.339098, -8.597792],
+    description: "World-class surf break with black sand and big waves.",
+    drivingTime: "Approximately 40 minutes from Sakala Resort",
+    distance: "25 km",
+    operatingHours: "Open 24/7",
+    pricing: {
+      entry: "Free"
+    },
+    specialEvents: [],
+    features: ["Surfing", "Beach bars"],
+    images: ["keramas-beach.jpg"],
+    priority: 17
+  },
+  {
+    id: "amed-beach",
+    name: "Amed Beach",
+    category: "beaches",
+    coordinates: [115.651455, -8.334859],
+    description: "Quiet fishing village beach known for diving and black volcanic sands.",
+    drivingTime: "Approximately 3 hours from Sakala Resort",
+    distance: "120 km",
+    operatingHours: "Open 24/7",
+    pricing: {
+      entry: "Free"
+    },
+    specialEvents: [],
+    features: ["Diving", "Snorkeling", "Black sand"],
+    images: ["amed-beach.jpg"],
+    priority: 18
+  },
+  {
+    id: "lovina-beach",
+    name: "Lovina Beach",
+    category: "beaches",
+    coordinates: [115.024437, -8.161002],
+    description: "Black sand beach known for calm waters, dolphin watching, and hot springs.",
+    drivingTime: "Approximately 3 hours 30 minutes from Sakala Resort",
+    distance: "130 km",
+    operatingHours: "Open 24/7",
+    pricing: {
+      entry: "Free"
+    },
+    specialEvents: [],
+    features: ["Dolphin watching", "Hot springs", "Black sand", "Calm waters"],
+    images: ["lovina-beach.jpg"],
+    priority: 19
+  },
+  {
+    id: "menjangan-beach",
+    name: "Menjangan Beach",
+    category: "beaches",
+    coordinates: [114.561991, -8.136507],
+    description: "Remote coral-fringed beach in West Bali National Park, ideal for snorkeling.",
+    drivingTime: "Approximately 4 hours 30 minutes from Sakala Resort",
+    distance: "160 km",
+    operatingHours: "Open 24/7",
+    pricing: {
+      entry: "IDR 100,000/person (park fee)"
+    },
+    specialEvents: [],
+    features: ["Snorkeling", "Coral reefs", "Wildlife spotting"],
+    images: ["menjangan-beach.jpg"],
+    priority: 20
   },
   // Beach Clubs
   {
