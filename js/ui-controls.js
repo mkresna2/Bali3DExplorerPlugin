@@ -14,6 +14,7 @@ class UIControls {
     this.sidebar = null;
     this.mapControls = null;
     this.searchInput = null;
+    this.panDelta = 100;
     this.isInitialized = false;
   }
 
@@ -112,6 +113,18 @@ class UIControls {
             break;
           case 'reset':
             this.resetMapView();
+            break;
+          case 'pan-up':
+            this.panMap(0, -this.panDelta);
+            break;
+          case 'pan-down':
+            this.panMap(0, this.panDelta);
+            break;
+          case 'pan-left':
+            this.panMap(-this.panDelta, 0);
+            break;
+          case 'pan-right':
+            this.panMap(this.panDelta, 0);
             break;
         }
       });
@@ -399,6 +412,17 @@ class UIControls {
       threeConfig.camera.position.set(0, 30, 30);
       threeConfig.controls.target.set(0, 0, 0);
       threeConfig.camera.lookAt(0, 0, 0);
+    }
+  }
+
+  /**
+   * Pan the map by pixel values
+   * @param {number} dx - Pixel offset x (positive right)
+   * @param {number} dy - Pixel offset y (positive down)
+   */
+  panMap(dx, dy) {
+    if (threeboxConfig.isInitialized) {
+      threeboxConfig.map.panBy([dx, dy], { duration: 500 });
     }
   }
 

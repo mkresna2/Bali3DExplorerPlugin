@@ -114,7 +114,7 @@ const destinations = [
   {
     id: "ubud-monkey-forest",
     name: "Ubud Monkey Forest",
-    category: "featured",
+    category: "cultural",
     coordinates: [115.2590, -8.5190], // Sacred Monkey Forest Sanctuary (Ubud)
     description: "A nature reserve and Hindu temple complex home to over 700 Balinese long-tailed macaques.",
     drivingTime: "Approximately 1 hour 20 minutes from Sakala Resort",
@@ -653,6 +653,111 @@ const destinations = [
     features: ["Historic architecture", "Buddhist shrines", "Cultural heritage", "Prayer ceremonies"],
     images: ["caow-eng-bio-temple.jpg"],
     priority: 11
+  },
+  {
+    id: "besakih-great-temple",
+    name: "Besakih Great Temple",
+    category: "cultural",
+    coordinates: [115.4480, -8.3596], // Pura Besakih (Mother Temple)
+    description: "The largest and holiest Hindu temple in Bali, located on the slopes of Mount Agung.",
+    drivingTime: "Approximately 2 hours 30 minutes from Sakala Resort",
+    distance: "96 km",
+    operatingHours: "7:00 AM - 6:00 PM daily",
+    pricing: { entry: "IDR 60,000/person" },
+    specialEvents: [],
+    features: ["Largest temple complex", "Mountain views", "Ceremonial halls"],
+    images: ["pura-besakih.jpg"],
+    priority: 12
+  },
+  {
+    id: "lempuyang-temple",
+    name: "Lempuyang Temple",
+    category: "cultural",
+    coordinates: [115.5085, -8.4315], // Pura Lempuyang Luhur
+    description: "One of Bali's oldest temples, offering the iconic 'Gate of Heaven' views of Mount Agung.",
+    drivingTime: "Approximately 2 hours from Sakala Resort",
+    distance: "85 km",
+    operatingHours: "6:00 AM - 7:00 PM daily",
+    pricing: { entry: "IDR 30,000/person" },
+    specialEvents: [],
+    features: ["Gate of Heaven", "Mountain scenery", "Ancient shrine"],
+    images: ["pura-lempuyang.jpg"],
+    priority: 13
+  },
+  {
+    id: "ulun-danu-beratan-temple",
+    name: "Ulun Danu Beratan Temple",
+    category: "cultural",
+    coordinates: [115.1610, -8.2798], // Pura Ulun Danu Bratan
+    description: "A lakeside water temple on Lake Bratan, known for its beautiful reflection views.",
+    drivingTime: "Approximately 2 hours 30 minutes from Sakala Resort",
+    distance: "85 km",
+    operatingHours: "8:00 AM - 6:00 PM daily",
+    pricing: { entry: "IDR 50,000/person" },
+    specialEvents: [],
+    features: ["Lake temple", "Reflection photography", "Floating shrines"],
+    images: ["ulun-danu-beratan.jpg"],
+    priority: 14
+  },
+  {
+    id: "tirta-empul-temple",
+    name: "Tirta Empul Temple",
+    category: "cultural",
+    coordinates: [115.3159, -8.4212], // Pura Tirta Empul
+    description: "A holy water temple famous for its purification baths fed by natural springs.",
+    drivingTime: "Approximately 2 hours from Sakala Resort",
+    distance: "78 km",
+    operatingHours: "9:00 AM - 5:00 PM daily",
+    pricing: { entry: "IDR 15,000/person" },
+    specialEvents: [],
+    features: ["Holy spring baths", "Purification rituals", "Sacred fish ponds"],
+    images: ["tirta-empul.jpg"],
+    priority: 15
+  },
+  {
+    id: "tirta-gangga-water-gardens",
+    name: "Tirta Gangga Water Gardens",
+    category: "cultural",
+    coordinates: [115.4535, -8.4660], // Tirta Gangga
+    description: "A former royal palace with tiered fountains, stone carvings, and lush gardens.",
+    drivingTime: "Approximately 2 hours from Sakala Resort",
+    distance: "90 km",
+    operatingHours: "8:00 AM - 5:00 PM daily",
+    pricing: { entry: "IDR 50,000/person" },
+    specialEvents: [],
+    features: ["Royal water gardens", "Stone sculptures", "Ornamental fountains"],
+    images: ["tirta-gangga.jpg"],
+    priority: 16
+  },
+  {
+    id: "ujung-water-palace",
+    name: "Ujung Water Palace",
+    category: "cultural",
+    coordinates: [115.6348, -8.3488], // Taman Soekasada Ujung
+    description: "A historic water palace featuring European-style gardens and coastal views.",
+    drivingTime: "Approximately 2 hours 20 minutes from Sakala Resort",
+    distance: "100 km",
+    operatingHours: "9:00 AM - 6:00 PM daily",
+    pricing: { entry: "IDR 15,000/person" },
+    specialEvents: [],
+    features: ["European gardens", "Seaside pavilions", "Scenic boardwalks"],
+    images: ["ujung-water-palace.jpg"],
+    priority: 17
+  },
+  {
+    id: "karangasem-palace",
+    name: "Karangasem Palace",
+    category: "cultural",
+    coordinates: [115.4940, -8.4343], // Puri Agung Karangasem
+    description: "The royal palace of the Karangasem kingdom, showcasing Balinese architecture and murals.",
+    drivingTime: "Approximately 2 hours 15 minutes from Sakala Resort",
+    distance: "95 km",
+    operatingHours: "9:00 AM - 5:00 PM daily",
+    pricing: { entry: "IDR 15,000/person" },
+    specialEvents: [],
+    features: ["Royal architecture", "Balinese murals", "Historical pavilions"],
+    images: ["karangasem-palace.jpg"],
+    priority: 18
   },
   // Balinese Traditional Villages
   {

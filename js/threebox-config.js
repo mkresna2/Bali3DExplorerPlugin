@@ -100,7 +100,7 @@ class ThreeLibreConfig {
       }), 'bottom-left');
       
       // Add fullscreen control
-      this.map.addControl(new maplibregl.FullscreenControl(), 'top-right');
+      this.map.addControl(new maplibregl.FullscreenControl({ container: container.parentNode }), 'top-right');
 
       // Improve pointer event handling for smoother dragging
       container.style.pointerEvents = 'auto';
