@@ -38,7 +38,7 @@ const destinations = [
     id: "uluwatu-temple",
     name: "Uluwatu Temple",
     category: "featured",
-    coordinates: [115.0849, -8.8296], // Uluwatu Temple (Pecatu) - CORRECT
+    coordinates: [115.084988, -8.829183], // Uluwatu Temple (Pecatu) - CORRECT
     description: "Pura Luhur Uluwatu is one of Bali's six key temples, perched dramatically on a steep cliff 70 meters above the Indian Ocean. The temple is inhabited by monkeys who are believed to guard it from bad influences.",
     drivingTime: "Approximately 45 minutes from Sakala Resort",
     distance: "22 km",
@@ -62,7 +62,7 @@ const destinations = [
     id: "tanah-lot",
     name: "Tanah Lot Temple",
     category: "featured",
-    coordinates: [115.0865, -8.6216], // Tanah Lot Temple (Beraban)
+    coordinates: [115.087054, -8.620784], // Tanah Lot Temple (Beraban)
     description: "A sea temple on a rock formation, famous for its offshore setting and sunset views.",
     drivingTime: "Approximately 1 hour 45 minutes from Sakala Resort",
     distance: "65 km",
@@ -79,7 +79,7 @@ const destinations = [
     id: "tegalalang-terraces",
     name: "Tegalalang Rice Terraces",
     category: "featured",
-    coordinates: [115.2773, -8.4302], // Tegalalang Rice Terraces (Ubud)
+    coordinates: [115.279331, -8.431787], // Tegalalang Rice Terraces (Ubud)
     description: "Iconic rice terraces with a beautiful jungle backdrop, offering scenic walks and swings.",
     drivingTime: "Approximately 1 hour 30 minutes from Sakala Resort",
     distance: "60 km",
@@ -95,7 +95,7 @@ const destinations = [
   {
     id: "ubud-monkey-forest",
     name: "Ubud Monkey Forest",
-    category: "cultural",
+    category: "featured",
     coordinates: [115.2590, -8.5190], // Sacred Monkey Forest Sanctuary (Ubud)
     description: "A nature reserve and Hindu temple complex home to over 700 Balinese long-tailed macaques.",
     drivingTime: "Approximately 1 hour 20 minutes from Sakala Resort",
@@ -113,7 +113,7 @@ const destinations = [
     id: "campuhan-ridge-walk",
     name: "Campuhan Ridge Walk",
     category: "featured",
-    coordinates: [115.2631, -8.5103], // Campuhan Ridge Walk (Ubud)
+    coordinates: [115.254736, -8.503587], // Campuhan Ridge Walk (Ubud)
     description: "A scenic hiking trail along the ridge of two hills offering panoramic valley views.",
     drivingTime: "Approximately 1 hour 25 minutes from Sakala Resort",
     distance: "58 km",
@@ -130,7 +130,7 @@ const destinations = [
     id: "goa-gajah",
     name: "Goa Gajah (Elephant Cave)",
     category: "featured",
-    coordinates: [115.2900, -8.4833], // Goa Gajah (Elephant Cave, Pejeng)
+    coordinates: [115.287161, -8.523479], // Goa Gajah (Elephant Cave, Pejeng)
     description: "A 9th-century archaeological site with cave, bathing pools, and fountains.",
     drivingTime: "Approximately 1 hour 35 minutes from Sakala Resort",
     distance: "62 km",
@@ -144,27 +144,10 @@ const destinations = [
     priority: 8
   },
   {
-    id: "waterbom-bali",
-    name: "Waterbom Bali",
-    category: "featured",
-    coordinates: [115.1678, -8.7191], // Waterbom Bali (Kuta)
-    description: "One of Asia’s top water parks featuring thrilling slides, lazy rivers, and tropical gardens.",
-    drivingTime: "Approximately 30 minutes from Sakala Resort",
-    distance: "18 km",
-    operatingHours: "9:00 AM - 6:00 PM daily",
-    pricing: {
-      entry: "IDR 500,000/person (adult), IDR 300,000/person (child)"
-    },
-    specialEvents: [],
-    features: ["Water slides", "Lazy river", "Kids area", "Cabanas", "Restaurants"],
-    images: ["waterbom-bali.jpg"],
-    priority: 12
-  },
-  {
     id: "gwk-park",
     name: "Garuda Wisnu Kencana Cultural Park",
     category: "featured",
-    coordinates: [115.2230, -8.8208], // GWK Cultural Park
+    coordinates: [115.166714, -8.813670], // GWK Cultural Park
     description: "A cultural park featuring a giant statue of Vishnu riding Garuda, with traditional Balinese performances and exhibitions.",
     drivingTime: "Approximately 30 minutes from Sakala Resort",
     distance: "20 km",
@@ -179,7 +162,7 @@ const destinations = [
     id: "mount-batur",
     name: "Mount Batur",
     category: "featured",
-    coordinates: [115.3755, -8.2428], // Mount Batur
+    coordinates: [115.364338, -8.282654], // Mount Batur
     description: "Active volcano offering sunrise trekking tours and panoramic views of Lake Batur.",
     drivingTime: "Approximately 2 hours 30 minutes from Sakala Resort",
     distance: "90 km",
@@ -194,7 +177,7 @@ const destinations = [
     id: "kelingking-beach",
     name: "Kelingking Beach",
     category: "featured",
-    coordinates: [115.4600, -8.7333], // Kelingking Beach (Nusa Penida)
+    coordinates: [115.472732, -8.752530], // Kelingking Beach (Nusa Penida)
     description: "Cliff viewpoint overlooking a T-Rex shaped peninsula and secluded beach.",
     drivingTime: "Approximately 2 hours from Sakala Resort (via ferry)",
     distance: "50 km",
@@ -209,7 +192,7 @@ const destinations = [
     id: "tegenungan-waterfall",
     name: "Tegenungan Waterfall",
     category: "featured",
-    coordinates: [115.2700, -8.5278], // Tegenungan Waterfall
+    coordinates: [115.288893, -8.575351], // Tegenungan Waterfall
     description: "Popular waterfall surrounded by lush jungle with swimming areas.",
     drivingTime: "Approximately 1 hour 15 minutes from Sakala Resort",
     distance: "50 km",
@@ -224,7 +207,7 @@ const destinations = [
     id: "bali-zoo",
     name: "Bali Zoo",
     category: "featured",
-    coordinates: [115.2700, -8.4550], // Bali Zoo
+    coordinates: [115.265666, -8.591700], // Bali Zoo
     description: "Family-friendly zoo with wildlife encounters and safari bus rides.",
     drivingTime: "Approximately 1 hour 10 minutes from Sakala Resort",
     distance: "55 km",
@@ -239,7 +222,7 @@ const destinations = [
     id: "bali-safari-marine-park",
     name: "Bali Safari & Marine Park",
     category: "featured",
-    coordinates: [115.2534, -8.4717], // Safari & Marine Park
+    coordinates: [115.345925, -8.581769], // Safari & Marine Park
     description: "Wildlife park with land and marine shows, safari journeys, and water attractions.",
     drivingTime: "Approximately 1 hour 20 minutes from Sakala Resort",
     distance: "60 km",
@@ -249,6 +232,23 @@ const destinations = [
     features: ["Safari journey","Marine theater","Animal shows","Water rides"],
     images: ["bali-safari.jpg"],
     priority: 14
+  },
+  {
+    id: "waterbom-bali",
+    name: "Waterbom Bali",
+    category: "featured",
+    coordinates: [115.169802, -8.728771], // Waterbom Bali (Kuta)
+    description: "One of Asia’s top water parks featuring thrilling slides, lazy rivers, and tropical gardens.",
+    drivingTime: "Approximately 30 minutes from Sakala Resort",
+    distance: "18 km",
+    operatingHours: "9:00 AM - 6:00 PM daily",
+    pricing: {
+      entry: "IDR 500,000/person (adult), IDR 300,000/person (child)"
+    },
+    specialEvents: [],
+    features: ["Water slides", "Lazy river", "Kids area", "Cabanas", "Restaurants"],
+    images: ["waterbom-bali.jpg"],
+    priority: 15
   },
   // Top Beaches
   {
@@ -593,10 +593,25 @@ const destinations = [
   },
   // Beach Clubs
   {
+    id: "sakala-beach-club",
+    name: "Sakala Beach Club",
+    category: "beach-clubs",
+    coordinates: [115.222176, -8.759364], // Sakala Resort Bali (Tanjung Benoa)
+    description: "Beach club within Sakala Resort Bali offering beachfront dining, infinity pool, and bar services.",
+    drivingTime: "Starting point",
+    distance: "0 km",
+    operatingHours: "9:00 AM - 10:00 PM daily",
+    pricing: { entry: "IDR 200,000/person", food: "Various options available" },
+    specialEvents: [],
+    features: ["Beachfront bar", "Infinity pool", "Live music", "Beach loungers"],
+    images: ["sakala-beach-club.jpg"],
+    priority: 1
+  },
+  {
     id: "reef-beach-club",
     name: "Reef Beach Club",
     category: "beach-clubs",
-    coordinates: [115.2269, -8.8055], // Reef Beach Club (Peninsula Beach Nusa Dua) - CORRECT
+    coordinates: [115.218833, -8.830094], // Reef Beach Club (Peninsula Beach Nusa Dua) - CORRECT
     description: "Located at Peninsula Beach Nusa Dua, Reef Beach Club offers a lavish yet comfortably serene beachfront experience with excellent dining options and water activities.",
     drivingTime: "Approximately 10 minutes from Sakala Resort",
     distance: "3 km",
@@ -619,7 +634,7 @@ const destinations = [
     id: "omnia-dayclub",
     name: "OMNIA Dayclub (now Savaya Bali)",
     category: "beach-clubs",
-    coordinates: [115.1380078, -8.8462129], // OMNIA Dayclub (now Savaya Bali) - CORRECT
+    coordinates: [115.140676, -8.846472], // OMNIA Dayclub (now Savaya Bali) - CORRECT
     description: "Perched on the limestone cliffs of Uluwatu, OMNIA Dayclub offers a luxurious day club experience with an infinity pool overlooking the Indian Ocean and world-class DJs.",
     drivingTime: "Approximately 40 minutes from Sakala Resort",
     distance: "20 km",
@@ -643,7 +658,7 @@ const destinations = [
     id: "ulu-cliff-house",
     name: "Ulu Cliff House",
     category: "beach-clubs",
-    coordinates: [115.0813224, -8.8139681], // Ulu Cliff House (Uluwatu) - CORRECT
+    coordinates: [115.091811, -8.813902], // Ulu Cliff House (Uluwatu) - CORRECT
     description: "A clifftop oasis offering panoramic views of the Indian Ocean, Ulu Cliff House features multiple dining concepts, two infinity pools, and a laid-back atmosphere.",
     drivingTime: "Approximately 50 minutes from Sakala Resort",
     distance: "25 km",
@@ -666,7 +681,7 @@ const destinations = [
     id: "sundays-beach-club",
     name: "Sundays Beach Club",
     category: "beach-clubs",
-    coordinates: [115.1532, -8.8487], // Sundays Beach Club (Pecatu, below Ungasan Clifftop Resort) - CORRECT
+    coordinates: [115.148592, -8.846173], // Sundays Beach Club (Pecatu, below Ungasan Clifftop Resort) - CORRECT
     description: "Nestled on a pristine white sand beach at the base of cliffs in the Bukit Peninsula, Sundays Beach Club offers a complete beach experience with water sports, dining, and bonfires.",
     drivingTime: "Approximately 45 minutes from Sakala Resort",
     distance: "23 km",
@@ -691,7 +706,7 @@ const destinations = [
     id: "finns-beach-club",
     name: "Finns Beach Club",
     category: "beach-clubs",
-    coordinates: [115.149, -8.670], // Canggu
+    coordinates: [115.139206, -8.666888], // Canggu
     description: "A lively beachfront club with pools, bars, and live entertainment.",
     drivingTime: "Approximately 50 minutes from Sakala Resort",
     distance: "45 km",
@@ -706,7 +721,7 @@ const destinations = [
     id: "tropical-temptation-beach-club",
     name: "Tropical Temptation Beach Club",
     category: "beach-clubs",
-    coordinates: [115.171, -8.805], // Pecatu
+    coordinates: [115.160670, -8.848257], // Pecatu
     description: "Chic beach club offering sunset cocktails, daybeds, and ocean views.",
     drivingTime: "Approximately 45 minutes from Sakala Resort",
     distance: "22 km",
@@ -721,7 +736,7 @@ const destinations = [
     id: "atlas-beach-club",
     name: "Atlas Beach Club",
     category: "beach-clubs",
-    coordinates: [115.163, -8.687], // Seminyak
+    coordinates: [115.139091, -8.665198], // Seminyak
     description: "Vibrant poolside club with cocktails, DJ sets, and lounging areas.",
     drivingTime: "Approximately 35 minutes from Sakala Resort",
     distance: "20 km",
@@ -736,7 +751,7 @@ const destinations = [
     id: "vue-beach-club",
     name: "Vue Beach Club",
     category: "beach-clubs",
-    coordinates: [115.088, -8.829], // Uluwatu
+    coordinates: [115.141182, -8.668675], // Uluwatu
     description: "Cliffside beach club offering panoramic ocean views, infinity pool, and fine dining.",
     drivingTime: "Approximately 50 minutes from Sakala Resort",
     distance: "25 km",
@@ -751,7 +766,7 @@ const destinations = [
     id: "cafe-del-mar-bali-beach-club",
     name: "Café del Mar Bali Beach Club",
     category: "beach-clubs",
-    coordinates: [115.1403, -8.6587], // Canggu
+    coordinates: [115.144408, -8.670695], // Canggu
     description: "World-renowned beach club with Mediterranean-inspired dining and pool parties.",
     drivingTime: "Approximately 1 hour from Sakala Resort",
     distance: "55 km",
@@ -766,7 +781,7 @@ const destinations = [
     id: "roosterfish-beach-club-bali",
     name: "Roosterfish Beach Club Bali",
     category: "beach-clubs",
-    coordinates: [115.1365, -8.6734], // Canggu
+    coordinates: [115.188236, -8.844012], // Canggu
     description: "Chic beachfront venue offering seafood, cocktails, and oceanfront vibes.",
     drivingTime: "Approximately 50 minutes from Sakala Resort",
     distance: "45 km",
@@ -778,25 +793,10 @@ const destinations = [
     priority: 13
   },
   {
-    id: "the-edge-bali",
-    name: "The Edge Bali",
-    category: "beach-clubs",
-    coordinates: [115.093, -8.818], // Uluwatu
-    description: "Exclusive cliff-top beach club offering private villas, infinity pools, and fine dining.",
-    drivingTime: "Approximately 50 minutes from Sakala Resort",
-    distance: "25 km",
-    operatingHours: "8:00 AM - 8:00 PM daily",
-    pricing: { entry: "IDR 500,000/person" },
-    specialEvents: [],
-    features: ["Cliff-top villas", "Infinity pools", "Fine dining"],
-    images: ["the-edge-bali.jpg"],
-    priority: 14
-  },
-  {
     id: "mrs-sippy-seminyak",
     name: "Mrs Sippy, Seminyak",
     category: "beach-clubs",
-    coordinates: [115.170, -8.691], // Seminyak
+    coordinates: [115.151101, -8.679833], // Seminyak
     description: "Popular pool club known for its tiered saltwater pool, daybeds, and social atmosphere.",
     drivingTime: "Approximately 35 minutes from Sakala Resort",
     distance: "20 km",
@@ -805,13 +805,13 @@ const destinations = [
     specialEvents: [],
     features: ["Saltwater pool", "Daybeds", "Social events"],
     images: ["mrs-sippy-seminyak.jpg"],
-    priority: 15
+    priority: 14
   },
   {
     id: "the-lawn-canggu",
     name: "The Lawn, Canggu",
     category: "beach-clubs",
-    coordinates: [115.136, -8.647], // Canggu
+    coordinates: [115.129612, -8.658512], // Canggu
     description: "Laid-back beachfront bar with daybeds, cocktails, and sunset sessions.",
     drivingTime: "Approximately 50 minutes from Sakala Resort",
     distance: "45 km",
@@ -820,13 +820,13 @@ const destinations = [
     specialEvents: [],
     features: ["Daybeds", "Sunset sessions", "Cocktails"],
     images: ["the-lawn-canggu.jpg"],
-    priority: 16
+    priority: 15
   },
   {
     id: "potato-head-seminyak",
-    name: "Potato Head, Seminyak",
+    name: "Potato Head Beach Club",
     category: "beach-clubs",
-    coordinates: [115.1575, -8.688], // Seminyak
+    coordinates: [115.149881, -8.679512], // Seminyak
     description: "Iconic beach club featuring an ocean pool, music events, and global cuisine.",
     drivingTime: "Approximately 35 minutes from Sakala Resort",
     distance: "20 km",
@@ -834,14 +834,14 @@ const destinations = [
     pricing: { entry: "IDR 300,000/person" },
     specialEvents: [],
     features: ["Ocean pool", "Music events", "Global cuisine"],
-    images: ["potato-head-seminyak.jpg"],
-    priority: 17
+    images: ["potato-head-beach-club.jpg"],
+    priority: 16
   },
   {
     id: "jungle-fish-ubud",
     name: "Jungle Fish, Ubud",
     category: "beach-clubs",
-    coordinates: [115.262, -8.5108], // Ubud
+    coordinates: [115.260156, -8.479136], // Ubud
     description: "Cliff-top pool venue set amid jungle scenery with hanging bridge access.",
     drivingTime: "Approximately 1 hour 30 minutes from Sakala Resort",
     distance: "60 km",
@@ -850,13 +850,13 @@ const destinations = [
     specialEvents: [],
     features: ["Cliff-top pool", "Jungle views", "Hanging bridge"],
     images: ["jungle-fish-ubud.jpg"],
-    priority: 18
-  },
+    priority: 17
+  },  
   {
     id: "wanna-jungle-pool-and-bar-ubud",
     name: "Wanna Jungle Pool and Bar, Ubud",
     category: "beach-clubs",
-    coordinates: [115.2639, -8.5056], // Ubud
+    coordinates: [115.274997, -8.423106], // Ubud
     description: "Rustic jungle pool bar featuring natural pools, swing seats, and wooden decks.",
     drivingTime: "Approximately 1 hour 30 minutes from Sakala Resort",
     distance: "60 km",
@@ -865,13 +865,13 @@ const destinations = [
     specialEvents: [],
     features: ["Natural pools", "Swing seats", "Jungle ambiance"],
     images: ["wanna-jungle-pool-and-bar-ubud.jpg"],
-    priority: 19
+    priority: 18
   },
   {
     id: "cocoon-day-club-seminyak",
     name: "Cocoon Day Club, Seminyak",
     category: "beach-clubs",
-    coordinates: [115.1676, -8.6882], // Seminyak
+    coordinates: [115.1617999, -8.6974008], // Seminyak
     description: "Luxurious day club with ocean view pool, VIP cabanas, and DJ parties.",
     drivingTime: "Approximately 35 minutes from Sakala Resort",
     distance: "20 km",
@@ -880,13 +880,13 @@ const destinations = [
     specialEvents: [],
     features: ["Ocean view pool", "VIP cabanas", "DJ parties"],
     images: ["cocoon-day-club-seminyak.jpg"],
-    priority: 20
+    priority: 19
   },
   {
     id: "white-rock-beach-club-ungasan",
     name: "White Rock Beach Club, Ungasan",
     category: "beach-clubs",
-    coordinates: [115.083, -8.8045], // Ungasan
+    coordinates: [115.156968, -8.848096], // Ungasan
     description: "Serene beach club at the base of cliffs offering daybeds and sunset cocktails.",
     drivingTime: "Approximately 45 minutes from Sakala Resort",
     distance: "23 km",
@@ -895,13 +895,13 @@ const destinations = [
     specialEvents: [],
     features: ["Cliff-base daybeds", "Sunset cocktails", "Beach access"],
     images: ["white-rock-beach-club-ungasan.jpg"],
-    priority: 21
+    priority: 20
   },
   {
     id: "canna-bali",
     name: "Canna Bali",
     category: "beach-clubs",
-    coordinates: [115.2264, -8.7912], // Nusa Dua
+    coordinates: [115.2135687, -8.8332141], // Nusa Dua
     description: "Elegant beachfront club with infinity pool, fine dining, and daybeds.",
     drivingTime: "Approximately 10 minutes from Sakala Resort",
     distance: "3 km",
@@ -910,13 +910,13 @@ const destinations = [
     specialEvents: [],
     features: ["Infinity pool", "Fine dining", "Daybeds"],
     images: ["canna-bali.jpg"],
-    priority: 22
+    priority: 21
   },
   {
-    id: "kubu-at-ayana-jimbaran",
-    name: "Kubu at AYANA, Jimbaran",
+    id: "rock-bar-ayana-jimbaran",
+    name: "Rock Bar at AYANA, Jimbaran",
     category: "beach-clubs",
-    coordinates: [115.1566, -8.795], // Jimbaran
+    coordinates: [115.1375829, -8.7849944], // Jimbaran
     description: "Romantic beachfront dining club under lantern-lit bamboo huts.",
     drivingTime: "Approximately 20 minutes from Sakala Resort",
     distance: "12 km",
@@ -924,16 +924,16 @@ const destinations = [
     pricing: { dining: "IDR 500,000/person" },
     specialEvents: [],
     features: ["Beachfront huts", "Fine dining", "Romantic ambiance"],
-    images: ["kubu-at-ayana-jimbaran.jpg"],
-    priority: 23
+    images: ["rock-bar-ayana-jimbaran.jpg"],
+    priority: 22
   },
   
   // Water Sports
   {
-    id: "tanjung-benoa-watersports",
-    name: "Tanjung Benoa Water Sports",
+    id: "bali-water-sport-tanjung-benoa",
+    name: "Bali Water Sport Tanjung Benoa",
     category: "water-sports",
-    coordinates: [115.2254, -8.7642], // Tanjung Benoa Water Sports (Tanjung Benoa) - CORRECT
+    coordinates: [115.222791, -8.759803], // Tanjung Benoa Water Sports (Tanjung Benoa) - CORRECT
     description: "Tanjung Benoa is Bali's water sports hub, offering a wide range of activities including parasailing, jet skiing, banana boat rides, and more along its 5km stretch of beach.",
     drivingTime: "Approximately 5 minutes from Sakala Resort",
     distance: "1 km",
@@ -946,14 +946,14 @@ const destinations = [
     },
     specialEvents: [],
     features: ["Parasailing", "Jet skiing", "Banana boat", "Flyboarding", "Seawalking", "Diving"],
-    images: ["tanjung-benoa-watersports.jpg"],
-    priority: 8
+    images: ["bali-water-sport-tanjung-benoa.jpg"],
+    priority: 23
   },
   {
-    id: "nusa-dua-watersports",
-    name: "Nusa Dua Water Sports",
+    id: "pacific-bahari-water-sports",
+    name: "Pacific Bahari Water Sports",
     category: "water-sports",
-    coordinates: [115.2262, -8.8077], // Nusa Dua Water Sports (Nusa Dua Beach) - CORRECT
+    coordinates: [115.223451, -8.761478], // Nusa Dua Water Sports (Nusa Dua Beach) - CORRECT
     description: "The beaches of Nusa Dua offer various water sports activities in a more upscale setting, with clear waters and less crowded beaches compared to Tanjung Benoa.",
     drivingTime: "Approximately 15 minutes from Sakala Resort",
     distance: "5 km",
@@ -965,16 +965,71 @@ const destinations = [
     },
     specialEvents: [],
     features: ["Snorkeling", "Glass bottom boat", "Seawalking", "Stand-up paddleboarding"],
-    images: ["nusa-dua-watersports.jpg"],
+    images: ["pacific-bahari-water-sports.jpg"],
     priority: 9
   },
-  
+  {
+    id: "padang-bai-coral-restoration",
+    name: "Padang Bai Livingseas Coral Restoration Site",
+    category: "water-sports",
+    coordinates: [115.513407, -8.527337],
+    description: "Snorkeling and diving site famous for its coral reefs and diverse marine life.",
+    drivingTime: "Approximately 1 hour from Sakala Resort",
+    distance: "60 km",
+    operatingHours: "7:00 AM - 5:00 PM daily",
+    pricing: {
+      snorkeling: "IDR 300,000/person",
+      diving: "IDR 600,000/person",
+      equipmentRental: "IDR 100,000/person"
+    },
+    specialEvents: [],
+    features: ["Snorkeling", "Scuba diving", "Coral reef exploration"],
+    images: ["padang-bai-coral-restoration-site.jpg"],
+    priority: 24
+  },
+  {
+    id: "manta-point-nusa-penida",
+    name: "Manta Point, Nusa Penida",
+    category: "water-sports",
+    coordinates: [115.5258607, -8.7941828],
+    description: "World-renowned dive site for encounters with manta rays in the clear waters off Nusa Penida.",
+    drivingTime: "Approximately 2 hours from Sakala Resort (including boat transfer)",
+    distance: "40 km",
+    operatingHours: "7:00 AM - 5:00 PM daily",
+    pricing: {
+      diveBoat: "IDR 1,200,000/person",
+      equipmentRental: "IDR 200,000/person"
+    },
+    specialEvents: [],
+    features: ["Scuba diving", "Manta ray sightings", "Underwater photography"],
+    images: ["manta-point-nusa-penida.jpg"],
+    priority: 25
+  },
+  {
+    id: "tulamben-shipwreck",
+    name: "USAT Liberty Shipwreck, Tulamben",
+    category: "water-sports",
+    coordinates: [115.593318, -8.274048],
+    description: "Historic shipwreck dive site offering vibrant coral growth and a variety of marine species.",
+    drivingTime: "Approximately 3 hours from Sakala Resort",
+    distance: "95 km",
+    operatingHours: "24/7 (diving tours available throughout the day)",
+    pricing: {
+      diveSiteFee: "IDR 150,000/person",
+      guidedDive: "IDR 500,000/person",
+      equipmentRental: "IDR 200,000/person"
+    },
+    specialEvents: [],
+    features: ["Scuba diving", "Wreck exploration", "Macro photography"],
+    images: ["tulamben-shipwreck.jpg"],
+    priority: 26
+  },
   // Cultural Sites
   {
     id: "museum-pasifika",
     name: "Museum PASIFIKA",
     category: "cultural",
-    coordinates: [115.2290, -8.7950], // Museum PASIFIKA (Nusa Dua, ITDC area) - CORRECT
+    coordinates: [115.230542, -8.800075], // Museum PASIFIKA (Nusa Dua, ITDC area) - CORRECT
     description: "Museum PASIFIKA houses an impressive collection of artworks and artifacts from across the Asia-Pacific region, with a particular focus on Balinese and Indonesian art.",
     drivingTime: "Approximately 15 minutes from Sakala Resort",
     distance: "5 km",
@@ -997,7 +1052,7 @@ const destinations = [
     id: "caow-eng-bio-temple",
     name: "Caow Eng Bio Chinese Buddhist Temple",
     category: "cultural",
-    coordinates: [115.2262, -8.7608], // Caow Eng Bio Temple (Tanjung Benoa) - CORRECT
+    coordinates: [115.219688, -8.7537085], // Caow Eng Bio Temple (Tanjung Benoa) - CORRECT
     description: "A historic Chinese Buddhist temple in Tanjung Benoa that showcases the cultural diversity of Bali and the influence of Chinese immigrants on the island's history.",
     drivingTime: "Approximately 10 minutes from Sakala Resort",
     distance: "2 km",
@@ -1019,7 +1074,7 @@ const destinations = [
     id: "besakih-great-temple",
     name: "Besakih Great Temple",
     category: "cultural",
-    coordinates: [115.4480, -8.3596], // Pura Besakih (Mother Temple)
+    coordinates: [115.452407, -8.373815], // Pura Besakih (Mother Temple)
     description: "The largest and holiest Hindu temple in Bali, located on the slopes of Mount Agung.",
     drivingTime: "Approximately 2 hours 30 minutes from Sakala Resort",
     distance: "96 km",
@@ -1034,7 +1089,7 @@ const destinations = [
     id: "lempuyang-temple",
     name: "Lempuyang Temple",
     category: "cultural",
-    coordinates: [115.5085, -8.4315], // Pura Lempuyang Luhur
+    coordinates: [115.6289024, -8.3918923], // Pura Lempuyang Luhur
     description: "One of Bali's oldest temples, offering the iconic 'Gate of Heaven' views of Mount Agung.",
     drivingTime: "Approximately 2 hours from Sakala Resort",
     distance: "85 km",
@@ -1049,7 +1104,7 @@ const destinations = [
     id: "ulun-danu-beratan-temple",
     name: "Ulun Danu Beratan Temple",
     category: "cultural",
-    coordinates: [115.1610, -8.2798], // Pura Ulun Danu Bratan
+    coordinates: [115.166780, -8.275178], // Pura Ulun Danu Bratan
     description: "A lakeside water temple on Lake Bratan, known for its beautiful reflection views.",
     drivingTime: "Approximately 2 hours 30 minutes from Sakala Resort",
     distance: "85 km",
@@ -1064,7 +1119,7 @@ const destinations = [
     id: "tirta-empul-temple",
     name: "Tirta Empul Temple",
     category: "cultural",
-    coordinates: [115.3159, -8.4212], // Pura Tirta Empul
+    coordinates: [115.3152709, -8.4155156], // Pura Tirta Empul
     description: "A holy water temple famous for its purification baths fed by natural springs.",
     drivingTime: "Approximately 2 hours from Sakala Resort",
     distance: "78 km",
@@ -1079,7 +1134,7 @@ const destinations = [
     id: "tirta-gangga-water-gardens",
     name: "Tirta Gangga Water Gardens",
     category: "cultural",
-    coordinates: [115.4535, -8.4660], // Tirta Gangga
+    coordinates: [115.587072, -8.412252], // Tirta Gangga
     description: "A former royal palace with tiered fountains, stone carvings, and lush gardens.",
     drivingTime: "Approximately 2 hours from Sakala Resort",
     distance: "90 km",
@@ -1094,7 +1149,7 @@ const destinations = [
     id: "ujung-water-palace",
     name: "Ujung Water Palace",
     category: "cultural",
-    coordinates: [115.6348, -8.3488], // Taman Soekasada Ujung
+    coordinates: [115.630776, -8.463856], // Taman Soekasada Ujung
     description: "A historic water palace featuring European-style gardens and coastal views.",
     drivingTime: "Approximately 2 hours 20 minutes from Sakala Resort",
     distance: "100 km",
@@ -1106,10 +1161,10 @@ const destinations = [
     priority: 17
   },
   {
-    id: "karangasem-palace",
-    name: "Karangasem Palace",
+    id: "puri-agung-karangasem",
+    name: "Puri Agung Karangasem",
     category: "cultural",
-    coordinates: [115.4940, -8.4343], // Puri Agung Karangasem
+    coordinates: [115.616383, -8.443636], // Puri Agung Karangasem
     description: "The royal palace of the Karangasem kingdom, showcasing Balinese architecture and murals.",
     drivingTime: "Approximately 2 hours 15 minutes from Sakala Resort",
     distance: "95 km",
@@ -1117,7 +1172,7 @@ const destinations = [
     pricing: { entry: "IDR 15,000/person" },
     specialEvents: [],
     features: ["Royal architecture", "Balinese murals", "Historical pavilions"],
-    images: ["karangasem-palace.jpg"],
+    images: ["puri-agung-karangasem.jpg"],
     priority: 18
   },
   // Balinese Traditional Villages
@@ -1125,7 +1180,7 @@ const destinations = [
     id: "penglipuran-village",
     name: "Penglipuran Village",
     category: "traditional-villages",
-    coordinates: [115.3157, -8.2856],
+    coordinates: [115.359253, -8.422237],
     description: "Known for its well-preserved traditional bamboo architecture and stone pathways, Penglipuran Village exemplifies Bali's cultural heritage.",
     drivingTime: "Approximately 1 hour 30 minutes from Sakala Resort",
     distance: "60 km",
@@ -1141,7 +1196,7 @@ const destinations = [
     id: "tenganan-pegringsingan-village",
     name: "Tenganan Pegringsingan Village",
     category: "traditional-villages",
-    coordinates: [115.4764, -8.4408],
+    coordinates: [115.566142, -8.476754],
     description: "One of Bali's oldest 'Bali Aga' villages, Tenganan is renowned for its double ikat weaving tradition and ancient customs.",
     drivingTime: "Approximately 2 hours from Sakala Resort",
     distance: "75 km",
@@ -1152,22 +1207,6 @@ const destinations = [
     features: ["Double ikat weaving", "Ancient customs", "Traditional community"],
     images: ["tenganan-pegringsingan.jpg"],
     priority: 2
-  },
-  {
-    id: "nyuh-kuning-village",
-    name: "Nyuh Kuning Village",
-    category: "traditional-villages",
-    coordinates: [115.2775, -8.5106],
-    description: "A lush rural village near Ubud, Nyuh Kuning offers traditional thatched-roof homes, rice terraces, and a tranquil atmosphere.",
-    drivingTime: "Approximately 1 hour 20 minutes from Sakala Resort",
-    distance: "55 km",
-    pricing: {
-      entry: "Free"
-    },
-    specialEvents: [],
-    features: ["Rice terraces", "Thatched-roof homes", "Tranquil environment"],
-    images: ["nyuh-kuning-village.jpg"],
-    priority: 3
   },
   {
     id: "trunyan-village",

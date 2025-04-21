@@ -398,7 +398,15 @@ class ThreeLibreConfig {
     });
     // Add marker at destination
     this.addThreeboxMarker(destination);
-    this.drawRoute(destination);
+    // Handle starting point: do not draw route and clear any existing route
+    if (destination.id === 'sakala-resort') {
+      if (this.map.getSource('route')) {
+        if (this.map.getLayer('route-line')) this.map.removeLayer('route-line');
+        this.map.removeSource('route');
+      }
+    } else {
+      this.drawRoute(destination);
+    }
   }
 
   /**
@@ -406,7 +414,7 @@ class ThreeLibreConfig {
    * @param {Object} destination - Destination data with coordinates [lng, lat]
    */
   drawRoute(destination) {
-    const start = [115.2188608, -8.7593706]; // Sakala Resort Bali
+    const start = [115.2215112, -8.7592114]; // Sakala Resort Bali (updated)
     const end = destination.coordinates;
     const url = `https://router.project-osrm.org/route/v1/driving/${start[0]},${start[1]};${end[0]},${end[1]}?overview=full&geometries=geojson`;
     fetch(url)
