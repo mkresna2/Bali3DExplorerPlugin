@@ -67,7 +67,7 @@ class ThreeLibreConfig {
         style: osmStyle,
         center: [115.188919, -8.409518], // Center of Bali
         zoom: 9,
-        pitch: 60, // More tilted view for better 3D effect
+        pitch: 80, // More tilted view for better 3D effect
         bearing: 0, // Set to 0 to match resetMapView
         attributionControl: false // We'll add our own attribution
       });
