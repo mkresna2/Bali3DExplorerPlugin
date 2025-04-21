@@ -16,7 +16,7 @@
     --shadow: rgba(0, 0, 0, 0.1);
     
     /* Dimensions */
-    --header-height: 70px;
+    --header-height: 20px;
     --sidebar-width: 320px;
     --sidebar-mobile-height: 200px;
 }

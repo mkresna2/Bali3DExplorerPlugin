@@ -31,17 +31,26 @@ class UIControls {
     this.infoPanel = document.querySelector('.info-panel');
     this.infoPanelContent = document.querySelector('.info-content');
     this.closePanelBtn = document.querySelector('.close-btn');
-    this.destinationItems = document.querySelectorAll('.destination-item');
     this.categoryLinks = document.querySelectorAll('.categories a');
     this.mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     this.sidebar = document.querySelector('.destination-sidebar');
     this.mapControls = document.querySelectorAll('.control-btn');
     this.searchInput = document.querySelector('.search-container input');
 
+    // Always update destinationItems after rendering
+    this.updateDestinationItems();
+
     // Add event listeners
     this.addEventListeners();
     
     this.isInitialized = true;
+  }
+
+  /**
+   * Update the destinationItems NodeList
+   */
+  updateDestinationItems() {
+    this.destinationItems = document.querySelectorAll('.destination-item');
   }
 
   /**
@@ -53,7 +62,8 @@ class UIControls {
       this.hideInfoPanel();
     });
 
-    // Destination item clicks
+    // Update destinationItems before adding listeners
+    this.updateDestinationItems();
     this.destinationItems.forEach(item => {
       item.addEventListener('click', () => {
         const destinationId = item.dataset.id;
@@ -69,18 +79,16 @@ class UIControls {
     this.categoryLinks.forEach(link => {
       link.addEventListener('click', (e) => {
         e.preventDefault();
-        
         // Remove active class from all links
         this.categoryLinks.forEach(l => l.classList.remove('active'));
-        
         // Add active class to clicked link
         link.classList.add('active');
-        
         // Get category ID from href
         const categoryId = link.getAttribute('href').substring(1);
-        
         // Show/hide destination sections
         this.filterDestinations(categoryId);
+        // Update destinationItems after filtering
+        this.updateDestinationItems();
       });
     });
 
@@ -88,7 +96,6 @@ class UIControls {
     if (this.mobileMenuToggle) {
       this.mobileMenuToggle.addEventListener('click', () => {
         document.body.classList.toggle('menu-open');
-        
         // Toggle sidebar height on mobile
         if (window.innerWidth <= 768) {
           this.sidebar.classList.toggle('expanded');
@@ -100,7 +107,6 @@ class UIControls {
     this.mapControls.forEach(control => {
       control.addEventListener('click', () => {
         const action = control.classList[1]; // Get the second class (zoom-in, zoom-out, etc.)
-        
         switch (action) {
           case 'zoom-in':
             this.zoomMap(1);
@@ -132,6 +138,7 @@ class UIControls {
 
     // Search input
     this.searchInput.addEventListener('input', (e) => {
+      console.log('Search triggered:', e.target.value); // Debug log
       this.searchDestinations(e.target.value);
     });
 
@@ -234,26 +241,15 @@ class UIControls {
     
     // Add special events
     if (destination.specialEvents && destination.specialEvents.length > 0) {
-      html += `
-        <div class="info-detail">
-          <h3>Special Events</h3>
-          <ul>
-      `;
-      
+      html += `\n      <div class=\"info-detail\">\n        <h3>Special Events</h3>\n        <ul>\n    `;
       destination.specialEvents.forEach(event => {
-        html += `
-          <li>
-            <strong>${event.name}</strong><br>
-            ${event.schedule}
-            ${event.price ? `<br>${event.price}` : ''}
-          </li>
-        `;
+        if (typeof event === 'string') {
+          html += `<li>${event}</li>`;
+        } else if (typeof event === 'object' && event !== null) {
+          html += `<li><strong>${event.name || ''}</strong>${event.schedule ? `<br>${event.schedule}` : ''}${event.price ? `<br>${event.price}` : ''}</li>`;
+        }
       });
-      
-      html += `
-          </ul>
-        </div>
-      `;
+      html += `\n        </ul>\n      </div>\n    `;
     }
     
     // Add features
@@ -454,6 +450,8 @@ class UIControls {
         return 'Water Sports';
       case 'cultural':
         return 'Cultural Site';
+      case 'cultural-experiences':
+        return 'Cultural Experiences';
       default:
         return category.charAt(0).toUpperCase() + category.slice(1);
     }
@@ -476,7 +474,7 @@ class UIControls {
    */
   renderDestinationList() {
     const container = document.querySelector('.destination-list');
-    const categories = ['featured', 'beaches', 'beach-clubs', 'water-sports', 'cultural', 'traditional-villages'];
+    const categories = ['featured', 'beaches', 'beach-clubs', 'water-sports', 'cultural', 'cultural-experiences', 'traditional-villages'];
     categories.forEach(category => {
       const section = container.querySelector(`.category-section#${category}`);
       if (!section) return;

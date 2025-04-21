@@ -182,7 +182,9 @@ const destinations = [
     drivingTime: "Approximately 2 hours from Sakala Resort (via ferry)",
     distance: "50 km",
     operatingHours: "Open 24/7",
-    pricing: { entry: "IDR 5,000/person" },
+    pricing: {
+      entry: "IDR 5,000/person"
+    },
     specialEvents: [],
     features: ["Cliff viewpoint","Secluded beach","Photography spot"],
     images: ["kelingking-beach.jpg"],
@@ -197,7 +199,9 @@ const destinations = [
     drivingTime: "Approximately 1 hour 15 minutes from Sakala Resort",
     distance: "50 km",
     operatingHours: "7:00 AM - 6:00 PM daily",
-    pricing: { entry: "IDR 15,000/person" },
+    pricing: {
+      entry: "IDR 15,000/person"
+    },
     specialEvents: [],
     features: ["Waterfall","Swimming","Jungle trails","Photo spots"],
     images: ["tegenungan-waterfall.jpg"],
@@ -1212,7 +1216,7 @@ const destinations = [
     id: "trunyan-village",
     name: "Trunyan Village",
     category: "traditional-villages",
-    coordinates: [115.3712, -8.2584],
+    coordinates: [115.421594, -8.265267],
     description: "Located on the eastern shore of Lake Batur, Trunyan Village is famous for its unique burial tradition where bodies rest in bamboo cages under ancient banyan trees.",
     drivingTime: "Approximately 2 hours from Sakala Resort",
     distance: "70 km",
@@ -1228,7 +1232,7 @@ const destinations = [
     id: "sidemen-village",
     name: "Sidemen Village",
     category: "traditional-villages",
-    coordinates: [115.5533, -8.5333],
+    coordinates: [115.447874, -8.464537],
     description: "With stunning views of Mount Agung and terraced rice fields, Sidemen Village preserves traditional weaving and rice farming practices.",
     drivingTime: "Approximately 2 hours 15 minutes from Sakala Resort",
     distance: "80 km",
@@ -1241,26 +1245,10 @@ const destinations = [
     priority: 5
   },
   {
-    id: "kapal-village",
-    name: "Kapal Village",
-    category: "traditional-villages",
-    coordinates: [114.7889, -8.1422],
-    description: "A northern coastal village known for salt production and seaweed farming, offering insight into local marine-based livelihoods.",
-    drivingTime: "Approximately 3 hours from Sakala Resort",
-    distance: "120 km",
-    pricing: {
-      entry: "Free"
-    },
-    specialEvents: [],
-    features: ["Salt production", "Seaweed farming", "Coastal community"],
-    images: ["kapal-village.jpg"],
-    priority: 6
-  },
-  {
     id: "cempaga-village",
     name: "Cempaga Village",
     category: "traditional-villages",
-    coordinates: [115.3600, -8.4400],
+    coordinates: [115.0072795, -8.2221059],
     description: "A traditional village in Bangli Regency with a thriving community preserving old Balinese customs and communal compound architecture.",
     drivingTime: "Approximately 1 hour from Sakala Resort",
     distance: "45 km",
@@ -1276,7 +1264,7 @@ const destinations = [
     id: "sembiran-village",
     name: "Sembiran Village",
     category: "traditional-villages",
-    coordinates: [115.0703, -8.33],
+    coordinates: [115.285978, -8.124729],
     description: "An ancient coastal village with archaeological significance, Sembiran has evidence of settlement dating back over two millennia and retains traditional pottery practices.",
     drivingTime: "Approximately 3 hours 30 minutes from Sakala Resort",
     distance: "130 km",
@@ -1292,7 +1280,7 @@ const destinations = [
     id: "sidatapa-village",
     name: "Sidatapa Village",
     category: "traditional-villages",
-    coordinates: [115.0897, -8.4167],
+    coordinates: [114.9966367, -8.2267893],
     description: "A rural village renowned for its pottery industry, Sidatapa produces earthenware using traditional kilns and local clay.",
     drivingTime: "Approximately 3 hours from Sakala Resort",
     distance: "110 km",
@@ -1308,7 +1296,7 @@ const destinations = [
     id: "tigawasa-village",
     name: "Tigawasa Village",
     category: "traditional-villages",
-    coordinates: [115.1167, -8.2167],
+    coordinates: [115.0221754, -8.2023277],
     description: "A remote highland village offering panoramic views over the Bay of Singaraja and rich Balinese cultural experiences.",
     drivingTime: "Approximately 3 hours from Sakala Resort",
     distance: "100 km",
@@ -1324,7 +1312,7 @@ const destinations = [
     id: "pedawa-village",
     name: "Pedawa Village",
     category: "traditional-villages",
-    coordinates: [115.6528, -8.4333],
+    coordinates: [115.0194786, -8.2400606],
     description: "Renowned for its cast iron craftsmanship, Pedawa Village features artisan workshops producing traditional Balinese tools and ornamental pieces.",
     drivingTime: "Approximately 1 hour 45 minutes from Sakala Resort",
     distance: "65 km",
@@ -1340,7 +1328,7 @@ const destinations = [
     id: "banyuseri-village",
     name: "Banyuseri Village",
     category: "traditional-villages",
-    coordinates: [115.1594, -8.8108],
+    coordinates: [115.0005594, -8.2458983],
     description: "A tranquil coastal village east of Sanur known for traditional fishing boats, seaweed farming, and serene beaches.",
     drivingTime: "Approximately 25 minutes from Sakala Resort",
     distance: "15 km",
@@ -1356,7 +1344,7 @@ const destinations = [
     id: "julah-village",
     name: "Julah Village",
     category: "traditional-villages",
-    coordinates: [115.5275, -8.0161],
+    coordinates: [115.2949047, -8.1066677],
     description: "A quaint coastal village known for traditional fishing, picturesque harbors, and calm beaches.",
     drivingTime: "Approximately 2 hours 30 minutes from Sakala Resort",
     distance: "95 km",
@@ -1367,7 +1355,203 @@ const destinations = [
     features: ["Fishing harbor", "Traditional fishing boats", "Beaches"],
     images: ["julah-village.jpg"],
     priority: 13
-  }
+  },
+  {
+    id: "gebug-ende",
+    name: "Gebug Ende",
+    category: "cultural-experiences",
+    coordinates: [115.656450, -8.429391], // Seraya Village, Karangasem
+    description: "A traditional bamboo stick ritual combat performed in Seraya Village, symbolizing strength and community spirit.",
+    drivingTime: "Varies by location",
+    distance: "Varies by location",
+    pricing: { entry: "Free" },
+    specialEvents: ["Annual event, usually in October"],
+    features: ["Bamboo stick combat", "Traditional music", "Ceremonial rituals"],
+    images: ["gebug-ende.jpg"],
+    priority: 13
+  },
+  {
+    id: "perang-pandan",
+    name: "Perang Pandan (Pandanus War)",
+    category: "cultural-experiences",
+    coordinates: [115.566382, -8.474611], // Tenganan Village, Karangasem
+    description: "A unique ritual fight using thorny pandan leaves, held in Tenganan Village to honor the god Indra.",
+    drivingTime: "Varies by location",
+    distance: "Varies by location",
+    pricing: { entry: "Free" },
+    specialEvents: ["Annual event, usually in June"],
+    features: ["Pandan leaf combat", "Traditional attire", "Ceremonial offerings"],
+    images: ["perang-pandan.jpg"],
+    priority: 14
+  },
+  {
+    id: "perang-api",
+    name: "Ter-teran Usaba Muu-Muu (Fire War)",
+    category: "cultural-experiences",
+    coordinates: [115.616922, -8.472629], // Jasri Village, Karangasem
+    description: "A dramatic fire-throwing ritual performed to ward off evil spirits, celebrated in Jasri Village, Karangasem.",
+    drivingTime: "Varies by location",
+    distance: "Varies by location",
+    pricing: { entry: "Free" },
+    specialEvents: ["Annual event, usually before Nyepi"],
+    features: ["Fire war ritual", "Community participation", "Nighttime festival"],
+    images: ["perang-api.jpg"],
+    priority: 15
+  },
+  {
+    id: "mekotek",
+    name: "Mekotek (Ritual Stick Battle)",
+    category: "cultural-experiences",
+    coordinates: [115.1234448, -8.624391], // approximate, Munggu Village, Mengwi
+    description: "A ritual stick battle held in Munggu Village to celebrate Kuningan, symbolizing unity and bravery.",
+    drivingTime: "Varies by location",
+    distance: "Varies by location",
+    pricing: { entry: "Free" },
+    specialEvents: ["Held every six months on Kuningan Day"],
+    features: ["Stick battle", "Large group participation", "Traditional ceremony"],
+    images: ["mekotek.jpg"],
+    priority: 16
+  },
+  {
+    id: "omed-omedan",
+    name: "Omed-omedan (Kissing Festival)",
+    category: "cultural-experiences",
+    coordinates: [115.21357, -8.6816593], // approximate, Sesetan Village, Denpasar
+    description: "A playful mass kissing ritual in Sesetan Village, believed to bring good luck and harmony to the community.",
+    drivingTime: "Varies by location",
+    distance: "Varies by location",
+    pricing: { entry: "Free" },
+    specialEvents: ["Held annually after Nyepi"],
+    features: ["Mass kissing ritual", "Community gathering", "Festive atmosphere"],
+    images: ["omed-omedan.jpg"],
+    priority: 17
+  },
+  {
+    id: "ngerebeg-ritual",
+    name: "Ngerebeg Ritual",
+    category: "cultural-experiences",
+    coordinates: [115.2754263, -8.4579148], // Tegallalang Village, Gianyar
+    description: "A vibrant purification ritual in Tegallalang Village where villagers, especially children, parade in colorful costumes and body paint to ward off evil spirits and restore harmony.",
+    drivingTime: "Varies by location",
+    distance: "Varies by location",
+    pricing: { entry: "Free" },
+    specialEvents: ["Held every 6 months (Balinese calendar)"],
+    features: ["Colorful parades", "Body paint", "Community ritual"],
+    images: ["ngerebeg-ritual.jpg"],
+    priority: 24
+  },
+  {
+    id: "ngerebong",
+    name: "Ngerebong (Trance Ritual)",
+    category: "cultural-experiences",
+    coordinates: [115.244339, -8.646415], // approximate, Kesiman Village
+    description: "A trance ritual in Kesiman Village where participants pierce themselves to demonstrate spiritual power and protection.",
+    drivingTime: "Varies by location",
+    distance: "Varies by location",
+    pricing: { entry: "Free" },
+    specialEvents: ["Held every 210 days (Balinese calendar)"],
+    features: ["Trance ritual", "Self-piercing", "Spiritual ceremony"],
+    images: ["ngerebong.jpg"],
+    priority: 18
+  },
+  {
+    id: "makepung",
+    name: "Makepung (Buffalo Races)",
+    category: "cultural-experiences",
+    coordinates: [114.5924582, -8.3416022], // approximate, Jembrana
+    description: "Traditional buffalo races in Jembrana, West Bali, showcasing speed and teamwork between farmers and their buffaloes.",
+    drivingTime: "Varies by location",
+    distance: "Varies by location",
+    pricing: { entry: "Free" },
+    specialEvents: ["Seasonal races, July-November"],
+    features: ["Buffalo racing", "Festive atmosphere", "Traditional music"],
+    images: ["makepung.jpg"],
+    priority: 19
+  },
+  {
+    id: "mepantigan",
+    name: "Mepantigan (Mud Wrestling)",
+    category: "cultural-experiences",
+    coordinates: [115.2634999, -8.6159419], // approximate, Ubud area
+    description: "A unique Balinese martial art involving friendly mud wrestling matches, often accompanied by music and dance.",
+    drivingTime: "Varies by location",
+    distance: "Varies by location",
+    pricing: { entry: "Free" },
+    specialEvents: ["Demonstrations throughout the year"],
+    features: ["Mud wrestling", "Martial arts", "Cultural performance"],
+    images: ["mepantigan.jpg"],
+    priority: 20
+  },
+  {
+    id: "usaba-dangsil",
+    name: "Usaba Dangsil",
+    category: "cultural-experiences",
+    coordinates: [115.5800576, -8.4605161], // Bungaya Village, Karangasem
+    description: "A grand ritual held every 12 years in Bungaya Village, featuring the construction of tall bamboo structures (dangsil) and elaborate ceremonies to honor ancestors and village unity.",
+    drivingTime: "Varies by location",
+    distance: "Varies by location",
+    pricing: { entry: "Free" },
+    specialEvents: ["Held every 12 years (next in 2030)"],
+    features: ["Dangsil bamboo towers", "Mass ceremonies", "Traditional music and dance"],
+    images: ["usaba-dangsil.jpg"],
+    priority: 21
+  },
+  {
+    id: "baris-kraras-dance",
+    name: "Baris Kraras Dance",
+    category: "cultural-experiences",
+    coordinates: [115.172458, -8.542394], // Mengwi Village
+    description: "A powerful and sacred warrior dance performed in Mengwi Village, symbolizing valor and dedication of Balinese soldiers. Traditionally featured in temple ceremonies.",
+    drivingTime: "Varies by location",
+    distance: "Varies by location",
+    pricing: { entry: "Free" },
+    specialEvents: ["Performed during temple festivals and special ceremonies"],
+    features: ["Warrior dance", "Traditional costumes", "Temple ritual"],
+    images: ["baris-kraras-dance.jpg"],
+    priority: 22
+  },
+  {
+    id: "sang-hyang-dedari-dance",
+    name: "Sang Hyang Dedari Dance",
+    category: "cultural-experiences",
+    coordinates: [115.492920, -8.430868], // Selat Village, Karangasem
+    description: "A sacred trance dance performed by prepubescent girls in Selat Village, believed to invite divine spirits for protection and blessing of the community.",
+    drivingTime: "Varies by location",
+    distance: "Varies by location",
+    pricing: { entry: "Free" },
+    specialEvents: ["Performed during temple festivals and special ceremonies"],
+    features: ["Trance dance", "Sacred ritual", "Traditional costumes"],
+    images: ["sang-hyang-dedari-dance.jpg"],
+    priority: 23
+  },
+  {
+    id: "mepalu-jerimpen-ritual",
+    name: "Mepalu Jerimpen Ritual",
+    category: "cultural-experiences",
+    coordinates: [115.211490, -8.439629], // Perean Kangin Village, Tabanan
+    description: "A unique traditional ritual in Perean Kangin Village, where villagers settle disputes and restore harmony through symbolic games of chance and communal offerings.",
+    drivingTime: "Varies by location",
+    distance: "Varies by location",
+    pricing: { entry: "Free" },
+    specialEvents: ["Held during specific temple ceremonies"],
+    features: ["Dispute resolution ritual", "Games of chance", "Community offerings"],
+    images: ["mepalu-jerimpen-ritual.jpg"],
+    priority: 25
+  },
+  {
+    id: "siat-yeh-ritual",
+    name: "Siat Yeh Ritual",
+    category: "cultural-experiences",
+    coordinates: [115.3139597, -8.4861491], // Suwat Village, Gianyar
+    description: "A lively water fight ritual performed in Suwat Village, Gianyar, where villagers splash each other to symbolize purification, unity, and the blessing of water.",
+    drivingTime: "Varies by location",
+    distance: "Varies by location",
+    pricing: { entry: "Free" },
+    specialEvents: ["Held annually during the dry season"],
+    features: ["Water fight", "Purification ritual", "Community celebration"],
+    images: ["siat-yeh-ritual.jpg"],
+    priority: 26
+  },
 ];
 
 // Export the destinations data

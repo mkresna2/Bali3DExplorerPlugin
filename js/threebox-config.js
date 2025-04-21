@@ -68,7 +68,7 @@ class ThreeLibreConfig {
         center: [115.188919, -8.409518], // Center of Bali
         zoom: 9,
         pitch: 60, // More tilted view for better 3D effect
-        bearing: 30, // Slight rotation for better perspective
+        bearing: 0, // Set to 0 to match resetMapView
         attributionControl: false // We'll add our own attribution
       });
 
