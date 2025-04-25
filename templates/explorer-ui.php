@@ -28,6 +28,20 @@
         </aside>
         <section class="map-container">
             <div id="map"></div>
+            <div class="map-controls">
+                <button class="control-btn zoom-in" aria-label="Zoom In">+</button>
+                <button class="control-btn zoom-out" aria-label="Zoom Out">-</button>
+                <button class="control-btn rotate" aria-label="Rotate">⟳</button>
+                <button class="control-btn reset" aria-label="Reset">⭯</button>
+                <button class="control-btn pan-up" aria-label="Pan Up">&#8593;</button>
+                <button class="control-btn pan-down" aria-label="Pan Down">&#8595;</button>
+                <button class="control-btn pan-left" aria-label="Pan Left">&#8592;</button>
+                <button class="control-btn pan-right" aria-label="Pan Right">&#8594;</button>
+            </div>
         </section>
+        <div class="info-panel">
+            <button class="close-btn" aria-label="Close">&times;</button>
+            <div class="info-content"></div>
+        </div>
     </main>
 </div>

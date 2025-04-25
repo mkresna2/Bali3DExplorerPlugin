@@ -100,7 +100,18 @@ class ThreeLibreConfig {
       }), 'bottom-left');
       
       // Add fullscreen control
-      this.map.addControl(new maplibregl.FullscreenControl({ container: container.parentNode }), 'top-right');
+      if (typeof maplibregl.FullscreenControl === 'function') {
+        this.map.addControl(new maplibregl.FullscreenControl({ container: container.parentNode }), 'top-right');
+        setTimeout(() => {
+          const fsBtn = container.parentNode.querySelector('.maplibregl-ctrl-fullscreen');
+          if (fsBtn) {
+          } else {
+            console.warn('Fullscreen button NOT found in DOM after addControl.');
+          }
+        }, 1000);
+      } else {
+        console.error('maplibregl.FullscreenControl is not available!');
+      }
 
       // Improve pointer event handling for smoother dragging
       container.style.pointerEvents = 'auto';

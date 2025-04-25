@@ -19,34 +19,15 @@
     
     <!-- Initialize the application -->
     <script>
-        // Initialize app when DOM is loaded
-        document.addEventListener('DOMContentLoaded', () => {
+        // Initialize app when ALL resources (including CSS) are loaded
+        window.onload = function() {
             if (typeof initApp === 'function') {
                 initApp();
             }
-        });
+        };
     </script>
 </head>
 <body>
-    <!-- <header>
-        <div class="logo">
-            <img src="assets/images/logo.png" alt="Bali 3D Explorer">
-            <h1>Bali 3D Explorer</h1>
-        </div>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="#" class="active">Explore</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-        <button class="mobile-menu-toggle" aria-label="Toggle menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-    </header> -->
-    
     <main>
         <aside class="destination-sidebar">
             <div class="search-container">
@@ -70,120 +51,7 @@
             </div>
             
             <div class="destination-list">
-                <div class="category-section" id="featured">
-                    <h3>Featured Attractions</h3>
-                    <ul>
-                        <li class="destination-item" data-id="sakala-resort">
-                            <div class="destination-thumb" style="background-image: url('assets/images/sakala-resort.jpg');"></div>
-                            <div class="destination-info">
-                                <h4>Sakala Resort Bali</h4>
-                                <p class="distance">Starting point</p>
-                            </div>
-                        </li>
-                        <li class="destination-item" data-id="bali-cliff">
-                            <div class="destination-thumb" style="background-image: url('assets/images/bali-cliff.jpg');"></div>
-                            <div class="destination-info">
-                                <h4>Bali Cliff</h4>
-                                <p class="distance">35 min drive</p>
-                            </div>
-                        </li>
-                        <li class="destination-item" data-id="uluwatu-temple">
-                            <div class="destination-thumb" style="background-image: url('assets/images/uluwatu-temple.jpg');"></div>
-                            <div class="destination-info">
-                                <h4>Uluwatu Temple</h4>
-                                <p class="distance">45 min drive</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="category-section" id="beaches">
-                    <h3>Top Beaches</h3>
-                    <ul></ul>
-                </div>
-                
-                <div class="category-section" id="beach-clubs">
-                    <h3>Beach Clubs</h3>
-                    <ul>
-                        <li class="destination-item" data-id="reef-beach-club">
-                            <div class="destination-thumb" style="background-image: url('assets/images/reef-beach-club.jpg');"></div>
-                            <div class="destination-info">
-                                <h4>Reef Beach Club</h4>
-                                <p class="distance">10 min drive</p>
-                            </div>
-                        </li>
-                        <li class="destination-item" data-id="omnia-dayclub">
-                            <div class="destination-thumb" style="background-image: url('assets/images/omnia-dayclub.jpg');"></div>
-                            <div class="destination-info">
-                                <h4>OMNIA Dayclub</h4>
-                                <p class="distance">40 min drive</p>
-                            </div>
-                        </li>
-                        <li class="destination-item" data-id="ulu-cliff-house">
-                            <div class="destination-thumb" style="background-image: url('assets/images/ulu-cliff-house.jpg');"></div>
-                            <div class="destination-info">
-                                <h4>Ulu Cliff House</h4>
-                                <p class="distance">50 min drive</p>
-                            </div>
-                        </li>
-                        <li class="destination-item" data-id="sundays-beach-club">
-                            <div class="destination-thumb" style="background-image: url('assets/images/sundays-beach-club.jpg');"></div>
-                            <div class="destination-info">
-                                <h4>Sundays Beach Club</h4>
-                                <p class="distance">45 min drive</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="category-section" id="water-sports">
-                    <h3>Water Sports</h3>
-                    <ul>
-                        <li class="destination-item" data-id="tanjung-benoa-watersports">
-                            <div class="destination-thumb" style="background-image: url('assets/images/tanjung-benoa-watersports.jpg');"></div>
-                            <div class="destination-info">
-                                <h4>Tanjung Benoa Water Sports</h4>
-                                <p class="distance">5 min drive</p>
-                            </div>
-                        </li>
-                        <li class="destination-item" data-id="nusa-dua-watersports">
-                            <div class="destination-thumb" style="background-image: url('assets/images/nusa-dua-watersports.jpg');"></div>
-                            <div class="destination-info">
-                                <h4>Nusa Dua Water Sports</h4>
-                                <p class="distance">15 min drive</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="category-section" id="cultural">
-                    <h3>Cultural Sites</h3>
-                    <ul>
-                        <li class="destination-item" data-id="museum-pasifika">
-                            <div class="destination-thumb" style="background-image: url('assets/images/museum-pasifika.jpg');"></div>
-                            <div class="destination-info">
-                                <h4>Museum PASIFIKA</h4>
-                                <p class="distance">15 min drive</p>
-                            </div>
-                        </li>
-                        <li class="destination-item" data-id="caow-eng-bio-temple">
-                            <div class="destination-thumb" style="background-image: url('assets/images/caow-eng-bio-temple.jpg');"></div>
-                            <div class="destination-info">
-                                <h4>Caow Eng Bio Temple</h4>
-                                <p class="distance">10 min drive</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="category-section" id="cultural-experiences">
-                    <h3>Cultural Experiences</h3>
-                    <ul></ul>
-                </div>
-                
-                <div class="category-section" id="traditional-villages">
-                    <h3>Balinese Traditional Villages</h3>
-                    <ul></ul>
-                </div>
+                <!-- Destination sections will be rendered dynamically by JS -->
             </div>
         </aside>
         

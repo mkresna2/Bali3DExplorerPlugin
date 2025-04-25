@@ -18,7 +18,7 @@
     --primary-light: #eaf6fb;
     
     /* Dimensions */
-    --header-height: 20px;
+    --header-height: 60px;
     --sidebar-width: 320px;
     --sidebar-mobile-height: 200px;
 }
@@ -170,23 +170,17 @@ main {
 }
 
 .map-container {
-    flex: 1;
-    position: relative;
-    overflow: hidden;
-    height: 100%;
-    min-height: 500px;
-    display: block;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
 
 #map {
     width: 100%;
     height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 5;
-    background-color: #e8f4f8; /* Light blue background as fallback */
-    display: block !important;
 }
 
 .maplibregl-canvas-container {
@@ -270,8 +264,8 @@ main {
 /* Map Controls Styling */
 .map-controls {
     position: absolute;
-    top: 190px;
-    right: 8px;
+    top: 150px;
+    right: 18px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -285,7 +279,7 @@ main {
     box-shadow: 0 2px 8px var(--shadow);
     width: 44px;
     height: 44px;
-    margin: 0;
+    margin: 0px;
     padding: 0;
     display: flex;
     align-items: center;
@@ -307,16 +301,132 @@ main {
     outline: none;
 }
 
-@media (max-width: 768px) {
-    .map-controls {
-        top: 10px;
-        right: 10px;
-        gap: 8px;
+/* Force MapLibre controls to be visible above all panels */
+.maplibregl-ctrl,
+.maplibregl-ctrl-top-right,
+.maplibregl-ctrl-group,
+.maplibregl-ctrl-fullscreen {
+    z-index: 4000 !important;
+}
+
+.maplibregl-ctrl.maplibregl-ctrl-group {
+    position: absolute !important;
+    top: 16px !important;
+    right: 48px !important;
+    box-shadow: 0 2px 8px var(--shadow);
+}
+
+/* Fullscreen Button Styling */
+.maplibregl-ctrl.maplibregl-ctrl-group {
+    position: absolute !important;
+    top: 16px !important;
+    right: 48px !important;
+    z-index: 3000 !important;
+    box-shadow: 0 2px 8px var(--shadow);
+}
+
+.maplibregl-ctrl-fullscreen {
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.4rem;
+    box-shadow: 0 2px 8px var(--shadow);
+    z-index: 3001 !important;
+}
+
+@media (min-width: 769px) {
+    .destination-sidebar {
+        position: absolute;
+        top: var(--header-height);
+        left: 0;
+        bottom: 0;
+        height: calc(100vh - var(--header-height));
+        width: var(--sidebar-width);
+        transform: translateY(0) !important;
+        display: block !important;
+        z-index: 1000;
+        border-right: 1px solid var(--shadow);
+        border-bottom: none;
     }
-    .control-btn {
-        width: 38px;
-        height: 38px;
-        font-size: 1.1rem;
+    .map-container {
+        margin-left: var(--sidebar-width);
+        width: calc(100vw - var(--sidebar-width));
+    }
+}
+
+@media (max-width: 768px) {
+    .main-nav {
+        display: none;
+    }
+    
+    .mobile-menu-toggle {
+        display: block;
+    }
+    
+    main {
+        flex-direction: column;
+    }
+    
+    .destination-sidebar {
+        width: 100%;
+        height: var(--sidebar-mobile-height);
+        border-right: none;
+        border-bottom: 1px solid var(--shadow);
+        transform: translateY(0);
+        transition: transform 0.3s ease;
+    }
+    .destination-sidebar:not(.expanded) {
+        transform: translateY(-100%);
+    }
+    body.menu-open .destination-sidebar,
+    .destination-sidebar.expanded {
+        transform: translateY(0);
+    }
+    
+    .map-container {
+        height: calc(100vh - var(--header-height) - var(--sidebar-mobile-height));
+    }
+    
+    .info-panel {
+        width: 90%;
+        left: 5%;
+        right: 5%;
+    }
+}
+
+@media (max-width: 992px) {
+    :root {
+        --sidebar-width: 280px;
+    }
+    
+    .info-panel {
+        width: 300px;
+    }
+}
+
+@media (max-width: 576px) {
+    :root {
+        --header-height: 60px;
+        --sidebar-mobile-height: 180px;
+    }
+    
+    .logo h1 {
+        font-size: 1.2rem;
+    }
+    
+    .destination-thumb {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .info-image {
+        height: 150px;
     }
 }
 
@@ -379,10 +489,14 @@ main {
 /* Destination List */
 .destination-list {
     margin-bottom: 2rem;
+    display: block;
+    max-height: 70vh;
+    overflow-y: auto;
 }
 
 .category-section {
     margin-bottom: 2rem;
+    display: block;
 }
 
 .destination-item {
@@ -420,7 +534,7 @@ main {
 
 /* Info Panel */
 .info-panel {
-    position: absolute;
+    position: fixed;
     top: 1rem;
     right: 4rem;
     width: 350px;
@@ -429,13 +543,18 @@ main {
     border-radius: 8px;
     box-shadow: 0 4px 12px var(--shadow);
     overflow-y: auto;
-    transform: translateX(400px);
+    transform: translateX(400px); /* Hidden by default, slides in when active */
     transition: transform 0.3s ease;
-    z-index: 10;
+    z-index: 2000;
+    display: block;
+    opacity: 0;
+    pointer-events: none;
 }
 
 .info-panel.active {
     transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .close-btn {
@@ -501,63 +620,3 @@ main {
 }
 
 /* Responsive Styles */
-@media (max-width: 992px) {
-    :root {
-        --sidebar-width: 280px;
-    }
-    
-    .info-panel {
-        width: 300px;
-    }
-}
-
-@media (max-width: 768px) {
-    .main-nav {
-        display: none;
-    }
-    
-    .mobile-menu-toggle {
-        display: block;
-    }
-    
-    main {
-        flex-direction: column;
-    }
-    
-    .destination-sidebar {
-        width: 100%;
-        height: var(--sidebar-mobile-height);
-        border-right: none;
-        border-bottom: 1px solid var(--shadow);
-    }
-    
-    .map-container {
-        height: calc(100vh - var(--header-height) - var(--sidebar-mobile-height));
-    }
-    
-    .info-panel {
-        width: 90%;
-        left: 5%;
-        right: 5%;
-    }
-}
-
-@media (max-width: 576px) {
-    :root {
-        --header-height: 60px;
-        --sidebar-mobile-height: 180px;
-    }
-    
-    .logo h1 {
-        font-size: 1.2rem;
-    }
-    
-    .destination-thumb {
-        width: 50px;
-        height: 50px;
-    }
-    
-    .info-image {
-        height: 150px;
-    }
-}

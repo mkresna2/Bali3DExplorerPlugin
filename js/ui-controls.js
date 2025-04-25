@@ -58,9 +58,13 @@ class UIControls {
    */
   addEventListeners() {
     // Close info panel
-    this.closePanelBtn.addEventListener('click', () => {
-      this.hideInfoPanel();
-    });
+    if (this.closePanelBtn) {
+      this.closePanelBtn.addEventListener('click', () => {
+        this.hideInfoPanel();
+      });
+    } else {
+      console.warn('UIControls: .close-btn element not found in DOM. Close panel button will not work.');
+    }
 
     // Update destinationItems before adding listeners
     this.updateDestinationItems();
@@ -89,6 +93,15 @@ class UIControls {
         this.filterDestinations(categoryId);
         // Update destinationItems after filtering
         this.updateDestinationItems();
+        // --- FIX: Show all destination items in the selected section ---
+        const sections = document.querySelectorAll('.category-section');
+        sections.forEach(section => {
+          if (section.id === categoryId || categoryId === 'all') {
+            // Show all destination items in this section
+            const items = section.querySelectorAll('.destination-item');
+            items.forEach(item => item.style.display = 'flex');
+          }
+        });
       });
     });
 
@@ -162,17 +175,17 @@ class UIControls {
     
     // Use MapLibre to navigate
     if (threeboxConfig && threeboxConfig.isInitialized) {
-      console.log('Using MapLibre for navigation');
+      //console.log('Using MapLibre for navigation');
       threeboxConfig.navigateToDestination(destination);
     } else {
-      console.log('Map not yet initialized, waiting...');
+      //console.log('Map not yet initialized, waiting...');
       // Wait for map to be initialized
       const waitForInitialization = () => {
         if (threeboxConfig && threeboxConfig.isInitialized) {
-          console.log('Map now initialized, navigating...');
+          //console.log('Map now initialized, navigating...');
           threeboxConfig.navigateToDestination(destination);
         } else {
-          console.log('Still waiting for map initialization...');
+          //console.log('Still waiting for map initialization...');
           setTimeout(waitForInitialization, 300);
         }
       };
@@ -198,7 +211,7 @@ class UIControls {
         <p class="category">${this.formatCategory(destination.category)}</p>
       </div>
       
-      <div class="info-image" style="background-image: url('assets/images/${destination.images[0]}');"></div>
+      <div class="info-image" style="background-image: url('/wp-content/plugins/Bali3DExplorer/assets/images/${destination.images[0]}');"></div>
       
       <div class="info-detail">
         <p>${destination.description}</p>
@@ -474,21 +487,51 @@ class UIControls {
    */
   renderDestinationList() {
     const container = document.querySelector('.destination-list');
-    const categories = ['featured', 'beaches', 'beach-clubs', 'water-sports', 'cultural', 'cultural-experiences', 'traditional-villages'];
+    if (!container) {
+      console.error('[DEBUG] .destination-list container NOT FOUND!');
+      return;
+    }
+    if (typeof destinations === 'undefined') {
+      console.error('[DEBUG] destinations variable is UNDEFINED!');
+      return;
+    }
+    if (!Array.isArray(destinations)) {
+      console.error('[DEBUG] destinations is not an array:', destinations);
+      return;
+    }
+    
+    // Clear container
+    container.innerHTML = '';
+    const categories = [
+      { id: 'featured', label: 'Featured Attractions' },
+      { id: 'beaches', label: 'Top Beaches' },
+      { id: 'beach-clubs', label: 'Beach Clubs' },
+      { id: 'water-sports', label: 'Water Sports' },
+      { id: 'cultural', label: 'Cultural Sites' },
+      { id: 'cultural-experiences', label: 'Cultural Experiences' },
+      { id: 'traditional-villages', label: 'Balinese Traditional Villages' }
+    ];
     categories.forEach(category => {
-      const section = container.querySelector(`.category-section#${category}`);
-      if (!section) return;
-      const ul = section.querySelector('ul');
-      const dests = destinations.filter(d => d.category === category);
+      // Create section
+      const section = document.createElement('div');
+      section.className = 'category-section';
+      section.id = category.id;
+      // Heading
+      const h3 = document.createElement('h3');
+      h3.textContent = category.label;
+      section.appendChild(h3);
+      // List
+      const ul = document.createElement('ul');
+      const dests = destinations.filter(d => d.category === category.id);
       dests.sort((a, b) => a.priority - b.priority);
-      ul.innerHTML = '';
       dests.forEach(d => {
         const li = document.createElement('li');
         li.classList.add('destination-item');
         li.dataset.id = d.id;
         const thumb = document.createElement('div');
         thumb.classList.add('destination-thumb');
-        thumb.style.backgroundImage = `url('assets/images/${d.images[0]}')`;
+        // Use absolute path for images to ensure they load correctly
+        thumb.style.backgroundImage = `url('/wp-content/plugins/Bali3DExplorer/assets/images/${d.images[0]}')`;
         const info = document.createElement('div');
         info.classList.add('destination-info');
         const h4 = document.createElement('h4');
@@ -513,6 +556,8 @@ class UIControls {
         li.appendChild(info);
         ul.appendChild(li);
       });
+      section.appendChild(ul);
+      container.appendChild(section);
     });
   }
 }
