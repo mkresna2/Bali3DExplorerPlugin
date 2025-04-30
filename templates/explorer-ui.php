@@ -40,10 +40,17 @@
                 <button class="control-btn pan-left" aria-label="Pan Left">&#8592;</button>
                 <button class="control-btn pan-right" aria-label="Pan Right">&#8594;</button>
             </div>
+            <div class="info-panel">
+                <button class="close-btn" aria-label="Close">&times;</button>
+                <div class="info-tabs">
+                    <button class="info-tab-btn active" data-tab="destination">Destination Info</button>
+                    <button class="info-tab-btn" data-tab="ai-itinerary">AI Itinerary</button>
+                </div>
+                <div class="info-tab-content">
+                    <div class="info-content info-content-destination active"><!-- Destination details will be loaded here --></div>
+                    <div class="info-content info-content-ai" style="display:none;"><!-- AI Itinerary will be loaded here --></div>
+                </div>
+            </div>
         </section>
-        <div class="info-panel">
-            <button class="close-btn" aria-label="Close">&times;</button>
-            <div class="info-content"></div>
-        </div>
     </main>
 </div>

@@ -398,12 +398,13 @@ main {
 }
 
 .info-panel {
-    position: fixed;
-    top: var(--header-height);
-    right: 4rem;
-    width: 350px;
-    max-height: calc(100vh - var(--header-height) - 2rem);
-    background-color: var(--primary-white);
+    position: absolute;
+    top: 3.5rem;
+    right: 4.5rem;
+    width: 370px;
+    max-width: 100vw;
+    max-height: calc(100vh - 5rem);
+    background: var(--primary-white);
     border-radius: 8px;
     box-shadow: 0 4px 12px var(--shadow);
     overflow-y: auto;
@@ -415,6 +416,11 @@ main {
     display: none;
 }
 
+.info-content {
+    padding: 1.5rem;
+    background: transparent;
+}
+
 .info-panel.active {
     display: block;
     opacity: 1;
@@ -423,18 +429,59 @@ main {
 
 .close-btn {
     position: absolute;
-    top: 0.5rem;
-    right: 0.5rem;
+    top: 0.6rem;
+    right: 0.7rem;
     background: none;
     border: none;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     cursor: pointer;
-    color: var(--text-medium);
-    z-index: 1;
+    color: var(--text-dark);
+    z-index: 2;
+    padding: 0.2rem 0.6rem 0.2rem 0.6rem;
+    border-radius: 50%;
+    line-height: 1;
+    transition: background 0.15s;
 }
 
-.info-content {
-    padding: 1.5rem;
+.close-btn:hover {
+    background: var(--primary-light);
+}
+
+.info-tabs {
+    margin-top: 2.5rem;
+}
+
+.ai-itinerary-btn {
+    display: none;
+}
+
+.info-tab-btn {
+    flex: 1 1 0;
+    background: none;
+    border: none;
+    outline: none;
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    color: var(--text-dark);
+    cursor: pointer;
+    border-bottom: 2.5px solid transparent;
+    transition: border-color 0.2s, color 0.2s, background 0.2s;
+    font-weight: 500;
+    border-radius: 8px 8px 0 0;
+}
+
+.info-tab-btn.active {
+    color: var(--accent-blue);
+    border-bottom: 2.5px solid var(--accent-blue);
+    background: var(--primary-light);
+}
+
+.info-tab-content {
+    min-height: 120px;
+}
+
+.info-content[style*="display: none"] {
+    display: none !important;
 }
 
 .info-header {

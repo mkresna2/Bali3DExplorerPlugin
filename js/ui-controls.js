@@ -6,8 +6,11 @@
 class UIControls {
   constructor() {
     this.infoPanel = null;
-    this.infoPanelContent = null;
+    this.infoPanelContentDestination = null;
+    this.infoPanelContentAI = null;
     this.closePanelBtn = null;
+    this.infoTabBtns = null;
+    this.aiItineraryBtn = null;
     this.destinationItems = null;
     this.categoryLinks = null;
     this.mobileMenuToggle = null;
@@ -29,8 +32,10 @@ class UIControls {
 
     // Get DOM elements
     this.infoPanel = document.querySelector('.info-panel');
-    this.infoPanelContent = document.querySelector('.info-content');
+    this.infoPanelContentDestination = document.querySelector('.info-content-destination');
+    this.infoPanelContentAI = document.querySelector('.info-content-ai');
     this.closePanelBtn = document.querySelector('.close-btn');
+    this.infoTabBtns = document.querySelectorAll('.info-tab-btn');
     this.categoryLinks = document.querySelectorAll('.categories a');
     this.mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     this.sidebar = document.querySelector('.destination-sidebar');
@@ -66,86 +71,36 @@ class UIControls {
       console.warn('UIControls: .close-btn element not found in DOM. Close panel button will not work.');
     }
 
+    // Info tab switching
+    if (this.infoTabBtns && this.infoTabBtns.length === 2) {
+      this.infoTabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          this.infoTabBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          const tab = btn.getAttribute('data-tab');
+          if (tab === 'destination') {
+            this.infoPanelContentDestination.style.display = '';
+            this.infoPanelContentDestination.classList.add('active');
+            this.infoPanelContentAI.style.display = 'none';
+            this.infoPanelContentAI.classList.remove('active');
+          } else {
+            this.infoPanelContentAI.style.display = '';
+            this.infoPanelContentAI.classList.add('active');
+            this.infoPanelContentDestination.style.display = 'none';
+            this.infoPanelContentDestination.classList.remove('active');
+            this.showAIItinerary();
+          }
+        });
+      });
+    }
+
     // Update destinationItems before adding listeners
     this.updateDestinationItems();
     this.destinationItems.forEach(item => {
       item.addEventListener('click', () => {
         const destinationId = item.dataset.id;
         const destination = destinations.find(d => d.id === destinationId);
-        
-        if (destination) {
-          this.navigateToDestination(destination);
-        }
-      });
-    });
-
-    // Category filter clicks
-    this.categoryLinks.forEach(link => {
-      link.addEventListener('click', (e) => {
-        e.preventDefault();
-        // Remove active class from all links
-        this.categoryLinks.forEach(l => l.classList.remove('active'));
-        // Add active class to clicked link
-        link.classList.add('active');
-        // Get category ID from href
-        const categoryId = link.getAttribute('href').substring(1);
-        // Show/hide destination sections
-        this.filterDestinations(categoryId);
-        // Update destinationItems after filtering
-        this.updateDestinationItems();
-        // --- FIX: Show all destination items in the selected section ---
-        const sections = document.querySelectorAll('.category-section');
-        sections.forEach(section => {
-          if (section.id === categoryId || categoryId === 'all') {
-            // Show all destination items in this section
-            const items = section.querySelectorAll('.destination-item');
-            items.forEach(item => item.style.display = 'flex');
-          }
-        });
-      });
-    });
-
-    // Mobile menu toggle
-    if (this.mobileMenuToggle) {
-      this.mobileMenuToggle.addEventListener('click', () => {
-        document.body.classList.toggle('menu-open');
-        // Toggle sidebar height on mobile
-        if (window.innerWidth <= 768) {
-          this.sidebar.classList.toggle('expanded');
-        }
-      });
-    }
-
-    // Map controls
-    this.mapControls.forEach(control => {
-      control.addEventListener('click', () => {
-        const action = control.classList[1]; // Get the second class (zoom-in, zoom-out, etc.)
-        switch (action) {
-          case 'zoom-in':
-            this.zoomMap(1);
-            break;
-          case 'zoom-out':
-            this.zoomMap(-1);
-            break;
-          case 'rotate':
-            this.rotateMap();
-            break;
-          case 'reset':
-            this.resetMapView();
-            break;
-          case 'pan-up':
-            this.panMap(0, -this.panDelta);
-            break;
-          case 'pan-down':
-            this.panMap(0, this.panDelta);
-            break;
-          case 'pan-left':
-            this.panMap(-this.panDelta, 0);
-            break;
-          case 'pan-right':
-            this.panMap(this.panDelta, 0);
-            break;
-        }
+        this.showDestinationInfo(destination);
       });
     });
 
@@ -203,94 +158,121 @@ class UIControls {
    * Show destination information in the info panel
    * @param {Object} destination - Destination data
    */
-  showDestinationInfo(destination) {
+  async showDestinationInfo(destination) {
     // Create HTML content for info panel
     let html = `
       <div class="info-header">
         <h2>${destination.name}</h2>
         <p class="category">${this.formatCategory(destination.category)}</p>
       </div>
-      
       <div class="info-image" style="background-image: url('/wp-content/plugins/Bali3DExplorer/assets/images/${destination.images[0]}');"></div>
-      
       <div class="info-detail">
         <p>${destination.description}</p>
       </div>
-      
       <div class="info-detail">
-        <h3>Location Details</h3>
-        <p><strong>Distance:</strong> ${destination.distance}</p>
-        <p><strong>Driving Time:</strong> ${destination.drivingTime}</p>
+        <h3>Details</h3>
+        <ul>
+          <li><strong>Distance:</strong> ${destination.distance}</li>
+          <li><strong>Driving Time:</strong> ${destination.drivingTime}</li>
+          <li><strong>Operating Hours:</strong> ${destination.operatingHours}</li>
+          <li><strong>Entry Price:</strong> ${destination.pricing && destination.pricing.entry ? destination.pricing.entry : 'N/A'}</li>
+        </ul>
       </div>
     `;
-    
-    // Add operating hours
-    if (destination.operatingHours) {
-      html += `
-        <div class="info-detail">
-          <h3>Operating Hours</h3>
-          <p>${destination.operatingHours}</p>
-        </div>
-      `;
-    }
-    
-    // Add pricing information
-    if (destination.pricing) {
-      html += `
-        <div class="info-detail">
-          <h3>Pricing</h3>
-          <ul>
-      `;
-      
-      for (const [key, value] of Object.entries(destination.pricing)) {
-        html += `<li><strong>${this.formatPricingKey(key)}:</strong> ${value}</li>`;
-      }
-      
-      html += `
-          </ul>
-        </div>
-      `;
-    }
-    
-    // Add special events
-    if (destination.specialEvents && destination.specialEvents.length > 0) {
-      html += `\n      <div class=\"info-detail\">\n        <h3>Special Events</h3>\n        <ul>\n    `;
-      destination.specialEvents.forEach(event => {
-        if (typeof event === 'string') {
-          html += `<li>${event}</li>`;
-        } else if (typeof event === 'object' && event !== null) {
-          html += `<li><strong>${event.name || ''}</strong>${event.schedule ? `<br>${event.schedule}` : ''}${event.price ? `<br>${event.price}` : ''}</li>`;
-        }
-      });
-      html += `\n        </ul>\n      </div>\n    `;
-    }
-    
-    // Add features
     if (destination.features && destination.features.length > 0) {
       html += `
         <div class="info-detail">
           <h3>Features</h3>
           <ul>
       `;
-      
       destination.features.forEach(feature => {
         html += `<li>${feature}</li>`;
       });
-      
       html += `
           </ul>
         </div>
       `;
     }
-    
-    // Set content and show panel
-    this.infoPanelContent.innerHTML = html;
+    this.infoPanelContentDestination.innerHTML = html;
     this.infoPanel.classList.add('active');
+
+    // Activate the destination info tab when showing info
+    if (this.infoTabBtns && this.infoTabBtns.length === 2) {
+      this.infoTabBtns.forEach(b => b.classList.remove('active'));
+      this.infoTabBtns[0].classList.add('active');
+      this.infoPanelContentDestination.style.display = '';
+      this.infoPanelContentDestination.classList.add('active');
+      this.infoPanelContentAI.style.display = 'none';
+      this.infoPanelContentAI.classList.remove('active');
+    }
+
+    // Populate AI Itinerary tab with LLM-generated itinerary for this destination
+    this.populateAIItineraryWithDestination(destination);
 
     // Add close event listener to the close button every time info is shown
     const closeBtn = this.infoPanel.querySelector('.close-btn');
     if (closeBtn) {
       closeBtn.onclick = () => this.hideInfoPanel();
+    }
+  }
+
+  /**
+   * Populate AI Itinerary tab using LLM with this destination as a spot, based at Sakala Resort Bali
+   */
+  async populateAIItineraryWithDestination(destination) {
+    this.infoPanelContentAI.innerHTML = '<p><em>Generating itinerary with AI...</em></p>';
+    try {
+      const itinerary = await this.generateAIItinerary(destination);
+      this.infoPanelContentAI.innerHTML = `<h3>AI-Generated Tour Itinerary</h3><pre style="white-space:pre-wrap;">${itinerary}</pre>`;
+    } catch (err) {
+      this.infoPanelContentAI.innerHTML = '<p style="color:red;">Failed to generate itinerary. Please try again later.</p>';
+      console.error(err);
+    }
+  }
+
+  /**
+   * Generate AI itinerary using OpenRouter API
+   * @param {Object} destination - The selected destination to include in the itinerary
+   */
+  async generateAIItinerary(destination) {
+    // Compose a prompt for the LLM
+    const prompt = `Create a 3-day Bali tour itinerary based at Sakala Resort Bali. Include ${destination ? destination.name : 'a top destination'} as one of the main tour spots. Give each day's plan and highlight the visit to ${destination ? destination.name : 'the destination'}.`;
+
+    // OpenRouter API endpoint and key (replace YOUR_API_KEY with your actual key)
+    const apiUrl = 'https://openrouter.ai/api/v1/chat/completions';
+    const apiKey = 'YOUR_OPENROUTER_API_KEY'; // <-- REPLACE THIS with your actual key or load from secure config
+
+    // Prepare the request payload
+    const payload = {
+      model: 'openai/gpt-3.5-turbo',
+      messages: [
+        { role: 'system', content: 'You are a helpful Bali trip planner.' },
+        { role: 'user', content: prompt }
+      ],
+      max_tokens: 512,
+      temperature: 0.7
+    };
+
+    try {
+      const response = await fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${apiKey}`
+        },
+        body: JSON.stringify(payload)
+      });
+      if (!response.ok) {
+        throw new Error('OpenRouter API error: ' + response.status);
+      }
+      const data = await response.json();
+      const text = data.choices && data.choices[0] && data.choices[0].message && data.choices[0].message.content
+        ? data.choices[0].message.content.trim()
+        : 'No itinerary could be generated.';
+      return text;
+    } catch (err) {
+      console.error('Error calling OpenRouter API:', err);
+      return 'Failed to generate itinerary from AI.';
     }
   }
 
@@ -565,6 +547,23 @@ class UIControls {
       section.appendChild(ul);
       container.appendChild(section);
     });
+  }
+
+  /**
+   * Show AI Itinerary tab handler
+   * When user switches to AI tab, if empty, trigger generation
+   */
+  async showAIItinerary() {
+    if (!this.infoPanelContentAI.innerHTML || this.infoPanelContentAI.innerHTML.trim() === '' || this.infoPanelContentAI.innerHTML.includes('Generating')) {
+      this.infoPanelContentAI.innerHTML = '<p><em>Generating itinerary with AI...</em></p>';
+      try {
+        const itinerary = await this.generateAIItinerary();
+        this.infoPanelContentAI.innerHTML = `<h3>AI-Generated Itinerary</h3><pre style="white-space:pre-wrap;">${itinerary}</pre>`;
+      } catch (err) {
+        this.infoPanelContentAI.innerHTML = '<p style="color:red;">Failed to generate itinerary. Please try again later.</p>';
+        console.error(err);
+      }
+    }
   }
 }
 
