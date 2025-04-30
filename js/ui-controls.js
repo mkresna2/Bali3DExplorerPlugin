@@ -101,6 +101,7 @@ class UIControls {
         const destinationId = item.dataset.id;
         const destination = destinations.find(d => d.id === destinationId);
         this.showDestinationInfo(destination);
+        this.navigateToDestination(destination); // Trigger navigation on destination click
       });
     });
 
