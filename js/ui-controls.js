@@ -236,11 +236,10 @@ class UIControls {
    */
   async generateAIItinerary(destination) {
     // Compose a prompt for the LLM
-    const prompt = `Create a 3-day Bali tour itinerary based at Sakala Resort Bali. Include ${destination ? destination.name : 'a top destination'} as one of the main tour spots. Give each day's plan and highlight the visit to ${destination ? destination.name : 'the destination'}.`;
+    const prompt = `Create 2 different full-day Bali tour options that both depart from Sakala Resort Bali. Each tour must include ${destination ? destination.name : 'a top destination'} as one of the main tour spots. For each tour, think about other attractions or destinations that are on the same route or close by to this destination, and include them as stops. For each tour option, provide a detailed itinerary with recommended stops, timing, and activities throughout the day. Clearly label the two options as "Option 1" and "Option 2".`;
 
-    // OpenRouter API endpoint and key (replace YOUR_API_KEY with your actual key)
-    const apiUrl = 'https://openrouter.ai/api/v1/chat/completions';
-    const apiKey = 'YOUR_OPENROUTER_API_KEY'; // <-- REPLACE THIS with your actual key or load from secure config
+    // OpenRouter API endpoint and key (now proxied via PHP)
+    const apiUrl = 'js/openrouter-proxy.php'; // Use relative path to the PHP proxy
 
     // Prepare the request payload
     const payload = {
@@ -257,8 +256,7 @@ class UIControls {
       const response = await fetch(apiUrl, {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${apiKey}`
+          'Content-Type': 'application/json'
         },
         body: JSON.stringify(payload)
       });
