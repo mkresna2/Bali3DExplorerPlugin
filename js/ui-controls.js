@@ -142,6 +142,31 @@ class UIControls {
         });
       });
     }
+
+    // Add event listeners for map controls
+    if (this.mapControls) {
+      this.mapControls.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          if (btn.classList.contains('zoom-in')) {
+            this.zoomMap(1);
+          } else if (btn.classList.contains('zoom-out')) {
+            this.zoomMap(-1);
+          } else if (btn.classList.contains('rotate')) {
+            this.rotateMap();
+          } else if (btn.classList.contains('reset')) {
+            this.resetMapView();
+          } else if (btn.classList.contains('pan-up')) {
+            this.panMap(0, -this.panDelta);
+          } else if (btn.classList.contains('pan-down')) {
+            this.panMap(0, this.panDelta);
+          } else if (btn.classList.contains('pan-left')) {
+            this.panMap(-this.panDelta, 0);
+          } else if (btn.classList.contains('pan-right')) {
+            this.panMap(this.panDelta, 0);
+          }
+        });
+      });
+    }
   }
 
   /**
@@ -384,7 +409,7 @@ class UIControls {
           steps.push(content.substring(prevIdx, timeMatch.index).trim());
         }
         steps.push(`<strong>${timeMatch[1]}</strong>`);
-        prevIdx = timeMatch.index + timeMatch[1].length;
+        prevIdx = timeMatch.index;
       }
       if (prevIdx < content.length) {
         steps.push(content.substring(prevIdx).trim());
