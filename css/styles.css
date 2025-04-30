@@ -87,7 +87,7 @@ main {
     box-shadow: 2px 0 16px 0 rgba(58, 124, 165, 0.07);
     border-radius: 0 18px 18px 0;
     border-right: 1px solid var(--shadow);
-    padding: 2rem 1rem 1rem 1rem;
+    padding: 2rem 1rem 3rem 1rem;
     margin-top: 0;
     height: 100vh;
     display: flex;
@@ -113,9 +113,8 @@ main {
 
 .destination-list {
     flex: 1 1 auto;
-    overflow-y: auto;
     min-height: 0;
-    max-height: unset;
+    overflow: hidden;
 }
 
 .destination-sidebar::-webkit-scrollbar {
@@ -355,12 +354,14 @@ main {
     width: 2rem;
 }
 
-.category-section,
-.destination-list {
+.category-section {
     background: transparent;
     box-shadow: none;
     margin: 0;
-    padding: 0;
+    padding-bottom: 8rem;
+    max-height: 60vh;
+    overflow-y: auto;
+    min-height: 0;
 }
 
 .destination-item {
