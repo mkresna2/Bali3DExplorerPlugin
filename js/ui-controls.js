@@ -327,6 +327,8 @@ class UIControls {
     if (!rawText) return '<p>No itinerary could be generated.</p>';
     // Remove leading explanations or greetings
     rawText = rawText.replace(/^[^*\n]+here are two[^*\n]+\n?/i, '');
+    // Remove repeated Option headings (keep only the first per section)
+    rawText = rawText.replace(/(Option 1[\s\S]*?)(Option 1[\s\S]*)/i, '$1');
     // Split by Option headings (Option 1, Option 2, Option 3, ...)
     const optionRegex = /Option\s*\d+[:\.]?/gi;
     let options = [];
@@ -349,29 +351,67 @@ class UIControls {
       let optionTitle = titleMatch ? titleMatch[0].replace(/[:.]/, '').trim() : `Option ${i+1}`;
       // Remove the title from content
       let content = opt.replace(/Option\s*\d+[:\.]?/i, '');
-      // Split steps by lines starting with * or + or - or numbers, or double newlines
-      const stepRegex = /([*\-+]|\d+\.|\d+\)|\n\n)/g;
-      let steps = content.split(stepRegex).map(s => s.trim()).filter(s => s.length > 0);
-      // Merge bullet markers and their following text
+      // Remove duplicate headings like 'Here's a detailed itinerary for Option X'
+      content = content.replace(/here's a detailed itinerary for[^\n]*\n?/i, '');
+      // Extract and remove tour name (first line before any time or bullet)
+      let tourTitleMatch = content.match(/^([A-Za-z0-9 ,\-\(\)\/]+Tour.*?)\*?\*?\s*:?\s*(\n|$)/i);
+      let tourTitle = '';
+      if (tourTitleMatch) {
+        tourTitle = tourTitleMatch[1].replace(/\*+$/, '').trim();
+        content = content.replace(tourTitleMatch[0], '');
+      }
+      // Extract and remove Departure and Return lines
+      let departureMatch = content.match(/Departure[:\-]?\s*([\d: ]+[AP]M.*?)\*?\s*(\n|$)/i);
+      let departure = '';
+      if (departureMatch) {
+        departure = departureMatch[0].replace(/\*+$/, '').trim();
+        content = content.replace(departureMatch[0], '');
+      }
+      let returnMatch = content.match(/Return[:\-]?\s*([\d: ]+[AP]M.*?)\*?\s*(\n|$)/i);
+      let returnInfo = '';
+      if (returnMatch) {
+        returnInfo = returnMatch[0].replace(/\*+$/, '').trim();
+        content = content.replace(returnMatch[0], '');
+      }
+      // Remove stray asterisks and extra whitespace
+      content = content.replace(/\*+/g, '').replace(/\n{2,}/g, '\n').trim();
+      // Split by time headings (e.g., 8:00 AM, 13:00, etc.)
+      const timeStepRegex = /((?:[01]?\d|2[0-3]):[0-5]\d ?(?:AM|PM)?)/gi;
+      let steps = [];
+      let timeMatch, prevIdx = 0;
+      while ((timeMatch = timeStepRegex.exec(content)) !== null) {
+        if (timeMatch.index > prevIdx) {
+          steps.push(content.substring(prevIdx, timeMatch.index).trim());
+        }
+        steps.push(`<strong>${timeMatch[1]}</strong>`);
+        prevIdx = timeMatch.index + timeMatch[1].length;
+      }
+      if (prevIdx < content.length) {
+        steps.push(content.substring(prevIdx).trim());
+      }
+      // Merge time with following text
       let merged = [];
       for (let j = 0; j < steps.length; j++) {
-        if (/^[*\-+]|\d+\.|\d+\)/.test(steps[j])) {
-          if (j+1 < steps.length) {
-            merged.push(steps[j] + ' ' + steps[j+1]);
+        if (steps[j].startsWith('<strong>')) {
+          if (j+1 < steps.length && steps[j+1]) {
+            merged.push(`${steps[j]} ${steps[j+1]}`);
             j++;
           } else {
             merged.push(steps[j]);
           }
-        } else {
+        } else if (steps[j].length > 2) {
           merged.push(steps[j]);
         }
       }
-      // Remove empty or non-informative lines
       merged = merged.filter(line => line.replace(/[*\-+]/g,'').trim().length > 2);
-      // Format as HTML list
-      return `<div class="ai-itinerary-option"><h4>${optionTitle}</h4><ul>` +
-        merged.map(step => `<li>${step.replace(/^([*\-+]|\d+\.|\d+\))\s*/, '')}</li>`).join('') +
-        '</ul></div>';
+      // Format as HTML
+      let html = `<div class="ai-itinerary-option">`;
+      html += `<h4>${optionTitle}</h4>`;
+      if (tourTitle) html += `<div class="ai-tour-title">${tourTitle}</div>`;
+      if (departure) html += `<div class="ai-tour-meta"><span class="ai-label">${departure}</span></div>`;
+      if (returnInfo) html += `<div class="ai-tour-meta"><span class="ai-label">${returnInfo}</span></div>`;
+      html += `<ul>` + merged.map(step => `<li>${step.replace(/^([*\-+]\s*)/, '')}</li>`).join('') + `</ul></div>`;
+      return html;
     });
     // If no options found, fallback to pre
     if (!formattedOptions.length) {
