@@ -14,13 +14,13 @@
                 <div class="categories">
                     <h2>Categories</h2>
                     <ul>
-                        <li><a href="#featured" class="active">Featured Attractions</a></li>
-                        <li><a href="#beaches">Top Beaches</a></li>
-                        <li><a href="#beach-clubs">Beach Clubs</a></li>
-                        <li><a href="#water-sports">Water Sports</a></li>
-                        <li><a href="#cultural">Cultural Sites</a></li>
-                        <li><a href="#cultural-experiences">Cultural Experiences</a></li>
-                        <li><a href="#traditional-villages">Balinese Traditional Villages</a></li>
+                        <li><a href="javascript:void(0)" class="active" data-category="featured">Featured Attractions</a></li>
+                        <li><a href="javascript:void(0)" data-category="beaches">Top Beaches</a></li>
+                        <li><a href="javascript:void(0)" data-category="beach-clubs">Beach Clubs</a></li>
+                        <li><a href="javascript:void(0)" data-category="water-sports">Water Sports</a></li>
+                        <li><a href="javascript:void(0)" data-category="cultural">Cultural Sites</a></li>
+                        <li><a href="javascript:void(0)" data-category="cultural-experiences">Cultural Experiences</a></li>
+                        <li><a href="javascript:void(0)" data-category="traditional-villages">Balinese Traditional Villages</a></li>
                     </ul>
                 </div>
                 <div class="destination-list">

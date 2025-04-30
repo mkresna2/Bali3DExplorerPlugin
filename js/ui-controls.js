@@ -119,6 +119,28 @@ class UIControls {
     window.addEventListener('resize', () => {
       this.handleResize();
     });
+
+    // Remove previous category click listeners if needed (not tracked here)
+    // Add event listeners for category links
+    if (this.categoryLinks) {
+      this.categoryLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          // Remove active class from all and add to clicked
+          this.categoryLinks.forEach(l => l.classList.remove('active'));
+          link.classList.add('active');
+          const categoryId = link.getAttribute('data-category');
+          // Filter displayed destinations by category
+          document.querySelectorAll('.category-section').forEach(section => {
+            if (section.id === categoryId) {
+              section.style.display = '';
+            } else {
+              section.style.display = 'none';
+            }
+          });
+        });
+      });
+    }
   }
 
   /**
@@ -223,7 +245,7 @@ class UIControls {
     this.infoPanelContentAI.innerHTML = '<p><em>Generating itinerary with AI...</em></p>';
     try {
       const itinerary = await this.generateAIItinerary(destination);
-      this.infoPanelContentAI.innerHTML = `<h3>AI-Generated Tour Itinerary</h3><pre style="white-space:pre-wrap;">${itinerary}</pre>`;
+      this.infoPanelContentAI.innerHTML = `<h3>AI-Generated Tour Itinerary</h3>${itinerary}`;
     } catch (err) {
       this.infoPanelContentAI.innerHTML = '<p style="color:red;">Failed to generate itinerary. Please try again later.</p>';
       console.error(err);
@@ -239,16 +261,16 @@ class UIControls {
     const prompt = `Create 2 different full-day Bali tour options that both depart from Sakala Resort Bali. Each tour must include ${destination ? destination.name : 'a top destination'} as one of the main tour spots. For each tour, think about other attractions or destinations that are on the same route or close by to this destination, and include them as stops. For each tour option, provide a detailed itinerary with recommended stops, timing, and activities throughout the day. Clearly label the two options as "Option 1" and "Option 2".`;
 
     // OpenRouter API endpoint and key (now proxied via PHP)
-    const apiUrl = 'js/openrouter-proxy.php'; // Use relative path to the PHP proxy
+    const apiUrl = '/wp-content/plugins/Bali3DExplorer/js/openrouter-proxy.php'; // Use absolute path for WordPress plugin
 
     // Prepare the request payload
     const payload = {
-      model: 'openai/gpt-3.5-turbo',
+      model: 'meta-llama/llama-4-scout:free',
       messages: [
         { role: 'system', content: 'You are a helpful Bali trip planner.' },
         { role: 'user', content: prompt }
       ],
-      max_tokens: 512,
+      max_tokens: 2048,
       temperature: 0.7
     };
 
@@ -260,18 +282,101 @@ class UIControls {
         },
         body: JSON.stringify(payload)
       });
+      let resultText = '';
       if (!response.ok) {
-        throw new Error('OpenRouter API error: ' + response.status);
+        // Try to extract error details from response
+        let errorMsg = `Error: ${response.status} ${response.statusText}`;
+        try {
+          const errorData = await response.json();
+          errorMsg += errorData.error ? `\nDetails: ${errorData.error}` : `\n${JSON.stringify(errorData)}`;
+        } catch (jsonErr) {
+          try {
+            const textData = await response.text();
+            errorMsg += `\n${textData}`;
+          } catch (textErr) {
+            // Ignore
+          }
+        }
+        throw new Error(errorMsg);
+      } else {
+        // Try to parse response JSON for the itinerary
+        const data = await response.json();
+        // OpenRouter API sometimes returns content in reasoning if content is empty
+        if (data.choices && data.choices[0] && data.choices[0].message) {
+          const msg = data.choices[0].message;
+          resultText = msg.content && msg.content.trim() ? msg.content : (msg.reasoning && msg.reasoning.trim() ? msg.reasoning : JSON.stringify(data));
+        } else {
+          resultText = JSON.stringify(data);
+        }
       }
-      const data = await response.json();
-      const text = data.choices && data.choices[0] && data.choices[0].message && data.choices[0].message.content
-        ? data.choices[0].message.content.trim()
-        : 'No itinerary could be generated.';
-      return text;
+      return this.formatAIItinerary(resultText);
     } catch (err) {
+      // Surface the error message in the UI and console
       console.error('Error calling OpenRouter API:', err);
-      return 'Failed to generate itinerary from AI.';
+      throw err;
     }
+  }
+
+  /**
+   * Format the AI-generated itinerary string as user-friendly HTML
+   * @param {string} rawText
+   * @returns {string} HTML
+   */
+  formatAIItinerary(rawText) {
+    if (!rawText) return '<p>No itinerary could be generated.</p>';
+    // Remove leading explanations or greetings
+    rawText = rawText.replace(/^[^*\n]+here are two[^*\n]+\n?/i, '');
+    // Split by Option headings (Option 1, Option 2, Option 3, ...)
+    const optionRegex = /Option\s*\d+[:\.]?/gi;
+    let options = [];
+    let match;
+    let lastIndex = 0;
+    while ((match = optionRegex.exec(rawText)) !== null) {
+      if (match.index > lastIndex) {
+        options.push(rawText.substring(lastIndex, match.index));
+      }
+      lastIndex = match.index;
+    }
+    // Push the last option
+    if (lastIndex < rawText.length) {
+      options.push(rawText.substring(lastIndex));
+    }
+    // Clean and format each option
+    const formattedOptions = options.map((opt, i) => {
+      // Get the option title
+      const titleMatch = opt.match(/Option\s*\d+[:\.]?/i);
+      let optionTitle = titleMatch ? titleMatch[0].replace(/[:.]/, '').trim() : `Option ${i+1}`;
+      // Remove the title from content
+      let content = opt.replace(/Option\s*\d+[:\.]?/i, '');
+      // Split steps by lines starting with * or + or - or numbers, or double newlines
+      const stepRegex = /([*\-+]|\d+\.|\d+\)|\n\n)/g;
+      let steps = content.split(stepRegex).map(s => s.trim()).filter(s => s.length > 0);
+      // Merge bullet markers and their following text
+      let merged = [];
+      for (let j = 0; j < steps.length; j++) {
+        if (/^[*\-+]|\d+\.|\d+\)/.test(steps[j])) {
+          if (j+1 < steps.length) {
+            merged.push(steps[j] + ' ' + steps[j+1]);
+            j++;
+          } else {
+            merged.push(steps[j]);
+          }
+        } else {
+          merged.push(steps[j]);
+        }
+      }
+      // Remove empty or non-informative lines
+      merged = merged.filter(line => line.replace(/[*\-+]/g,'').trim().length > 2);
+      // Format as HTML list
+      return `<div class="ai-itinerary-option"><h4>${optionTitle}</h4><ul>` +
+        merged.map(step => `<li>${step.replace(/^([*\-+]|\d+\.|\d+\))\s*/, '')}</li>`).join('') +
+        '</ul></div>';
+    });
+    // If no options found, fallback to pre
+    if (!formattedOptions.length) {
+      return `<pre style="white-space:pre-wrap;">${rawText}</pre>`;
+    }
+    return formattedOptions.join('');
   }
 
   /**
@@ -497,6 +602,21 @@ class UIControls {
       { id: 'cultural-experiences', label: 'Cultural Experiences' },
       { id: 'traditional-villages', label: 'Balinese Traditional Villages' }
     ];
+    // Render category links in sidebar
+    const categoriesContainer = document.querySelector('.categories ul');
+    if (categoriesContainer) {
+      categoriesContainer.innerHTML = '';
+      categories.forEach((category, idx) => {
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.href = 'javascript:void(0)';
+        a.setAttribute('data-category', category.id);
+        a.textContent = category.label;
+        if (idx === 0) a.classList.add('active');
+        li.appendChild(a);
+        categoriesContainer.appendChild(li);
+      });
+    }
     categories.forEach(category => {
       // Create section
       const section = document.createElement('div');
@@ -545,6 +665,8 @@ class UIControls {
       section.appendChild(ul);
       container.appendChild(section);
     });
+    // Update categoryLinks NodeList after rendering
+    this.categoryLinks = document.querySelectorAll('.categories a');
   }
 
   /**
@@ -556,7 +678,7 @@ class UIControls {
       this.infoPanelContentAI.innerHTML = '<p><em>Generating itinerary with AI...</em></p>';
       try {
         const itinerary = await this.generateAIItinerary();
-        this.infoPanelContentAI.innerHTML = `<h3>AI-Generated Itinerary</h3><pre style="white-space:pre-wrap;">${itinerary}</pre>`;
+        this.infoPanelContentAI.innerHTML = `<h3>AI-Generated Itinerary</h3>${itinerary}`;
       } catch (err) {
         this.infoPanelContentAI.innerHTML = '<p style="color:red;">Failed to generate itinerary. Please try again later.</p>';
         console.error(err);

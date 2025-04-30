@@ -3,8 +3,8 @@
 // Proxy endpoint to call OpenRouter API securely using API key from .env
 header('Content-Type: application/json');
 
-// Load .env file
-$envPath = __DIR__ . '/.env';
+// Load .env file from plugin root (parent directory)
+$envPath = realpath(__DIR__ . '/../.env');
 if (file_exists($envPath)) {
     $lines = file($envPath, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
     foreach ($lines as $line) {
@@ -16,7 +16,13 @@ if (file_exists($envPath)) {
 $apiKey = isset($_ENV['OPENROUTER_API_KEY']) ? $_ENV['OPENROUTER_API_KEY'] : '';
 if (!$apiKey) {
     http_response_code(500);
-    echo json_encode(['error' => 'API key not set']);
+    echo json_encode([
+        'error' => 'API key not set',
+        'env_path' => $envPath,
+        'env_file_exists' => file_exists($envPath),
+        'env_contents' => file_exists($envPath) ? file_get_contents($envPath) : null,
+        '_ENV' => $_ENV
+    ]);
     exit;
 }
 
@@ -24,7 +30,10 @@ if (!$apiKey) {
 $input = file_get_contents('php://input');
 if (!$input) {
     http_response_code(400);
-    echo json_encode(['error' => 'No payload']);
+    echo json_encode([
+        'error' => 'No payload',
+        'input' => $input
+    ]);
     exit;
 }
 

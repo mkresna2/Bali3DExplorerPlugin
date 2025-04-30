@@ -93,6 +93,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    scroll-behavior: smooth;
 }
 
 .sidebar-content {
@@ -157,6 +158,9 @@ main {
     box-shadow: none;
     color: var(--text-dark);
     background-color: transparent;
+    scroll-margin-top: 0 !important;
+    scroll-padding-top: 0 !important;
+    cursor: pointer;
 }
 
 .categories a:hover,
@@ -164,6 +168,10 @@ main {
     background: linear-gradient(90deg, #eaf6fb 60%, #f5f2ed 100%);
     color: var(--accent-blue);
     box-shadow: 0 2px 8px 0 rgba(58, 124, 165, 0.09);
+}
+
+.categories a:focus {
+    outline: none;
 }
 
 .map-container {
@@ -358,7 +366,7 @@ main {
     background: transparent;
     box-shadow: none;
     margin: 0;
-    padding-bottom: 8rem;
+    padding-bottom: 3rem;
     max-height: 60vh;
     overflow-y: auto;
     min-height: 0;
@@ -528,6 +536,14 @@ main {
     position: absolute;
     left: -1rem;
     color: var(--accent-blue);
+}
+
+.destination-sidebar,
+.sidebar-content,
+.map-container {
+    height: 100vh;
+    min-height: 0;
+    max-height: 100vh;
 }
 
 @media (min-width: 769px) {
