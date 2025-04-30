@@ -1469,32 +1469,32 @@ const destinations = [
     priority: 19
   },
   {
-    id: "mepantigan",
-    name: "Mepantigan (Mud Wrestling)",
+    id: "mepalu-jerimpen-ritual",
+    name: "Mepalu Jerimpen Ritual",
     category: "cultural-experiences",
-    coordinates: [115.2634999, -8.6159419], // approximate, Ubud area
-    description: "A unique Balinese martial art involving friendly mud wrestling matches, often accompanied by music and dance.",
+    coordinates: [115.211490, -8.439629], // Perean Kangin Village, Tabanan
+    description: "A unique traditional ritual in Perean Kangin Village, where villagers settle disputes and restore harmony through symbolic games of chance and communal offerings.",
     drivingTime: "Varies by location",
     distance: "Varies by location",
     pricing: { entry: "Free" },
-    specialEvents: ["Demonstrations throughout the year"],
-    features: ["Mud wrestling", "Martial arts", "Cultural performance"],
-    images: ["mepantigan.jpg"],
-    priority: 20
+    specialEvents: ["Held during specific temple ceremonies"],
+    features: ["Dispute resolution ritual", "Games of chance", "Community offerings"],
+    images: ["mepalu-jerimpen-ritual.jpg"],
+    priority: 25
   },
   {
-    id: "usaba-dangsil",
-    name: "Usaba Dangsil",
+    id: "siat-yeh-ritual",
+    name: "Siat Yeh Ritual",
     category: "cultural-experiences",
-    coordinates: [115.5800576, -8.4605161], // Bungaya Village, Karangasem
-    description: "A grand ritual held every 12 years in Bungaya Village, featuring the construction of tall bamboo structures (dangsil) and elaborate ceremonies to honor ancestors and village unity.",
+    coordinates: [115.3139597, -8.4861491], // Suwat Village, Gianyar
+    description: "A lively water fight ritual performed in Suwat Village, Gianyar, where villagers splash each other to symbolize purification, unity, and the blessing of water.",
     drivingTime: "Varies by location",
     distance: "Varies by location",
     pricing: { entry: "Free" },
-    specialEvents: ["Held every 12 years (next in 2030)"],
-    features: ["Dangsil bamboo towers", "Mass ceremonies", "Traditional music and dance"],
-    images: ["usaba-dangsil.jpg"],
-    priority: 21
+    specialEvents: ["Held annually during the dry season"],
+    features: ["Water fight", "Purification ritual", "Community celebration"],
+    images: ["siat-yeh-ritual.jpg"],
+    priority: 26
   },
   {
     id: "baris-kraras-dance",
@@ -1525,32 +1525,18 @@ const destinations = [
     priority: 23
   },
   {
-    id: "mepalu-jerimpen-ritual",
-    name: "Mepalu Jerimpen Ritual",
+    id: "usaba-dangsil",
+    name: "Usaba Dangsil",
     category: "cultural-experiences",
-    coordinates: [115.211490, -8.439629], // Perean Kangin Village, Tabanan
-    description: "A unique traditional ritual in Perean Kangin Village, where villagers settle disputes and restore harmony through symbolic games of chance and communal offerings.",
+    coordinates: [115.5800576, -8.4605161], // Bungaya Village, Karangasem
+    description: "A grand ritual held every 12 years in Bungaya Village, featuring the construction of tall bamboo structures (dangsil) and elaborate ceremonies to honor ancestors and village unity.",
     drivingTime: "Varies by location",
     distance: "Varies by location",
     pricing: { entry: "Free" },
-    specialEvents: ["Held during specific temple ceremonies"],
-    features: ["Dispute resolution ritual", "Games of chance", "Community offerings"],
-    images: ["mepalu-jerimpen-ritual.jpg"],
-    priority: 25
-  },
-  {
-    id: "siat-yeh-ritual",
-    name: "Siat Yeh Ritual",
-    category: "cultural-experiences",
-    coordinates: [115.3139597, -8.4861491], // Suwat Village, Gianyar
-    description: "A lively water fight ritual performed in Suwat Village, Gianyar, where villagers splash each other to symbolize purification, unity, and the blessing of water.",
-    drivingTime: "Varies by location",
-    distance: "Varies by location",
-    pricing: { entry: "Free" },
-    specialEvents: ["Held annually during the dry season"],
-    features: ["Water fight", "Purification ritual", "Community celebration"],
-    images: ["siat-yeh-ritual.jpg"],
-    priority: 26
+    specialEvents: ["Held every 12 years (next in 2030)"],
+    features: ["Dangsil bamboo towers", "Mass ceremonies", "Traditional music and dance"],
+    images: ["usaba-dangsil.jpg"],
+    priority: 21
   },
 ];
 
@@ -1558,6 +1544,9 @@ const destinations = [
 if (typeof module !== 'undefined') {
   module.exports = { destinations };
 }
+
+// Ensure destinations is available globally for browser/WordPress
+window.destinations = destinations;
 
 // --- DEBUG: Check for out-of-bounds markers in Bali ---
 (function() {

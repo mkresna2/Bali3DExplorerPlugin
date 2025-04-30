@@ -286,6 +286,12 @@ class UIControls {
     // Set content and show panel
     this.infoPanelContent.innerHTML = html;
     this.infoPanel.classList.add('active');
+
+    // Add close event listener to the close button every time info is shown
+    const closeBtn = this.infoPanel.querySelector('.close-btn');
+    if (closeBtn) {
+      closeBtn.onclick = () => this.hideInfoPanel();
+    }
   }
 
   /**
@@ -564,3 +570,31 @@ class UIControls {
 
 // Create instance
 const uiControls = new UIControls();
+
+// Ensure UI is initialized after DOM and destinations are loaded
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', function() {
+    if (typeof destinations !== 'undefined') {
+      uiControls.init();
+    } else {
+      // Wait for destinations.js to load
+      const checkDestinations = setInterval(function() {
+        if (typeof destinations !== 'undefined') {
+          clearInterval(checkDestinations);
+          uiControls.init();
+        }
+      }, 50);
+    }
+  });
+} else {
+  if (typeof destinations !== 'undefined') {
+    uiControls.init();
+  } else {
+    const checkDestinations = setInterval(function() {
+      if (typeof destinations !== 'undefined') {
+        clearInterval(checkDestinations);
+        uiControls.init();
+      }
+    }, 50);
+  }
+}
