@@ -321,16 +321,26 @@ class UIControls {
       </div>`;
     try {
       const itinerary = await this.generateAIItinerary(destination);
-      // Remove all ** from the LLM result for cleaner display
-      const cleanedItinerary = typeof itinerary === 'string' ? itinerary.replace(/\*\*/g, '') : itinerary;
-      this.aiItineraryCache[cacheKey] = { itinerary: cleanedItinerary, timestamp: Date.now() };
+      // Convert markdown to HTML for bold, italic, headings, and horizontal rules
+      let htmlItinerary = typeof itinerary === 'string' ? itinerary : '';
+      // Bold (**text** or __text__)
+      htmlItinerary = htmlItinerary.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+      htmlItinerary = htmlItinerary.replace(/__(.*?)__/g, '<strong>$1</strong>');
+      // Italic (*text* or _text_)
+      htmlItinerary = htmlItinerary.replace(/\*(.*?)\*/g, '<em>$1</em>');
+      htmlItinerary = htmlItinerary.replace(/_(.*?)_/g, '<em>$1</em>');
+      // H3 (### Heading)
+      htmlItinerary = htmlItinerary.replace(/^### (.*)$/gm, '<h3>$1</h3>');
+      // Horizontal rule (--- or - - -)
+      htmlItinerary = htmlItinerary.replace(/^(---|\-\s\-\s\-)$/gm, '<hr>');
+      this.aiItineraryCache[cacheKey] = { itinerary: htmlItinerary, timestamp: Date.now() };
       // Persist cache to localStorage
       try {
         localStorage.setItem('aiItineraryCache', JSON.stringify(this.aiItineraryCache));
       } catch (e) {
         // Ignore storage errors
       }
-      this.infoPanelContentAI.innerHTML = `<h3>AI-Generated Tour Itinerary</h3>${cleanedItinerary}`;
+      this.infoPanelContentAI.innerHTML = `<h3>AI-Generated Tour Itinerary</h3>${htmlItinerary}`;
     } catch (err) {
       this.infoPanelContentAI.innerHTML = `
         <div style="color:red;">
