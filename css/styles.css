@@ -668,6 +668,96 @@ main {
   opacity: 0.5;
 }
 
+/* --- AI Itinerary Pretty Styles --- */
+.ai-itinerary-card {
+  background: var(--primary-white);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: 0 2px 8px var(--shadow);
+  margin: 2rem 0;
+  padding: 1.5rem 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.ai-itinerary-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.ai-itinerary-icon {
+  font-size: 1.3rem;
+  vertical-align: middle;
+}
+.ai-tour-overview {
+  font-size: 1.05rem;
+  color: var(--text-medium);
+  margin-bottom: 1.2rem;
+}
+.ai-tour-stops {
+  margin-bottom: 1.2rem;
+}
+.ai-stop {
+  border-left: 4px solid var(--accent-blue);
+  margin-bottom: 1.1rem;
+  padding-left: 1.1rem;
+}
+.ai-stop-header {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 0.2rem;
+}
+.ai-stop-time {
+  color: var(--accent-blue);
+  font-weight: 600;
+  font-size: 1.07rem;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+.ai-stop-time-icon {
+  font-size: 1.1rem;
+  margin-right: 0.2rem;
+}
+.ai-stop-title {
+  font-size: 1.08rem;
+}
+.ai-stop-details {
+  margin-left: 0.2rem;
+  margin-top: 0.1rem;
+  margin-bottom: 0.2rem;
+  color: var(--text-dark);
+}
+.ai-stop-details li {
+  margin-bottom: 0.2rem;
+  list-style-type: disc;
+  margin-left: 1.2rem;
+}
+.ai-tour-highlights {
+  background: var(--primary-light);
+  border-left: 3px solid var(--accent-gold);
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+}
+.ai-tour-highlights strong {
+  color: var(--accent-gold);
+  font-weight: 600;
+}
+.ai-tour-highlights ul {
+  margin: 0.4rem 0 0 0.4rem;
+  padding-left: 1.3rem;
+}
+.ai-tour-highlights li {
+  margin-bottom: 0.2rem;
+}
+/* --- End AI Itinerary Pretty Styles --- */
+
 @media (max-width: 700px) {
   .ai-itinerary-card {
     padding: 1rem 0.5rem 1rem 0.5rem;

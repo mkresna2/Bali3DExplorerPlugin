@@ -370,8 +370,7 @@ class UIControls {
    */
   async generateAIItinerary(destination) {
     // Compose a prompt for the LLM
-    const prompt = `Create 2 different tour options, a half-day and a full-day tour, that both depart from Sakala Resort Bali. Each tour must include ${destination ? destination.name : 'a top destination'} as one of the main tour spots. For each tour, think about other attractions or destinations that are on the same route or close by to this destination, and include them as stops. For each tour option, provide a detailed itinerary with recommended stops, timing, and activities throughout the day. Clearly label the two options as "Half-day Tour" and "Full-day Tour".`;
-
+    const prompt = `Create 2 different tour options, a half-day and a full-day tour, that both depart from Sakala Resort Bali. Each tour must include ${destination ? destination.name : 'a top destination'} as one of the main tour spots. For each tour, think about other attractions or destinations that are on the same route or close by to this destination, and include them as stops. For each tour option, provide a detailed itinerary with recommended stops, timing, and activities throughout the day. Clearly label the two options as "Half-day Tour" and "Full-day Tour".\n\nReturn the result as a JSON array with two objects, each representing a tour. Each object should have:\n- type: 'Half-day' or 'Full-day'\n- title: title of the tour\n- overview: a short summary\n- stops: an array of objects, each with 'time', 'location', and 'description'\n- highlights: an array of strings\n\nIMPORTANT: Do not include any explanation, reasoning, or step-by-step thinking. Respond ONLY with a valid JSON array as described above. Do NOT include any text before or after the JSON array. Do NOT wrap the JSON in code blocks or quotes. Do not include trailing commas in the JSON array or objects. Example:\n[\n  {\n    \"type\": \"Half-day\",\n    \"title\": \"...\",\n    \"overview\": \"...\",\n    \"stops\": [\n      {\"time\": \"...\", \"location\": \"...\", \"description\": \"...\"}\n    ],\n    \"highlights\": [\"...\", \"...\"]\n  },\n  {\n    \"type\": \"Full-day\",\n    \"title\": \"...\",\n    \"overview\": \"...\",\n    \"stops\": [\n      {\"time\": \"...\", \"location\": \"...\", \"description\": \"...\"}\n    ],\n    \"highlights\": [\"...\", \"...\"]\n  }\n]\n`;
     // OpenRouter API endpoint and key (now proxied via PHP)
     const apiUrl = '/wp-content/plugins/Bali3DExplorer/openrouter-proxy.php'; // Use absolute path for WordPress plugin
 
@@ -436,8 +435,71 @@ class UIControls {
    * @returns {string} HTML
    */
   formatAIItinerary(rawText) {
-    if (!rawText) return '<p>No itinerary could be generated.</p>';
+    console.log('[AIItinerary Debug] Raw LLM output:', rawText);
+    if (!rawText) {
+      console.warn('[AIItinerary Debug] No rawText received.');
+      return '<div class="ai-itinerary-empty">No itinerary could be generated. The AI did not return any output. Please try again or contact support.</div>';
+    }
 
+    // Super-forgiving: Remove all trailing commas before } or ] (nested, multiline)
+    let forgivingText = rawText.replace(/,\s*([}\]])/g, '$1');
+    // If output ends with an open array/object, try to close it
+    if (forgivingText.match(/\[\s*{[\s\S]*$/) && !forgivingText.trim().endsWith(']')) {
+      forgivingText += ']';
+    }
+
+    // Try to extract a JSON array from the text
+    let tours = null;
+    let jsonMatch = forgivingText.match(/\[[\s\S]*\]/);
+    if (jsonMatch) {
+      try {
+        tours = JSON.parse(jsonMatch[0]);
+        console.log('[AIItinerary Debug] Parsed JSON array:', tours);
+      } catch (e) {
+        console.error('[AIItinerary Debug] JSON.parse error (from regex match):', e);
+        tours = null;
+      }
+    } else {
+      // Try to parse as JSON directly
+      try {
+        tours = JSON.parse(forgivingText);
+        console.log('[AIItinerary Debug] Parsed JSON (direct):', tours);
+      } catch (e) {
+        console.error('[AIItinerary Debug] JSON.parse error (direct):', e);
+        tours = null;
+      }
+    }
+    if (Array.isArray(tours) && tours.length > 0) {
+      // Render from structured JSON
+      return tours.map(tour => {
+        // Prettier itinerary format inspired by the screenshot
+        const stopsHtml = Array.isArray(tour.stops) ? tour.stops.map(stop => `
+          <div class="ai-stop">
+            <div class="ai-stop-header">
+              <span class="ai-stop-time">${stop.time ? `<span class=\"ai-stop-time-icon\">✅</span> ${stop.time}` : ''}</span>
+              <span class="ai-stop-title"><strong>${stop.location || ''}</strong></span>
+            </div>
+            <ul class="ai-stop-details">
+              ${stop.description ? `<li>${stop.description}</li>` : ''}
+            </ul>
+          </div>
+        `).join('') : '';
+        const highlightsHtml = Array.isArray(tour.highlights) && tour.highlights.length > 0
+          ? `<div class="ai-tour-highlights"><strong>Highlights:</strong><ul>${tour.highlights.map(h => `<li>${h}</li>`).join('')}</ul></div>`
+          : '';
+        return `
+          <div class="ai-itinerary-card">
+            <div class="ai-itinerary-title"><span class="ai-itinerary-icon">📖</span> <strong>${tour.type ? tour.type + ' Tour' : ''}${tour.title ? ' – ' + tour.title : ''}</strong></div>
+            <div class="ai-tour-overview">${tour.overview || ''}</div>
+            <div class="ai-tour-stops">
+              ${stopsHtml}
+            </div>
+            ${highlightsHtml}
+          </div>
+        `;
+      }).join('');
+    }
+    // Fallback to original text parsing
     // Extract each tour block (Half-day/Full-day) using headings
     const tourBlocks = rawText.split(/(?=\s*[🌴\-\*]*\s*(Half[- ]Day|Full[- ]Day) Tour[:：]?)/i).filter(Boolean);
     const formatted = tourBlocks
@@ -494,7 +556,7 @@ class UIControls {
     if (formatted.length === 0) {
       // Debug: Log rawText to console for troubleshooting
       console.warn('[AIItinerary Debug] No valid tour cards found. Raw AI output:', rawText);
-      return '<div class="ai-itinerary-empty">No AI-generated itinerary could be produced for this destination. Please try again or select a different destination.</div>';
+      return '<div class="ai-itinerary-empty">No AI-generated itinerary could be produced for this destination. The AI did not return valid structured data. Please try again or contact support.</div>';
     }
     return formatted.join('');
   }
