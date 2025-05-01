@@ -3,8 +3,8 @@
 // Proxy endpoint to call OpenRouter API securely using API key from .env
 header('Content-Type: application/json');
 
-// Load .env file from plugin root (parent directory)
-$envPath = realpath(__DIR__ . '/../.env');
+// Load .env file from plugin root (same directory)
+$envPath = realpath(__DIR__ . '/.env');
 if (file_exists($envPath)) {
     $lines = file($envPath, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
     foreach ($lines as $line) {

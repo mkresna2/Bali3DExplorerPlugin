@@ -373,7 +373,7 @@ class UIControls {
     const prompt = `Create 2 different tour options, a half-day and a full-day tour, that both depart from Sakala Resort Bali. Each tour must include ${destination ? destination.name : 'a top destination'} as one of the main tour spots. For each tour, think about other attractions or destinations that are on the same route or close by to this destination, and include them as stops. For each tour option, provide a detailed itinerary with recommended stops, timing, and activities throughout the day. Clearly label the two options as "Half-day Tour" and "Full-day Tour".`;
 
     // OpenRouter API endpoint and key (now proxied via PHP)
-    const apiUrl = '/wp-content/plugins/Bali3DExplorer/js/openrouter-proxy.php'; // Use absolute path for WordPress plugin
+    const apiUrl = '/wp-content/plugins/Bali3DExplorer/openrouter-proxy.php'; // Use absolute path for WordPress plugin
 
     // Prepare the request payload for Qwen3
     const payload = {
