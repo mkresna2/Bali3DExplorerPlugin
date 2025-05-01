@@ -1,9 +1,9 @@
 <?php
 /*
 Plugin Name: Bali 3D Explorer
-Description: Interactive 3D map explorer for Bali, ported from standalone web project.
-Version: 1.0
-Author: Your Name
+Description: Interactive 3D map explorer for Bali, with AI itinerary generation.
+Version: 1.5
+Author: Trisna Widia - Sakala Resort Bali
 */
 
 // Exit if accessed directly
