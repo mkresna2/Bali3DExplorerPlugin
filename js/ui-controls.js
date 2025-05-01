@@ -19,6 +19,28 @@ class UIControls {
     this.searchInput = null;
     this.panDelta = 100;
     this.isInitialized = false;
+    this.lastSelectedDestination = null; // New property to store last selected destination
+    this.isAIItineraryLoading = false; // New property to track AI itinerary loading state
+    this.aiItineraryCache = {}; // key: destination.id, value: { itinerary: HTML, timestamp: Date.now() }
+
+    // Load cache from localStorage if available, and clean expired entries
+    try {
+      const cached = localStorage.getItem('aiItineraryCache');
+      let parsed = cached ? JSON.parse(cached) : {};
+      const now = Date.now();
+      const threeDays = 3 * 24 * 60 * 60 * 1000;
+      // Remove expired entries
+      for (const key in parsed) {
+        if (!parsed[key].timestamp || now - parsed[key].timestamp > threeDays) {
+          delete parsed[key];
+        }
+      }
+      this.aiItineraryCache = parsed;
+      // Save cleaned cache
+      localStorage.setItem('aiItineraryCache', JSON.stringify(this.aiItineraryCache));
+    } catch (e) {
+      this.aiItineraryCache = {};
+    }
   }
 
   /**
@@ -84,11 +106,17 @@ class UIControls {
             this.infoPanelContentAI.style.display = 'none';
             this.infoPanelContentAI.classList.remove('active');
           } else {
+            // Always show spinner and switch to AI tab immediately
             this.infoPanelContentAI.style.display = '';
             this.infoPanelContentAI.classList.add('active');
             this.infoPanelContentDestination.style.display = 'none';
             this.infoPanelContentDestination.classList.remove('active');
-            this.showAIItinerary();
+            btn.classList.add('disabled');
+            this.infoPanelContentAI.innerHTML = `<div class="ai-loading"><div class="ai-spinner"></div><p><em>Generating itinerary with AI...</em></p></div>`;
+            // Only request if not already loading or if destination changed
+            if (!this.isAIItineraryLoading && this.lastSelectedDestination) {
+              this.populateAIItineraryWithDestination(this.lastSelectedDestination);
+            }
           }
         });
       });
@@ -98,9 +126,15 @@ class UIControls {
     this.updateDestinationItems();
     this.destinationItems.forEach(item => {
       item.addEventListener('click', () => {
+        // Save the destination data for tab switching
+        const destId = item.getAttribute('data-id');
+        const foundDestination = destinations.find(d => d.id === destId);
+        if (foundDestination) {
+          this.lastSelectedDestination = foundDestination;
+        }
         const destinationId = item.dataset.id;
         const destination = destinations.find(d => d.id === destinationId);
-        this.showDestinationInfo(destination);
+        this.showDestinationInfo(foundDestination);
         this.navigateToDestination(destination); // Trigger navigation on destination click
       });
     });
@@ -268,36 +302,79 @@ class UIControls {
    * Populate AI Itinerary tab using LLM with this destination as a spot, based at Sakala Resort Bali
    */
   async populateAIItineraryWithDestination(destination) {
-    this.infoPanelContentAI.innerHTML = '<p><em>Generating itinerary with AI...</em></p>';
+    if (this.isAIItineraryLoading) return; // Loading guard
+    const cacheKey = destination.id;
+    // Check cache first
+    if (this.aiItineraryCache && this.aiItineraryCache[cacheKey] && this.aiItineraryCache[cacheKey].itinerary) {
+      this.infoPanelContentAI.innerHTML = `<h3>AI-Generated Tour Itinerary</h3>${this.aiItineraryCache[cacheKey].itinerary}`;
+      this.isAIItineraryLoading = false;
+      if (this.infoTabBtns && this.infoTabBtns.length === 2) {
+        this.infoTabBtns[1].classList.remove('disabled');
+      }
+      return;
+    }
+    this.isAIItineraryLoading = true;
+    this.infoPanelContentAI.innerHTML = `
+      <div class="ai-loading">
+        <div class="ai-spinner"></div>
+        <p><em>Generating itinerary with AI...</em></p>
+      </div>`;
     try {
       const itinerary = await this.generateAIItinerary(destination);
-      this.infoPanelContentAI.innerHTML = `<h3>AI-Generated Tour Itinerary</h3>${itinerary}`;
+      // Remove all ** from the LLM result for cleaner display
+      const cleanedItinerary = typeof itinerary === 'string' ? itinerary.replace(/\*\*/g, '') : itinerary;
+      this.aiItineraryCache[cacheKey] = { itinerary: cleanedItinerary, timestamp: Date.now() };
+      // Persist cache to localStorage
+      try {
+        localStorage.setItem('aiItineraryCache', JSON.stringify(this.aiItineraryCache));
+      } catch (e) {
+        // Ignore storage errors
+      }
+      this.infoPanelContentAI.innerHTML = `<h3>AI-Generated Tour Itinerary</h3>${cleanedItinerary}`;
     } catch (err) {
-      this.infoPanelContentAI.innerHTML = '<p style="color:red;">Failed to generate itinerary. Please try again later.</p>';
+      this.infoPanelContentAI.innerHTML = `
+        <div style="color:red;">
+          Failed to generate itinerary. Please try again later.
+          <button class="ai-retry-btn">Retry</button>
+        </div>`;
+      // Attach retry handler
+      const retryBtn = this.infoPanelContentAI.querySelector('.ai-retry-btn');
+      if (retryBtn) {
+        retryBtn.onclick = () => {
+          this.populateAIItineraryWithDestination(destination);
+        };
+      }
       console.error(err);
+    } finally {
+      this.isAIItineraryLoading = false;
+      // Re-enable AI tab if it was disabled
+      if (this.infoTabBtns && this.infoTabBtns.length === 2) {
+        this.infoTabBtns[1].classList.remove('disabled');
+      }
     }
   }
 
   /**
-   * Generate AI itinerary using OpenRouter API
+   * Generate AI itinerary using Qwen3 API (via OpenRouter proxy)
    * @param {Object} destination - The selected destination to include in the itinerary
    */
   async generateAIItinerary(destination) {
     // Compose a prompt for the LLM
-    const prompt = `Create 2 different full-day Bali tour options that both depart from Sakala Resort Bali. Each tour must include ${destination ? destination.name : 'a top destination'} as one of the main tour spots. For each tour, think about other attractions or destinations that are on the same route or close by to this destination, and include them as stops. For each tour option, provide a detailed itinerary with recommended stops, timing, and activities throughout the day. Clearly label the two options as "Option 1" and "Option 2".`;
+    const prompt = `Create 2 different tour options, a half-day and a full-day tour, that both depart from Sakala Resort Bali. Each tour must include ${destination ? destination.name : 'a top destination'} as one of the main tour spots. For each tour, think about other attractions or destinations that are on the same route or close by to this destination, and include them as stops. For each tour option, provide a detailed itinerary with recommended stops, timing, and activities throughout the day. Clearly label the two options as "Half-day Tour" and "Full-day Tour".`;
 
     // OpenRouter API endpoint and key (now proxied via PHP)
     const apiUrl = '/wp-content/plugins/Bali3DExplorer/js/openrouter-proxy.php'; // Use absolute path for WordPress plugin
 
-    // Prepare the request payload
+    // Prepare the request payload for Qwen3
     const payload = {
-      model: 'meta-llama/llama-4-scout:free',
+      model: 'qwen/qwen3-32b:free',
       messages: [
         { role: 'system', content: 'You are a helpful Bali trip planner.' },
         { role: 'user', content: prompt }
       ],
       max_tokens: 2048,
-      temperature: 0.7
+      temperature: 0.7,
+      enable_thinking: false // Qwen3-specific: disables thinking mode
     };
 
     try {
@@ -327,7 +404,7 @@ class UIControls {
       } else {
         // Try to parse response JSON for the itinerary
         const data = await response.json();
-        // OpenRouter API sometimes returns content in reasoning if content is empty
+        // Qwen3 API returns content in choices[0].message.content
         if (data.choices && data.choices[0] && data.choices[0].message) {
           const msg = data.choices[0].message;
           resultText = msg.content && msg.content.trim() ? msg.content : (msg.reasoning && msg.reasoning.trim() ? msg.reasoning : JSON.stringify(data));
@@ -338,7 +415,7 @@ class UIControls {
       return this.formatAIItinerary(resultText);
     } catch (err) {
       // Surface the error message in the UI and console
-      console.error('Error calling OpenRouter API:', err);
+      console.error('Error calling Qwen3 API:', err);
       throw err;
     }
   }
@@ -350,99 +427,66 @@ class UIControls {
    */
   formatAIItinerary(rawText) {
     if (!rawText) return '<p>No itinerary could be generated.</p>';
-    // Remove leading explanations or greetings
-    rawText = rawText.replace(/^[^*\n]+here are two[^*\n]+\n?/i, '');
-    // Remove repeated Option headings (keep only the first per section)
-    rawText = rawText.replace(/(Option 1[\s\S]*?)(Option 1[\s\S]*)/i, '$1');
-    // Split by Option headings (Option 1, Option 2, Option 3, ...)
-    const optionRegex = /Option\s*\d+[:\.]?/gi;
-    let options = [];
-    let match;
-    let lastIndex = 0;
-    while ((match = optionRegex.exec(rawText)) !== null) {
-      if (match.index > lastIndex) {
-        options.push(rawText.substring(lastIndex, match.index));
-      }
-      lastIndex = match.index;
-    }
-    // Push the last option
-    if (lastIndex < rawText.length) {
-      options.push(rawText.substring(lastIndex));
-    }
-    // Clean and format each option
-    const formattedOptions = options.map((opt, i) => {
-      // Get the option title
-      const titleMatch = opt.match(/Option\s*\d+[:\.]?/i);
-      let optionTitle = titleMatch ? titleMatch[0].replace(/[:.]/, '').trim() : `Option ${i+1}`;
-      // Remove the title from content
-      let content = opt.replace(/Option\s*\d+[:\.]?/i, '');
-      // Remove duplicate headings like 'Here's a detailed itinerary for Option X'
-      content = content.replace(/here's a detailed itinerary for[^\n]*\n?/i, '');
-      // Extract and remove tour name (first line before any time or bullet)
-      let tourTitleMatch = content.match(/^([A-Za-z0-9 ,\-\(\)\/]+Tour.*?)\*?\*?\s*:?\s*(\n|$)/i);
-      let tourTitle = '';
-      if (tourTitleMatch) {
-        tourTitle = tourTitleMatch[1].replace(/\*+$/, '').trim();
-        content = content.replace(tourTitleMatch[0], '');
-      }
-      // Extract and remove Departure and Return lines
-      let departureMatch = content.match(/Departure[:\-]?\s*([\d: ]+[AP]M.*?)\*?\s*(\n|$)/i);
-      let departure = '';
-      if (departureMatch) {
-        departure = departureMatch[0].replace(/\*+$/, '').trim();
-        content = content.replace(departureMatch[0], '');
-      }
-      let returnMatch = content.match(/Return[:\-]?\s*([\d: ]+[AP]M.*?)\*?\s*(\n|$)/i);
-      let returnInfo = '';
-      if (returnMatch) {
-        returnInfo = returnMatch[0].replace(/\*+$/, '').trim();
-        content = content.replace(returnMatch[0], '');
-      }
-      // Remove stray asterisks and extra whitespace
-      content = content.replace(/\*+/g, '').replace(/\n{2,}/g, '\n').trim();
-      // Split by time headings (e.g., 8:00 AM, 13:00, etc.)
-      const timeStepRegex = /((?:[01]?\d|2[0-3]):[0-5]\d ?(?:AM|PM)?)/gi;
-      let steps = [];
-      let timeMatch, prevIdx = 0;
-      while ((timeMatch = timeStepRegex.exec(content)) !== null) {
-        if (timeMatch.index > prevIdx) {
-          steps.push(content.substring(prevIdx, timeMatch.index).trim());
+
+    // Extract each tour block (Half-day/Full-day) using headings
+    const tourBlocks = rawText.split(/(?=\s*[🌴\-\*]*\s*(Half[- ]Day|Full[- ]Day) Tour[:：]?)/i).filter(Boolean);
+    const formatted = tourBlocks
+      .map(block => {
+        // Accept blocks with at least one detail or overview
+        if (!/(Tour Duration|Start Time|End Time|Location|Group Size|Departure Time|Return Time|Departure\/Return|Itinerary Overview|Itinerary:)/i.test(block)) return '';
+        // Extract tour title (with optional subtitle)
+        const titleMatch = block.match(/[🌴\-\*]*\s*(Half[- ]Day|Full[- ]Day) Tour[:：]?([^\n]*)/i);
+        let title = titleMatch ? titleMatch[0].trim() : '';
+        let content = block.replace(title, '').trim();
+
+        // Extract key-value details
+        const detailRegex = /(?:Tour Duration|Start Time|End Time|Location|Group Size|Departure Time|Return Time|Departure\/Return)\s*[:：]\s*([^\n]+)/gi;
+        let details = '';
+        let match;
+        while ((match = detailRegex.exec(block)) !== null) {
+          const key = match[0].split(/[:：]/)[0].trim();
+          const value = match[1].trim();
+          details += `<div class="ai-tour-detail-row"><span class="ai-tour-detail-key">${key}:</span> <span class="ai-tour-detail-value">${value}</span></div>`;
         }
-        steps.push(`<strong>${timeMatch[1]}</strong>`);
-        prevIdx = timeMatch.index;
-      }
-      if (prevIdx < content.length) {
-        steps.push(content.substring(prevIdx).trim());
-      }
-      // Merge time with following text
-      let merged = [];
-      for (let j = 0; j < steps.length; j++) {
-        if (steps[j].startsWith('<strong>')) {
-          if (j+1 < steps.length && steps[j+1]) {
-            merged.push(`${steps[j]} ${steps[j+1]}`);
-            j++;
-          } else {
-            merged.push(steps[j]);
-          }
-        } else if (steps[j].length > 2) {
-          merged.push(steps[j]);
+
+        // Itinerary Overview (look for heading or numbered/bullet list)
+        let itineraryHtml = '';
+        let overview = '';
+        // Prefer explicit Itinerary Overview/Itinerary: heading
+        const overviewMatch = content.match(/(Itinerary Overview|Itinerary:)\s*([\s\S]*)/i);
+        if (overviewMatch) {
+          overview = overviewMatch[2].trim();
+        } else {
+          // Fallback: look for first numbered or bullet list
+          const listMatch = content.match(/(\n?\d+\. .+([\s\S]+))/);
+          if (listMatch) overview = listMatch[1].trim();
         }
-      }
-      merged = merged.filter(line => line.replace(/[*\-+]/g,'').trim().length > 2);
-      // Format as HTML
-      let html = `<div class="ai-itinerary-option">`;
-      html += `<h4>${optionTitle}</h4>`;
-      if (tourTitle) html += `<div class="ai-tour-title">${tourTitle}</div>`;
-      if (departure) html += `<div class="ai-tour-meta"><span class="ai-label">${departure}</span></div>`;
-      if (returnInfo) html += `<div class="ai-tour-meta"><span class="ai-label">${returnInfo}</span></div>`;
-      html += `<ul>` + merged.map(step => `<li>${step.replace(/^([*\-+]\s*)/, '')}</li>`).join('') + `</ul></div>`;
-      return html;
-    });
-    // If no options found, fallback to pre
-    if (!formattedOptions.length) {
-      return `<pre style="white-space:pre-wrap;">${rawText}</pre>`;
+        if (overview) {
+          // Format time blocks (e.g., 9:00 AM) as checklist
+          overview = overview.replace(/(\d{1,2}:\d{2}\s*[AP]M?)(\s*[\u2013\-–]\s*[^\n]*)?/g, '<span class="ai-time-check">✅</span> <strong>$1</strong>$2');
+          // Numbered list to <li>
+          overview = overview.replace(/\n?\d+\.\s*/g, '</li><li>');
+          // Bullet list to <li>
+          overview = overview.replace(/\n\s*\-\s*/g, '</li><li>');
+          overview = '<ul><li>' + overview.replace(/^<\/li><li>/, '') + '</li></ul>';
+          itineraryHtml = `<div class="ai-tour-overview-title">🗺️ Itinerary Overview</div>${overview}`;
+        }
+
+        // Compose card
+        return `<div class="ai-itinerary-card">
+          <div class="ai-tour-title-row">${title}</div>
+          <div class="ai-tour-details">${details}</div>
+          <hr class="ai-tour-divider" />
+          ${itineraryHtml}
+        </div>`;
+      })
+      .filter(card => card && card.trim().length > 0); // Remove empty/intro cards
+    if (formatted.length === 0) {
+      // Debug: Log rawText to console for troubleshooting
+      console.warn('[AIItinerary Debug] No valid tour cards found. Raw AI output:', rawText);
+      return '<div class="ai-itinerary-empty">No AI-generated itinerary could be produced for this destination. Please try again or select a different destination.</div>';
     }
-    return formattedOptions.join('');
+    return formatted.join('');
   }
 
   /**
@@ -741,13 +785,25 @@ class UIControls {
    */
   async showAIItinerary() {
     if (!this.infoPanelContentAI.innerHTML || this.infoPanelContentAI.innerHTML.trim() === '' || this.infoPanelContentAI.innerHTML.includes('Generating')) {
+      console.log('[AIItinerary] Setting loading message', { caller: 'showAIItinerary' });
       this.infoPanelContentAI.innerHTML = '<p><em>Generating itinerary with AI...</em></p>';
       try {
         const itinerary = await this.generateAIItinerary();
+        console.log('[AIItinerary] Setting final itinerary', { itinerary, caller: 'showAIItinerary' });
         this.infoPanelContentAI.innerHTML = `<h3>AI-Generated Itinerary</h3>${itinerary}`;
+        // Ensure AI tab is visible and active after content is set
+        this.infoPanelContentAI.style.display = '';
+        this.infoPanelContentAI.classList.add('active');
+        this.infoPanelContentDestination.style.display = 'none';
+        this.infoPanelContentDestination.classList.remove('active');
       } catch (err) {
         this.infoPanelContentAI.innerHTML = '<p style="color:red;">Failed to generate itinerary. Please try again later.</p>';
         console.error(err);
+        // Ensure AI tab is visible and active after error
+        this.infoPanelContentAI.style.display = '';
+        this.infoPanelContentAI.classList.add('active');
+        this.infoPanelContentDestination.style.display = 'none';
+        this.infoPanelContentDestination.classList.remove('active');
       }
     }
   }
@@ -781,5 +837,30 @@ if (document.readyState === 'loading') {
         uiControls.init();
       }
     }, 50);
+  }
+}
+
+// DEV: Manual cache clear button
+if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+  if (!document.getElementById('clear-ai-cache-btn')) {
+    const btn = document.createElement('button');
+    btn.id = 'clear-ai-cache-btn';
+    btn.textContent = 'Clear AI Itinerary Cache';
+    btn.style.position = 'fixed';
+    btn.style.bottom = '20px';
+    btn.style.right = '20px';
+    btn.style.zIndex = 9999;
+    btn.style.background = '#d32f2f';
+    btn.style.color = 'white';
+    btn.style.border = 'none';
+    btn.style.padding = '10px 18px';
+    btn.style.borderRadius = '8px';
+    btn.style.cursor = 'pointer';
+    btn.onclick = () => {
+      localStorage.removeItem('aiItineraryCache');
+      uiControls.aiItineraryCache = {};
+      alert('AI Itinerary cache cleared!');
+    };
+    document.body.appendChild(btn);
   }
 }

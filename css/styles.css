@@ -548,6 +548,133 @@ main {
     overflow-x: hidden;  
 }
 
+/* === AI Itinerary Card Styles === */
+.ai-itinerary-card {
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  margin-bottom: 1rem;
+  padding: 0;
+  border: none;
+  max-width: none;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.ai-itinerary-card ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+.ai-itinerary-card li {
+  margin-bottom: 0.5rem;
+  padding-left: 0.2rem;
+  line-height: 1.7;
+  position: relative;
+  font-size: 1.01rem;
+  color: var(--text-dark);
+}
+
+.ai-tour-title-row {
+  font-size: 1.18rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  color: var(--accent-blue);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ai-tour-details {
+  margin-bottom: 1.1rem;
+}
+
+.ai-tour-detail-row {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.3rem;
+  font-size: 1rem;
+}
+.ai-tour-detail-key {
+  font-weight: 500;
+  color: var(--text-medium);
+  min-width: 110px;
+  display: inline-block;
+}
+.ai-tour-detail-value {
+  color: var(--text-dark);
+}
+
+.ai-tour-divider {
+  border: none;
+  border-top: 1.5px solid var(--primary-beige);
+  margin: 1.1rem 0 1.1rem 0;
+}
+
+.ai-tour-overview-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+  color: var(--accent-blue);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.ai-itinerary-card ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+.ai-itinerary-card li {
+  margin-bottom: 0.5rem;
+  padding-left: 0.2rem;
+  line-height: 1.7;
+  position: relative;
+  font-size: 1.01rem;
+  color: var(--text-dark);
+}
+
+.ai-time-check {
+  color: #18b96f;
+  font-size: 1.1em;
+  margin-right: 0.35em;
+  vertical-align: middle;
+}
+
+/* --- AI Itinerary Loading Spinner & Disabled Tab Styles --- */
+.ai-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 120px;
+}
+.ai-spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  animation: ai-spin 1s linear infinite;
+  margin-bottom: 10px;
+}
+@keyframes ai-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.info-tab-btn.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+@media (max-width: 700px) {
+  .ai-itinerary-card {
+    padding: 1rem 0.5rem 1rem 0.5rem;
+    max-width: 99vw;
+  }
+}
+
 @media (min-width: 769px) {
     .destination-sidebar {
         position: relative;
@@ -616,7 +743,7 @@ main {
     }
     
     .info-panel {
-        width: 300px;
+        width: 650px;
     }
 }
 
