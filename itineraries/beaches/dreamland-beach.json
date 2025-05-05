@@ -1,0 +1,28 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Dreamland Beach Getaway (Half-day)",
+    "overview": "Relax on white sands, enjoy surf breaks, and take in stunning sunset views at Dreamland Beach.",
+    "stops": [
+      {"time": "10:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "10:40", "location": "Dreamland Beach", "description": "Arrive and relax on the sand or try surfing."},
+      {"time": "12:00", "location": "Beach Club or Warung", "description": "Enjoy a snack or drink at a beachfront venue."},
+      {"time": "13:00", "location": "Sakala Resort Bali", "description": "Return to the resort."}
+    ],
+    "highlights": ["Surfing", "Beach clubs", "Sunset viewing"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Dreamland Beach & Surf (Full-day)",
+    "overview": "A full day of surfing, sunbathing, and sunset at Dreamland Beach.",
+    "stops": [
+      {"time": "09:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "09:40", "location": "Dreamland Beach", "description": "Surf or relax on the white sands."},
+      {"time": "12:00", "location": "Beach Club or Warung", "description": "Lunch with ocean views."},
+      {"time": "14:00", "location": "Dreamland Beach", "description": "Swim, sunbathe, or explore nearby cliffs."},
+      {"time": "17:30", "location": "Dreamland Beach", "description": "Watch the sunset before heading back."},
+      {"time": "18:30", "location": "Sakala Resort Bali", "description": "Return to the resort."}
+    ],
+    "highlights": ["Surfing", "Beach clubs", "Sunset viewing"]
+  }
+]

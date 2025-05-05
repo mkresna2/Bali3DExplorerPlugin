@@ -1,0 +1,28 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Sanur Beach Morning (Half-day)",
+    "overview": "Enjoy calm, shallow waters and a beachfront cycling path at Sanur Beach.",
+    "stops": [
+      {"time": "08:30", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "08:55", "location": "Sanur Beach", "description": "Arrive and swim or walk along the promenade."},
+      {"time": "10:30", "location": "Beachfront Café", "description": "Have a light breakfast or coffee with a view."},
+      {"time": "11:30", "location": "Sakala Resort Bali", "description": "Return to the resort."}
+    ],
+    "highlights": ["Beachfront cycling path", "Calm lagoon", "Sunrise views"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Sanur Beach & Village (Full-day)",
+    "overview": "A day at Sanur Beach with swimming, cycling, and exploring the local village.",
+    "stops": [
+      {"time": "08:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "08:25", "location": "Sanur Beach", "description": "Swim or rent a bicycle to explore the beachfront path."},
+      {"time": "11:00", "location": "Sanur Village", "description": "Explore local markets and art shops."},
+      {"time": "13:00", "location": "Beachfront Restaurant", "description": "Lunch by the sea."},
+      {"time": "15:00", "location": "Sanur Beach", "description": "Relax or enjoy water activities."},
+      {"time": "17:00", "location": "Sakala Resort Bali", "description": "Return to the resort."}
+    ],
+    "highlights": ["Beachfront cycling path", "Calm lagoon", "Local village"]
+  }
+]

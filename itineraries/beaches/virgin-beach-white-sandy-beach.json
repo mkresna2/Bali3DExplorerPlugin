@@ -1,0 +1,27 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Virgin Beach Relaxation (Half-day)",
+    "overview": "Enjoy the seclusion and crystal clear waters of Virgin Beach, also known as White Sandy Beach, perfect for swimming and sunbathing.",
+    "stops": [
+      {"time": "09:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "10:15", "location": "Virgin Beach (White Sandy Beach)", "description": "Arrive and relax on the white sand, swim, or snorkel in the clear water."},
+      {"time": "12:00", "location": "Beach Warung", "description": "Lunch at a local warung with ocean views."},
+      {"time": "13:00", "location": "Return to Sakala Resort Bali"}
+    ],
+    "highlights": ["Seclusion", "Snorkeling", "White sand beach"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Virgin Beach & Coral Reefs (Full-day)",
+    "overview": "A full day of relaxation and underwater adventure at Virgin Beach, featuring snorkeling, coral reefs, and time to unwind.",
+    "stops": [
+      {"time": "09:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "10:15", "location": "Virgin Beach (White Sandy Beach)", "description": "Arrive and enjoy swimming, snorkeling, or exploring the coral reefs."},
+      {"time": "12:30", "location": "Beach Warung", "description": "Lunch at a beachside warung."},
+      {"time": "14:00", "location": "Relax on the Beach", "description": "Free time for sunbathing, swimming, or beachcombing."},
+      {"time": "16:00", "location": "Return to Sakala Resort Bali"}
+    ],
+    "highlights": ["Coral reefs", "Seclusion", "Snorkeling", "White sand beach"]
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Pacific Bahari Water Sports Adventure (Half-day)",
+    "overview": "Enjoy a thrilling half-day of jet skiing, banana boat rides, and snorkeling at Pacific Bahari Water Sports in Tanjung Benoa.",
+    "stops": [
+      {"time": "09:00", "location": "Hotel Pickup", "description": "Depart for Pacific Bahari Water Sports, Tanjung Benoa."},
+      {"time": "09:30", "location": "Pacific Bahari Water Sports", "description": "Arrive and get ready for water activities."},
+      {"time": "09:45", "location": "Jet Ski & Banana Boat", "description": "Experience jet skiing and banana boat rides."},
+      {"time": "11:00", "location": "Snorkeling", "description": "Snorkel in the clear waters of Tanjung Benoa."},
+      {"time": "12:30", "location": "Return to Hotel"}
+    ],
+    "highlights": ["Jet skiing", "Banana boat", "Snorkeling", "Family-friendly"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Pacific Bahari Water Sports Full Experience (Full-day)",
+    "overview": "A full day of water sports fun at Pacific Bahari, including parasailing, snorkeling, and jet skiing.",
+    "stops": [
+      {"time": "09:00", "location": "Hotel Pickup", "description": "Depart for Pacific Bahari Water Sports, Tanjung Benoa."},
+      {"time": "09:30", "location": "Pacific Bahari Water Sports", "description": "Arrive and prepare for a day of activities."},
+      {"time": "09:45", "location": "Parasailing", "description": "Enjoy breathtaking views during a parasailing session."},
+      {"time": "11:00", "location": "Jet Ski & Banana Boat", "description": "Ride jet skis and banana boats."},
+      {"time": "13:00", "location": "Lunch Break", "description": "Lunch at a local restaurant (optional)."},
+      {"time": "14:00", "location": "Snorkeling & More", "description": "Snorkel and try other available water sports."},
+      {"time": "16:00", "location": "Return to Hotel"}
+    ],
+    "highlights": ["Parasailing", "Jet skiing", "Banana boat", "Snorkeling", "Family-friendly"]
+  }
+]

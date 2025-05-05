@@ -1,0 +1,27 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Mepalu Jerimpen Ritual Experience (Half-day)",
+    "overview": "Witness the sacred Mepalu Jerimpen ritual, a unique Balinese purification ceremony.",
+    "stops": [
+      {"time": "09:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "10:30", "location": "Mepalu Jerimpen Venue", "description": "Arrive and observe the Mepalu Jerimpen ritual."},
+      {"time": "12:30", "location": "Return to Sakala Resort Bali", "description": "Return to Sakala Resort Bali."}
+    ],
+    "highlights": ["Purification ritual", "Balinese ceremony", "Cultural tradition"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Mepalu Jerimpen Ritual & Village Tour (Full-day)",
+    "overview": "A full day exploring the Mepalu Jerimpen ritual and village culture.",
+    "stops": [
+      {"time": "09:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "10:30", "location": "Mepalu Jerimpen Venue", "description": "Arrive and witness the Mepalu Jerimpen ritual."},
+      {"time": "12:00", "location": "Village Tour", "description": "Tour the local village and interact with the community."},
+      {"time": "13:00", "location": "Lunch Break", "description": "Lunch at a local warung (optional)."},
+      {"time": "14:00", "location": "Cultural Workshop", "description": "Participate in a workshop or discussion about Balinese rituals."},
+      {"time": "16:00", "location": "Return to Sakala Resort Bali", "description": "Return to Sakala Resort Bali."}
+    ],
+    "highlights": ["Purification ritual", "Village culture", "Cultural workshop"]
+  }
+]

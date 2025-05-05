@@ -1,0 +1,28 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Padang Bai Snorkeling Escape (Half-day)",
+    "overview": "Discover the calm waters and vibrant marine life of Padang Bai Beach, a gateway for snorkeling and boat trips.",
+    "stops": [
+      {"time": "08:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "09:15", "location": "Padang Bai Beach", "description": "Arrive and snorkel in the clear waters or relax on the beach."},
+      {"time": "11:30", "location": "Beach Warung", "description": "Enjoy a local lunch at a beachside warung."},
+      {"time": "12:30", "location": "Return to Sakala Resort Bali"}
+    ],
+    "highlights": ["Snorkeling", "Boat trips", "White sand"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Padang Bai & Blue Lagoon Adventure (Full-day)",
+    "overview": "A full day exploring Padang Bai Beach and the Blue Lagoon, with opportunities for snorkeling, boat trips, and relaxation.",
+    "stops": [
+      {"time": "08:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "09:15", "location": "Padang Bai Beach", "description": "Arrive and enjoy snorkeling or swimming."},
+      {"time": "11:30", "location": "Blue Lagoon", "description": "Take a boat trip to the Blue Lagoon for more snorkeling and marine life viewing."},
+      {"time": "13:30", "location": "Beach Warung", "description": "Lunch at a local warung with ocean views."},
+      {"time": "15:00", "location": "Relax on Padang Bai Beach", "description": "Free time to relax, swim, or explore the area."},
+      {"time": "16:00", "location": "Return to Sakala Resort Bali"}
+    ],
+    "highlights": ["Snorkeling", "Blue Lagoon", "Boat trips", "White sand beach"]
+  }
+]

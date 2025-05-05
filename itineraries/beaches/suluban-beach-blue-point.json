@@ -1,0 +1,27 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Suluban Beach Adventure (Half-day)",
+    "overview": "Explore the hidden Suluban Beach, accessed via stairs through limestone cliffs. Ideal for surfers and photographers.",
+    "stops": [
+      {"time": "10:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "10:50", "location": "Suluban Beach (Blue Point)", "description": "Descend the stairs to the beach, explore sea caves, and enjoy the surf."},
+      {"time": "12:30", "location": "Cliffside Café", "description": "Have a snack or drink with ocean views."},
+      {"time": "13:30", "location": "Sakala Resort Bali", "description": "Return to the resort."}
+    ],
+    "highlights": ["Surfing", "Sea cave access", "Scenic cliffs"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Suluban Surf & Explore (Full-day)",
+    "overview": "A day of surfing, sea cave exploration, and cliffside relaxation at Suluban Beach.",
+    "stops": [
+      {"time": "09:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "09:50", "location": "Suluban Beach (Blue Point)", "description": "Surf or explore the unique sea caves and rock formations."},
+      {"time": "12:00", "location": "Cliffside Café", "description": "Lunch with panoramic ocean views."},
+      {"time": "14:00", "location": "Suluban Beach (Blue Point)", "description": "Relax, swim, or take photos."},
+      {"time": "16:00", "location": "Sakala Resort Bali", "description": "Return to the resort."}
+    ],
+    "highlights": ["Surfing", "Sea cave access", "Scenic cliffs"]
+  }
+]

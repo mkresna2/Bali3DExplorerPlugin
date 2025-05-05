@@ -1,0 +1,29 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Café del Mar Bali Afternoon (Half-day)",
+    "overview": "Experience Ibiza vibes at Café del Mar Bali with its beachfront pool, Mediterranean cuisine, and sunset sessions.",
+    "stops": [
+      {"time": "13:00", "location": "Sakala Resort Bali", "description": "Depart for Café del Mar Bali."},
+      {"time": "13:45", "location": "Café del Mar Bali", "description": "Arrive and enjoy the infinity pool and daybeds."},
+      {"time": "16:00", "location": "Mediterranean Dining", "description": "Enjoy Mediterranean-inspired dishes with ocean views."},
+      {"time": "17:30", "location": "Sunset Session", "description": "Relax with signature cocktails and live DJ music as the sun sets."},
+      {"time": "19:00", "location": "Return to Sakala Resort Bali"}
+    ],
+    "highlights": ["Infinity pool", "Daybeds", "Mediterranean cuisine", "Sunset DJ sessions"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Café del Mar Bali Full Experience (Full-day)",
+    "overview": "A full day of poolside relaxation, Mediterranean dining, and sunset sessions at Café del Mar Bali.",
+    "stops": [
+      {"time": "10:00", "location": "Sakala Resort Bali", "description": "Depart for Café del Mar Bali."},
+      {"time": "10:45", "location": "Café del Mar Bali", "description": "Arrive and enjoy the infinity pool, daybeds, and club facilities."},
+      {"time": "13:00", "location": "Mediterranean Lunch", "description": "Lunch with Mediterranean flavors and ocean views."},
+      {"time": "14:00", "location": "Poolside & Activities", "description": "Relax by the pool, enjoy club amenities, or stroll the beach."},
+      {"time": "17:30", "location": "Sunset Session", "description": "Enjoy signature cocktails and live DJ music as the sun sets."},
+      {"time": "19:00", "location": "Return to Sakala Resort Bali"}
+    ],
+    "highlights": ["Infinity pool", "Daybeds", "Mediterranean cuisine", "Sunset DJ sessions"]
+  }
+]

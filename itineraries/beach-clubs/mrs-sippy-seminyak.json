@@ -1,0 +1,27 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Mrs Sippy Seminyak Pool Party (Half-day)",
+    "overview": "Enjoy Seminyak's iconic pool club with diving boards, cocktails, and a lively atmosphere.",
+    "stops": [
+      {"time": "13:00", "location": "Sakala Resort Bali", "description": "Depart for Mrs Sippy Seminyak."},
+      {"time": "13:45", "location": "Mrs Sippy Seminyak", "description": "Arrive and enjoy the saltwater pool and diving boards."},
+      {"time": "16:00", "location": "Poolside Cocktails", "description": "Sip cocktails and enjoy live DJ music."},
+      {"time": "18:00", "location": "Return to Sakala Resort Bali"}
+    ],
+    "highlights": ["Saltwater pool", "Diving boards", "Cocktails", "Live DJs"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Mrs Sippy Seminyak Experience (Full-day)",
+    "overview": "A full day of fun, music, and poolside relaxation at Mrs Sippy Seminyak.",
+    "stops": [
+      {"time": "10:00", "location": "Sakala Resort Bali", "description": "Depart for Mrs Sippy Seminyak."},
+      {"time": "10:45", "location": "Mrs Sippy Seminyak", "description": "Arrive and enjoy the saltwater pool, diving boards, and club facilities."},
+      {"time": "13:00", "location": "Lunch at Mrs Sippy", "description": "Lunch with a poolside view."},
+      {"time": "14:00", "location": "Poolside & Activities", "description": "Relax by the pool, enjoy live DJs, or participate in club activities."},
+      {"time": "18:00", "location": "Return to Sakala Resort Bali"}
+    ],
+    "highlights": ["Saltwater pool", "Diving boards", "Cocktails", "Live DJs"]
+  }
+]

@@ -1,0 +1,28 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Tirta Empul Temple Purification (Half-day)",
+    "overview": "Experience a traditional purification ritual at the sacred Tirta Empul Temple in central Bali.",
+    "stops": [
+      {"time": "08:00", "location": "Hotel Pickup", "description": "Depart for Tirta Empul Temple."},
+      {"time": "09:00", "location": "Tirta Empul Temple", "description": "Arrive and participate in the purification ritual."},
+      {"time": "11:00", "location": "Explore Temple Grounds", "description": "Explore the temple complex and holy springs."},
+      {"time": "12:00", "location": "Return to Hotel"}
+    ],
+    "highlights": ["Purification ritual", "Holy springs", "Balinese culture"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Tirta Empul Temple & Ubud (Full-day)",
+    "overview": "A full day of cultural immersion at Tirta Empul Temple and Ubud attractions.",
+    "stops": [
+      {"time": "08:00", "location": "Hotel Pickup", "description": "Depart for Tirta Empul Temple."},
+      {"time": "09:00", "location": "Tirta Empul Temple", "description": "Arrive and participate in the purification ritual."},
+      {"time": "11:00", "location": "Explore Temple Grounds", "description": "Explore the temple complex and holy springs."},
+      {"time": "12:00", "location": "Lunch Break", "description": "Lunch at a local restaurant (optional)."},
+      {"time": "13:00", "location": "Ubud Tour", "description": "Visit Ubud attractions such as the Monkey Forest or art market."},
+      {"time": "16:00", "location": "Return to Hotel"}
+    ],
+    "highlights": ["Purification ritual", "Holy springs", "Ubud attractions"]
+  }
+]

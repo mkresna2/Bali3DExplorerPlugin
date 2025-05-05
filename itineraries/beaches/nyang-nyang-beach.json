@@ -1,0 +1,27 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Nyang Nyang Beach Escape (Half-day)",
+    "overview": "Discover a secluded beach with pristine sands, accessed by a scenic jungle descent.",
+    "stops": [
+      {"time": "09:30", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "10:20", "location": "Nyang Nyang Beach", "description": "Arrive and hike down the jungle path to the beach."},
+      {"time": "12:00", "location": "Beach Picnic", "description": "Enjoy a picnic or relax in the natural scenery."},
+      {"time": "13:00", "location": "Sakala Resort Bali", "description": "Return to the resort."}
+    ],
+    "highlights": ["Seclusion", "Natural scenery", "Cliff walks"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Nyang Nyang Adventure (Full-day)",
+    "overview": "A full day of hiking, beachcombing, and relaxation at Nyang Nyang Beach.",
+    "stops": [
+      {"time": "08:30", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "09:20", "location": "Nyang Nyang Beach", "description": "Descend to the beach and explore the coastline."},
+      {"time": "12:00", "location": "Beach Picnic", "description": "Have lunch and enjoy the peaceful setting."},
+      {"time": "14:00", "location": "Cliff Walk", "description": "Take a walk along the cliffs for panoramic views."},
+      {"time": "16:00", "location": "Sakala Resort Bali", "description": "Return to the resort."}
+    ],
+    "highlights": ["Seclusion", "Natural scenery", "Cliff walks"]
+  }
+]

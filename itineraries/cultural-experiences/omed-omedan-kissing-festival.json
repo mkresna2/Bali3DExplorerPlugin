@@ -1,0 +1,27 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Omed-omedan (Kissing Festival) (Half-day)",
+    "overview": "Experience the playful Omed-omedan festival, a unique youth kissing ritual in Denpasar.",
+    "stops": [
+      {"time": "09:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "10:00", "location": "Denpasar", "description": "Arrive and observe the Omed-omedan ritual and festivities."},
+      {"time": "12:00", "location": "Return to Sakala Resort Bali", "description": "Return to Sakala Resort Bali."}
+    ],
+    "highlights": ["Kissing festival", "Youth ritual", "Local tradition"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Omed-omedan Ritual & City Tour (Full-day)",
+    "overview": "A full day exploring the Omed-omedan ritual and Denpasar's cultural sites.",
+    "stops": [
+      {"time": "09:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "10:00", "location": "Denpasar", "description": "Arrive and witness the Omed-omedan ritual."},
+      {"time": "12:00", "location": "City Tour", "description": "Tour Denpasar's cultural attractions."},
+      {"time": "13:00", "location": "Lunch Break", "description": "Lunch at a local warung (optional)."},
+      {"time": "14:00", "location": "Cultural Workshop", "description": "Participate in a workshop or discussion about Balinese rituals."},
+      {"time": "16:00", "location": "Return to Sakala Resort Bali", "description": "Return to Sakala Resort Bali."}
+    ],
+    "highlights": ["Kissing festival", "City culture", "Cultural workshop"]
+  }
+]

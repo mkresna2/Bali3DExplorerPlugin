@@ -1,0 +1,28 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Canna Bali Afternoon (Half-day)",
+    "overview": "Relax at Canna Bali with its beachfront pool, ocean views, and vibrant beach club scene.",
+    "stops": [
+      {"time": "13:00", "location": "Sakala Resort Bali", "description": "Depart for Canna Bali."},
+      {"time": "13:45", "location": "Canna Bali", "description": "Arrive and enjoy the beachfront pool and club facilities."},
+      {"time": "16:00", "location": "Sunset Cocktails", "description": "Sip cocktails while watching the sunset over the ocean."},
+      {"time": "18:00", "location": "Return to Sakala Resort Bali"}
+    ],
+    "highlights": ["Beachfront pool", "Ocean views", "Vibrant scene", "Sunset cocktails"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Canna Bali Full Experience (Full-day)",
+    "overview": "A full day of poolside lounging, food, and sunset cocktails at Canna Bali.",
+    "stops": [
+      {"time": "10:00", "location": "Sakala Resort Bali", "description": "Depart for Canna Bali."},
+      {"time": "10:45", "location": "Canna Bali", "description": "Arrive and enjoy the beachfront pool, club amenities, and ocean views."},
+      {"time": "13:00", "location": "Lunch at Canna Bali", "description": "Lunch with a view of the ocean."},
+      {"time": "14:00", "location": "Poolside & Activities", "description": "Relax by the pool, enjoy club amenities, or stroll the beach."},
+      {"time": "16:00", "location": "Sunset Cocktails", "description": "Sip cocktails while watching the sunset over the ocean."},
+      {"time": "18:00", "location": "Return to Sakala Resort Bali"}
+    ],
+    "highlights": ["Beachfront pool", "Ocean views", "Vibrant scene", "Sunset cocktails"]
+  }
+]

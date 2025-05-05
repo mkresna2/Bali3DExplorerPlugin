@@ -1,0 +1,26 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Sang Hyang Dedari Dance Experience (Half-day)",
+    "overview": "Witness the mystical Sang Hyang Dedari trance dance, a sacred Balinese performance.",
+    "stops": [
+      {"time": "09:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "10:30", "location": "Performance Venue", "description": "Arrive and observe the Sang Hyang Dedari trance dance."},
+      {"time": "12:30", "location": "Return to Sakala Resort Bali", "description": "Return to Sakala Resort Bali."}
+    ],
+    "highlights": ["Trance dance", "Sacred ritual", "Balinese culture"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Sang Hyang Dedari Dance & Workshop (Full-day)",
+    "overview": "A full day with the Sang Hyang Dedari trance dance, including a performance and cultural workshop.",
+    "stops": [
+      {"time": "09:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "10:30", "location": "Performance Venue", "description": "Arrive and witness the Sang Hyang Dedari trance dance."},
+      {"time": "12:00", "location": "Lunch Break", "description": "Lunch at a local warung (optional)."},
+      {"time": "13:00", "location": "Cultural Workshop", "description": "Participate in a workshop or discussion about the Sang Hyang Dedari dance."},
+      {"time": "16:00", "location": "Return to Sakala Resort Bali", "description": "Return to Sakala Resort Bali."}
+    ],
+    "highlights": ["Trance dance", "Cultural workshop", "Sacred ritual"]
+  }
+]

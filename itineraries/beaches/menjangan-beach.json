@@ -1,0 +1,26 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Menjangan Beach Snorkel (Half-day)",
+    "overview": "Explore the remote coral-fringed Menjangan Beach in West Bali National Park, ideal for snorkeling and wildlife spotting.",
+    "stops": [
+      {"time": "06:00", "location": "Sakala Resort Bali", "description": "Depart early from Sakala Resort Bali for Menjangan Beach."},
+      {"time": "10:30", "location": "Menjangan Beach", "description": "Arrive and snorkel among the coral reefs."},
+      {"time": "12:30", "location": "Beach Picnic", "description": "Enjoy a picnic lunch and wildlife spotting."},
+      {"time": "13:30", "location": "Return to Sakala Resort Bali"}
+    ],
+    "highlights": ["Snorkeling", "Coral reefs", "Wildlife spotting"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Menjangan Island Adventure (Full-day)",
+    "overview": "A full day of snorkeling, wildlife encounters, and relaxation at Menjangan Beach and Island.",
+    "stops": [
+      {"time": "06:00", "location": "Sakala Resort Bali", "description": "Depart early from Sakala Resort Bali for Menjangan Beach."},
+      {"time": "10:30", "location": "Menjangan Beach", "description": "Snorkel and explore the coral reefs."},
+      {"time": "12:30", "location": "Menjangan Island", "description": "Take a boat trip to Menjangan Island for more snorkeling and wildlife spotting."},
+      {"time": "15:00", "location": "Return to Sakala Resort Bali"}
+    ],
+    "highlights": ["Snorkeling", "Coral reefs", "Wildlife spotting"]
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Ulu Cliff House Chill (Half-day)",
+    "overview": "Relax at Ulu Cliff House, a clifftop oasis with infinity pools, restaurants, and sunset views.",
+    "stops": [
+      {"time": "13:00", "location": "Sakala Resort Bali", "description": "Depart for Ulu Cliff House."},
+      {"time": "14:00", "location": "Ulu Cliff House", "description": "Arrive and enjoy the infinity pools and cocktail bar."},
+      {"time": "16:30", "location": "Sunset Session", "description": "Experience the daily sunset session with music and drinks."},
+      {"time": "18:00", "location": "Return to Sakala Resort Bali"}
+    ],
+    "highlights": ["Clifftop views", "Infinity pools", "Sunset sessions"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Ulu Cliff House Day Retreat (Full-day)",
+    "overview": "A full day of poolside relaxation, dining, and sunset views at Ulu Cliff House.",
+    "stops": [
+      {"time": "10:00", "location": "Sakala Resort Bali", "description": "Depart for Ulu Cliff House."},
+      {"time": "11:00", "location": "Ulu Cliff House", "description": "Arrive and enjoy the infinity pools and multiple restaurants."},
+      {"time": "13:00", "location": "Lunch at Ulu Cliff House", "description": "Lunch with panoramic ocean views."},
+      {"time": "15:00", "location": "Relaxation & Activities", "description": "Relax by the pool, enjoy cocktails, or take in the sunset session."},
+      {"time": "18:00", "location": "Return to Sakala Resort Bali"}
+    ],
+    "highlights": ["Clifftop views", "Infinity pools", "Multiple restaurants", "Sunset sessions"]
+  }
+]

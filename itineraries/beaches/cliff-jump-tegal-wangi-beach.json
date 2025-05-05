@@ -1,0 +1,27 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Tegal Wangi Cliff Jump Adventure (Half-day)",
+    "overview": "Discover the hidden cove of Tegal Wangi Beach, famous for its natural jacuzzis, cliff jumping, and sunset views.",
+    "stops": [
+      {"time": "15:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "15:30", "location": "Tegal Wangi Beach", "description": "Arrive and explore the beach, natural pools, and cliff jump spots."},
+      {"time": "17:30", "location": "Sunset Viewpoint", "description": "Enjoy the sunset from the cliffs."},
+      {"time": "18:30", "location": "Return to Sakala Resort Bali"}
+    ],
+    "highlights": ["Cliff jumping", "Natural jacuzzis", "Sunset views"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Tegal Wangi Beach & Hidden Cove (Full-day)",
+    "overview": "A full day of adventure at Tegal Wangi Beach, including cliff jumping, exploring natural pools, and relaxing in a secluded cove.",
+    "stops": [
+      {"time": "10:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "10:30", "location": "Tegal Wangi Beach", "description": "Arrive and enjoy cliff jumping, swimming, and exploring the natural jacuzzis."},
+      {"time": "13:00", "location": "Hidden Cove", "description": "Relax and have a picnic in the secluded cove."},
+      {"time": "16:30", "location": "Sunset Viewpoint", "description": "Watch the sunset from the cliffs."},
+      {"time": "18:00", "location": "Return to Sakala Resort Bali"}
+    ],
+    "highlights": ["Cliff jumping", "Natural jacuzzis", "Hidden cove", "Sunset views"]
+  }
+]

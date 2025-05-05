@@ -1,0 +1,30 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Padang Bai Livingseas Coral Restoration (Half-day)",
+    "overview": "Participate in coral restoration and snorkeling at Livingseas site in Padang Bai.",
+    "stops": [
+      {"time": "08:00", "location": "Hotel Pickup", "description": "Depart for Padang Bai."},
+      {"time": "09:30", "location": "Livingseas Coral Restoration Site", "description": "Arrive and learn about coral restoration."},
+      {"time": "10:00", "location": "Coral Planting Activity", "description": "Participate in coral planting and education."},
+      {"time": "11:00", "location": "Snorkeling", "description": "Snorkel around the coral restoration area."},
+      {"time": "12:30", "location": "Return to Hotel"}
+    ],
+    "highlights": ["Coral restoration", "Snorkeling", "Marine education", "Eco-friendly"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Padang Bai Livingseas Coral Restoration Full Experience (Full-day)",
+    "overview": "A full day of coral restoration, snorkeling, and marine education at Padang Bai Livingseas site.",
+    "stops": [
+      {"time": "08:00", "location": "Hotel Pickup", "description": "Depart for Padang Bai."},
+      {"time": "09:30", "location": "Livingseas Coral Restoration Site", "description": "Arrive and participate in coral restoration."},
+      {"time": "10:00", "location": "Coral Planting & Education", "description": "Engage in coral planting and learn from marine biologists."},
+      {"time": "12:00", "location": "Snorkeling", "description": "Snorkel at the restoration site."},
+      {"time": "13:00", "location": "Lunch Break", "description": "Lunch at a local restaurant (optional)."},
+      {"time": "14:00", "location": "Marine Education & Activities", "description": "Participate in more marine activities and education."},
+      {"time": "16:00", "location": "Return to Hotel"}
+    ],
+    "highlights": ["Coral restoration", "Snorkeling", "Marine education", "Eco-friendly"]
+  }
+]

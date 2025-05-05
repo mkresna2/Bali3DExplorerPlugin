@@ -1,0 +1,27 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Keramas Beach Surf Break (Half-day)",
+    "overview": "Experience the world-class surf break and black sand at Keramas Beach, ideal for surfers and beach lovers.",
+    "stops": [
+      {"time": "08:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "08:40", "location": "Keramas Beach", "description": "Arrive and surf or relax on the black sand beach."},
+      {"time": "11:00", "location": "Beach Bar", "description": "Enjoy refreshments at a local beach bar."},
+      {"time": "12:00", "location": "Return to Sakala Resort Bali"}
+    ],
+    "highlights": ["Surfing", "Black sand", "Beach bars"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Keramas Beach Surf & Chill (Full-day)",
+    "overview": "A full day of surfing, sunbathing, and relaxing at Keramas Beach, known for its waves and vibrant atmosphere.",
+    "stops": [
+      {"time": "08:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "08:40", "location": "Keramas Beach", "description": "Arrive and enjoy surfing or relaxing on the beach."},
+      {"time": "11:00", "location": "Beach Bar", "description": "Lunch and drinks at a local beach bar."},
+      {"time": "13:00", "location": "Surf or Relax", "description": "Continue surfing or enjoy the beach atmosphere."},
+      {"time": "16:00", "location": "Return to Sakala Resort Bali"}
+    ],
+    "highlights": ["Surfing", "Black sand", "Beach bars", "Chill vibe"]
+  }
+]

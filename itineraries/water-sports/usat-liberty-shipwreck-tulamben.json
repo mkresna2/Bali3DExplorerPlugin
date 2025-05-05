@@ -1,0 +1,29 @@
+[
+  {
+    "type": "Half-day",
+    "title": "USAT Liberty Shipwreck Tulamben (Half-day)",
+    "overview": "Dive or snorkel at the famous USAT Liberty Shipwreck in Tulamben, a world-class underwater site.",
+    "stops": [
+      {"time": "07:00", "location": "Hotel Pickup", "description": "Depart for Tulamben."},
+      {"time": "09:30", "location": "USAT Liberty Shipwreck", "description": "Arrive and prepare for diving or snorkeling."},
+      {"time": "10:00", "location": "Shipwreck Dive/Snorkel", "description": "Explore the shipwreck and marine life."},
+      {"time": "12:00", "location": "Beach Relaxation", "description": "Relax on the beach or explore nearby coral reefs."},
+      {"time": "13:30", "location": "Return to Hotel"}
+    ],
+    "highlights": ["Shipwreck dive", "Snorkeling", "Marine life", "Historic site"]
+  },
+  {
+    "type": "Full-day",
+    "title": "USAT Liberty Shipwreck Tulamben Full Experience (Full-day)",
+    "overview": "A full day of diving, snorkeling, and marine exploration at the USAT Liberty Shipwreck in Tulamben.",
+    "stops": [
+      {"time": "07:00", "location": "Hotel Pickup", "description": "Depart for Tulamben."},
+      {"time": "09:30", "location": "USAT Liberty Shipwreck", "description": "Arrive and prepare for multiple dives or snorkeling sessions."},
+      {"time": "10:00", "location": "Shipwreck Dive/Snorkel", "description": "Explore the shipwreck and surrounding coral reefs."},
+      {"time": "12:00", "location": "Lunch Break", "description": "Lunch at a local dive resort (optional)."},
+      {"time": "13:00", "location": "Marine Exploration", "description": "Continue diving or snorkeling, or relax on the beach."},
+      {"time": "15:30", "location": "Return to Hotel"}
+    ],
+    "highlights": ["Shipwreck dive", "Snorkeling", "Marine life", "Historic site"]
+  }
+]

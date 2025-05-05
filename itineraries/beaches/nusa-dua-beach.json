@@ -1,0 +1,27 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Nusa Dua Beach Leisure (Half-day)",
+    "overview": "Relax at Bali's pristine white-sand beach, perfect for swimming and water sports.",
+    "stops": [
+      {"time": "10:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "10:10", "location": "Nusa Dua Beach", "description": "Arrive, swim in calm waters, or sunbathe on the sand."},
+      {"time": "12:00", "location": "Beachfront Café", "description": "Enjoy a snack or cold drink at a café."},
+      {"time": "13:00", "location": "Sakala Resort Bali", "description": "Return to the resort."}
+    ],
+    "highlights": ["Swimming", "Water sports", "Resort beach", "Clean sands"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Nusa Dua Family Day (Full-day)",
+    "overview": "A full day of water sports, swimming, and relaxation at Nusa Dua Beach.",
+    "stops": [
+      {"time": "09:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "09:10", "location": "Nusa Dua Beach", "description": "Try water sports like banana boat or parasailing."},
+      {"time": "12:00", "location": "Beachfront Restaurant", "description": "Lunch with ocean views."},
+      {"time": "14:00", "location": "Nusa Dua Beach", "description": "Relax, swim, or walk along the beach promenade."},
+      {"time": "16:00", "location": "Sakala Resort Bali", "description": "Return to the resort."}
+    ],
+    "highlights": ["Swimming", "Water sports", "Family friendly", "Resort beach"]
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Jungle Fish Ubud Afternoon (Half-day)",
+    "overview": "Relax at Jungle Fish Ubud, a jungle pool club with infinity pool, tropical cocktails, and lush views.",
+    "stops": [
+      {"time": "12:00", "location": "Sakala Resort Bali", "description": "Depart for Jungle Fish Ubud."},
+      {"time": "13:30", "location": "Jungle Fish Ubud", "description": "Arrive and enjoy the infinity pool and jungle views."},
+      {"time": "16:00", "location": "Tropical Cocktails", "description": "Sip cocktails and relax by the pool."},
+      {"time": "18:00", "location": "Return to Sakala Resort Bali"}
+    ],
+    "highlights": ["Infinity pool", "Jungle views", "Tropical cocktails", "Relaxation"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Jungle Fish Ubud Experience (Full-day)",
+    "overview": "A full day of jungle poolside lounging, food, and drinks at Jungle Fish Ubud.",
+    "stops": [
+      {"time": "09:00", "location": "Sakala Resort Bali", "description": "Depart for Jungle Fish Ubud."},
+      {"time": "10:30", "location": "Jungle Fish Ubud", "description": "Arrive and enjoy the infinity pool, jungle views, and club facilities."},
+      {"time": "13:00", "location": "Lunch at Jungle Fish", "description": "Lunch with a jungle view."},
+      {"time": "14:00", "location": "Poolside & Activities", "description": "Relax by the pool, enjoy club amenities, or explore Ubud."},
+      {"time": "18:00", "location": "Return to Sakala Resort Bali"}
+    ],
+    "highlights": ["Infinity pool", "Jungle views", "Tropical cocktails", "Relaxation"]
+  }
+]

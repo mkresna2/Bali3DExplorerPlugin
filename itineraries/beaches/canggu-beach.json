@@ -1,0 +1,29 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Canggu Beach Vibes (Half-day)",
+    "overview": "Discover Canggu's trendy surf scene, hip cafes, and black sand beach.",
+    "stops": [
+      {"time": "09:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "09:50", "location": "Canggu Beach", "description": "Arrive and enjoy surfing or relaxing on the black sand."},
+      {"time": "11:00", "location": "Hip Café", "description": "Grab coffee or brunch at a local café."},
+      {"time": "12:30", "location": "Street Art Walk", "description": "Explore Canggu's street art and murals."},
+      {"time": "13:30", "location": "Sakala Resort Bali", "description": "Return to the resort."}
+    ],
+    "highlights": ["Surfing", "Hip cafes", "Sunset views"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Canggu Surf & Explore (Full-day)",
+    "overview": "A day of surfing, café hopping, and sunset at Canggu Beach.",
+    "stops": [
+      {"time": "08:30", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "09:20", "location": "Canggu Beach", "description": "Take a surf lesson or relax on the sand."},
+      {"time": "11:30", "location": "Local Café", "description": "Enjoy brunch or coffee at a trendy spot."},
+      {"time": "13:00", "location": "Street Art Walk", "description": "Discover Canggu's famous murals."},
+      {"time": "15:00", "location": "Beach Bars", "description": "Chill at a beach bar and watch the sunset."},
+      {"time": "17:00", "location": "Sakala Resort Bali", "description": "Return to the resort."}
+    ],
+    "highlights": ["Surfing", "Hip cafes", "Street art", "Beach bars"]
+  }
+]

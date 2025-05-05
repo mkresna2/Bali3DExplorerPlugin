@@ -1,28 +1,26 @@
 [
   {
     "type": "Half-day",
-    "title": "Puri Agung Karangasem Heritage Tour (Half-day)",
-    "overview": "A short but enriching visit to the royal palace of Karangasem, exploring Balinese history and culture.",
+    "title": "Puri Agung Karangasem Royal Palace (Half-day)",
+    "overview": "Visit the historic Puri Agung Karangasem, the royal palace of East Bali, and explore its architecture and gardens.",
     "stops": [
-      {"time": "09:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
-      {"time": "10:30", "location": "Puri Agung Karangasem", "description": "Guided tour of the historic royal palace and its beautiful gardens."},
-      {"time": "11:30", "location": "Taman Ujung Water Palace", "description": "Visit the nearby water palace, known for its scenic beauty and architecture."},
-      {"time": "13:00", "location": "Sakala Resort Bali", "description": "Return to the resort."}
+      {"time": "09:00", "location": "Hotel Pickup", "description": "Depart for Puri Agung Karangasem."},
+      {"time": "10:30", "location": "Puri Agung Karangasem", "description": "Arrive and explore the palace grounds, halls, and gardens."},
+      {"time": "12:00", "location": "Return to Hotel", "description": "Return to the hotel."}
     ],
-    "highlights": ["Puri Agung Karangasem palace tour", "Balinese royal history", "Taman Ujung Water Palace"]
+    "highlights": ["Royal palace", "Balinese architecture", "Gardens", "History"]
   },
   {
     "type": "Full-day",
-    "title": "Karangasem Royal & Cultural Exploration (Full-day)",
-    "overview": "A comprehensive journey through Karangasem’s royal heritage, water palaces, and local culture.",
+    "title": "Puri Agung Karangasem & East Bali (Full-day)",
+    "overview": "A full day exploring Puri Agung Karangasem and other East Bali cultural sites.",
     "stops": [
-      {"time": "08:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
-      {"time": "09:30", "location": "Puri Agung Karangasem", "description": "Explore the royal palace, learn about the history of the Karangasem kingdom."},
-      {"time": "11:00", "location": "Taman Ujung Water Palace", "description": "Stroll through the gardens and pavilions of the water palace."},
-      {"time": "12:30", "location": "Local Restaurant", "description": "Enjoy Balinese cuisine for lunch."},
-      {"time": "14:00", "location": "Tirta Gangga Water Palace", "description": "Visit the famous water palace with its pools and fountains."},
-      {"time": "16:00", "location": "Sakala Resort Bali", "description": "Return to the resort."}
+      {"time": "09:00", "location": "Hotel Pickup", "description": "Depart for Puri Agung Karangasem."},
+      {"time": "10:30", "location": "Puri Agung Karangasem", "description": "Arrive and explore the palace grounds, halls, and gardens."},
+      {"time": "12:00", "location": "Lunch Break", "description": "Lunch at a local restaurant (optional)."},
+      {"time": "13:00", "location": "East Bali Tour", "description": "Visit nearby attractions such as Tirta Gangga or Ujung Water Palace."},
+      {"time": "16:00", "location": "Return to Hotel", "description": "Return to the hotel."}
     ],
-    "highlights": ["Puri Agung Karangasem", "Taman Ujung", "Tirta Gangga", "Balinese royal culture"]
+    "highlights": ["Royal palace", "Balinese architecture", "East Bali attractions", "History"]
   }
 ]

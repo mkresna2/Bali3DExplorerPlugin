@@ -1,0 +1,27 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Ngerebong (Trance Ritual) (Half-day)",
+    "overview": "Witness the sacred Ngerebong trance ritual, a unique spiritual ceremony held in Bali.",
+    "stops": [
+      {"time": "09:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "10:30", "location": "Ngerebong Temple", "description": "Arrive and observe the trance ritual and its significance."},
+      {"time": "12:30", "location": "Return to Sakala Resort Bali", "description": "Return to Sakala Resort Bali."}
+    ],
+    "highlights": ["Trance ritual", "Spiritual ceremony", "Balinese culture"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Ngerebong Ritual & Village Tour (Full-day)",
+    "overview": "A full day exploring the Ngerebong trance ritual and local village culture.",
+    "stops": [
+      {"time": "09:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "10:30", "location": "Ngerebong Temple", "description": "Arrive and witness the trance ritual."},
+      {"time": "12:00", "location": "Village Tour", "description": "Tour the local village and interact with the community."},
+      {"time": "13:00", "location": "Lunch Break", "description": "Lunch at a local warung (optional)."},
+      {"time": "14:00", "location": "Cultural Workshop", "description": "Participate in a workshop or discussion about Balinese rituals."},
+      {"time": "16:00", "location": "Return to Sakala Resort Bali", "description": "Return to Sakala Resort Bali."}
+    ],
+    "highlights": ["Trance ritual", "Village culture", "Cultural workshop"]
+  }
+]

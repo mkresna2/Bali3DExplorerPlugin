@@ -1,0 +1,27 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Cocoon Day Club Seminyak (Half-day)",
+    "overview": "Relax at Cocoon Day Club in Seminyak with its poolside cabanas, Mediterranean cuisine, and vibrant atmosphere.",
+    "stops": [
+      {"time": "13:00", "location": "Sakala Resort Bali", "description": "Depart for Cocoon Day Club Seminyak."},
+      {"time": "13:40", "location": "Cocoon Day Club Seminyak", "description": "Arrive and enjoy the pool and cabanas."},
+      {"time": "16:00", "location": "Mediterranean Dining", "description": "Enjoy Mediterranean-inspired dishes poolside."},
+      {"time": "18:00", "location": "Return to Sakala Resort Bali"}
+    ],
+    "highlights": ["Poolside cabanas", "Mediterranean cuisine", "Vibrant atmosphere", "Cocktails"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Cocoon Day Club Seminyak Experience (Full-day)",
+    "overview": "A full day of poolside lounging, Mediterranean food, and cocktails at Cocoon Day Club in Seminyak.",
+    "stops": [
+      {"time": "10:00", "location": "Sakala Resort Bali", "description": "Depart for Cocoon Day Club Seminyak."},
+      {"time": "10:40", "location": "Cocoon Day Club Seminyak", "description": "Arrive and enjoy the pool, cabanas, and club facilities."},
+      {"time": "13:00", "location": "Lunch at Cocoon Day Club", "description": "Lunch with Mediterranean flavors and pool views."},
+      {"time": "14:00", "location": "Poolside & Activities", "description": "Relax by the pool, enjoy club amenities, or stroll the beach."},
+      {"time": "18:00", "location": "Return to Sakala Resort Bali"}
+    ],
+    "highlights": ["Poolside cabanas", "Mediterranean cuisine", "Vibrant atmosphere", "Cocktails"]
+  }
+]

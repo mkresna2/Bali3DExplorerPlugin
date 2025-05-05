@@ -1,0 +1,27 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Roosterfish Beach Club Afternoon (Half-day)",
+    "overview": "Enjoy a fun and vibrant afternoon at Roosterfish Beach Club with poolside games, cocktails, and beachfront vibes on Pandawa Beach.",
+    "stops": [
+      {"time": "13:00", "location": "Sakala Resort Bali", "description": "Depart for Roosterfish Beach Club."},
+      {"time": "13:40", "location": "Roosterfish Beach Club", "description": "Arrive and enjoy the pool, games, and cocktails."},
+      {"time": "16:00", "location": "Beachfront Activities", "description": "Participate in beach volleyball or relax on sun loungers."},
+      {"time": "18:00", "location": "Return to Sakala Resort Bali"}
+    ],
+    "highlights": ["Poolside games", "Cocktails", "Beach volleyball", "Beachfront location"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Roosterfish Beach Club Experience (Full-day)",
+    "overview": "A full day of beach fun, poolside games, and delicious food at Roosterfish Beach Club on Pandawa Beach.",
+    "stops": [
+      {"time": "10:00", "location": "Sakala Resort Bali", "description": "Depart for Roosterfish Beach Club."},
+      {"time": "10:40", "location": "Roosterfish Beach Club", "description": "Arrive and enjoy the pool, games, and club facilities."},
+      {"time": "13:00", "location": "Lunch at Roosterfish Beach Club", "description": "Lunch with ocean views and fresh seafood."},
+      {"time": "14:00", "location": "Poolside & Beach Activities", "description": "Relax by the pool, play beach games, or stroll Pandawa Beach."},
+      {"time": "18:00", "location": "Return to Sakala Resort Bali"}
+    ],
+    "highlights": ["Poolside games", "Cocktails", "Beach volleyball", "Fresh seafood", "Beachfront location"]
+  }
+]

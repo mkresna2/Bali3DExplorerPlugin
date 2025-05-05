@@ -1,0 +1,26 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Ujung Water Palace (Half-day)",
+    "overview": "Stroll through the elegant Ujung Water Palace, known for its pools, gardens, and royal history.",
+    "stops": [
+      {"time": "09:00", "location": "Hotel Pickup", "description": "Depart for Ujung Water Palace."},
+      {"time": "10:30", "location": "Ujung Water Palace", "description": "Arrive and explore the palace grounds and gardens."},
+      {"time": "12:00", "location": "Return to Hotel"}
+    ],
+    "highlights": ["Palace gardens", "Royal history", "Photography"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Ujung Water Palace & East Bali (Full-day)",
+    "overview": "A full day exploring Ujung Water Palace and other East Bali cultural sites.",
+    "stops": [
+      {"time": "09:00", "location": "Hotel Pickup", "description": "Depart for Ujung Water Palace."},
+      {"time": "10:30", "location": "Ujung Water Palace", "description": "Arrive and explore the palace grounds and gardens."},
+      {"time": "12:00", "location": "Lunch Break", "description": "Lunch at a local restaurant (optional)."},
+      {"time": "13:00", "location": "East Bali Tour", "description": "Visit nearby attractions such as Tirta Gangga or Puri Agung Karangasem."},
+      {"time": "16:00", "location": "Return to Hotel"}
+    ],
+    "highlights": ["Palace gardens", "East Bali attractions", "Photography"]
+  }
+]

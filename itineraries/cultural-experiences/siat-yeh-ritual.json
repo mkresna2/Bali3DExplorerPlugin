@@ -1,0 +1,27 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Siat Yeh Ritual Experience (Half-day)",
+    "overview": "Witness the lively Siat Yeh ritual, a traditional water fight ceremony in Bali.",
+    "stops": [
+      {"time": "09:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "10:30", "location": "Siat Yeh Venue", "description": "Arrive and observe the Siat Yeh water fight ritual."},
+      {"time": "12:30", "location": "Return to Sakala Resort Bali", "description": "Return to Sakala Resort Bali."}
+    ],
+    "highlights": ["Water fight ritual", "Balinese tradition", "Community celebration"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Siat Yeh Ritual & Village Tour (Full-day)",
+    "overview": "A full day exploring the Siat Yeh ritual and village culture.",
+    "stops": [
+      {"time": "09:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "10:30", "location": "Siat Yeh Venue", "description": "Arrive and witness the Siat Yeh water fight ritual."},
+      {"time": "12:00", "location": "Village Tour", "description": "Tour the local village and interact with the community."},
+      {"time": "13:00", "location": "Lunch Break", "description": "Lunch at a local warung (optional)."},
+      {"time": "14:00", "location": "Cultural Workshop", "description": "Participate in a workshop or discussion about Balinese rituals."},
+      {"time": "16:00", "location": "Return to Sakala Resort Bali", "description": "Return to Sakala Resort Bali."}
+    ],
+    "highlights": ["Water fight ritual", "Village culture", "Cultural workshop"]
+  }
+]

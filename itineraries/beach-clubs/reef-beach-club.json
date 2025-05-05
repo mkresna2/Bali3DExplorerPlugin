@@ -1,0 +1,27 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Reef Beach Club Leisure (Half-day)",
+    "overview": "Relax at Reef Beach Club with beachfront dining, a swimming pool, and live music at Peninsula Beach Nusa Dua.",
+    "stops": [
+      {"time": "11:00", "location": "Sakala Resort Bali", "description": "Depart for Reef Beach Club."},
+      {"time": "11:15", "location": "Reef Beach Club", "description": "Arrive, swim, and enjoy the sun loungers."},
+      {"time": "13:00", "location": "Beachfront Dining", "description": "Lunch at the club's restaurant with ocean views."},
+      {"time": "14:00", "location": "Return to Sakala Resort Bali"}
+    ],
+    "highlights": ["Beachfront dining", "Swimming pool", "Live music", "Sun loungers"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Reef Beach Club Day (Full-day)",
+    "overview": "A full day of relaxation and fun at Reef Beach Club, including water sports, live music, and great food.",
+    "stops": [
+      {"time": "09:00", "location": "Sakala Resort Bali", "description": "Depart for Reef Beach Club."},
+      {"time": "09:15", "location": "Reef Beach Club", "description": "Arrive, swim, and enjoy water sports or sunbathing."},
+      {"time": "12:00", "location": "Lunch at Reef Beach Club", "description": "Lunch with a view of the ocean."},
+      {"time": "13:00", "location": "Water Sports & Activities", "description": "Participate in water sports or relax by the pool."},
+      {"time": "17:00", "location": "Return to Sakala Resort Bali"}
+    ],
+    "highlights": ["Beachfront dining", "Swimming pool", "Water sports", "Live music", "Sun loungers"]
+  }
+]

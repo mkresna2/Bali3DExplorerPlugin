@@ -1,0 +1,27 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Sakala Beach Club Relaxation (Half-day)",
+    "overview": "Enjoy beachfront dining, the infinity pool, and live music at Sakala Beach Club.",
+    "stops": [
+      {"time": "10:00", "location": "Sakala Resort Bali", "description": "Walk to Sakala Beach Club."},
+      {"time": "10:05", "location": "Sakala Beach Club", "description": "Enjoy the infinity pool and beachfront bar."},
+      {"time": "12:00", "location": "Beachfront Dining", "description": "Lunch with ocean views."},
+      {"time": "13:00", "location": "Return to Sakala Resort Bali"}
+    ],
+    "highlights": ["Infinity pool", "Beachfront bar", "Live music"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Sakala Beach Club Experience (Full-day)",
+    "overview": "A full day of relaxation, dining, and poolside fun at Sakala Beach Club.",
+    "stops": [
+      {"time": "09:00", "location": "Sakala Resort Bali", "description": "Walk to Sakala Beach Club."},
+      {"time": "09:05", "location": "Sakala Beach Club", "description": "Start your day with a swim in the infinity pool."},
+      {"time": "12:00", "location": "Beachfront Dining", "description": "Lunch with a view of the ocean."},
+      {"time": "13:00", "location": "Relaxation & Activities", "description": "Enjoy beach loungers, live music, and bar service."},
+      {"time": "17:00", "location": "Return to Sakala Resort Bali"}
+    ],
+    "highlights": ["Infinity pool", "Beachfront bar", "Live music", "Beach loungers"]
+  }
+]

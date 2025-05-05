@@ -1,0 +1,27 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Ter-teran Usaba Muu-Muu (Fire War) (Half-day)",
+    "overview": "Experience the dramatic Ter-teran Usaba Muu-Muu, a fire war ritual unique to Bali.",
+    "stops": [
+      {"time": "09:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "10:30", "location": "Fire War Venue", "description": "Arrive and witness the Ter-teran fire war ritual."},
+      {"time": "12:30", "location": "Return to Sakala Resort Bali", "description": "Return to Sakala Resort Bali."}
+    ],
+    "highlights": ["Fire war ritual", "Dramatic ceremony", "Local tradition"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Ter-teran Usaba Muu-Muu & Village Tour (Full-day)",
+    "overview": "A full day exploring the Ter-teran fire war ritual and village culture.",
+    "stops": [
+      {"time": "09:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "10:30", "location": "Fire War Venue", "description": "Arrive and witness the Ter-teran fire war ritual."},
+      {"time": "12:00", "location": "Village Tour", "description": "Tour the local village and interact with the community."},
+      {"time": "13:00", "location": "Lunch Break", "description": "Lunch at a local warung (optional)."},
+      {"time": "14:00", "location": "Cultural Workshop", "description": "Participate in a workshop or discussion about Balinese rituals."},
+      {"time": "16:00", "location": "Return to Sakala Resort Bali", "description": "Return to Sakala Resort Bali."}
+    ],
+    "highlights": ["Fire war ritual", "Village culture", "Cultural workshop"]
+  }
+]

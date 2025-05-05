@@ -1,0 +1,27 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Bingin Beach Chill (Half-day)",
+    "overview": "Unwind at Bingin Beach, known for its surf breaks and laid-back atmosphere atop dramatic cliffs.",
+    "stops": [
+      {"time": "09:30", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "10:15", "location": "Bingin Beach", "description": "Arrive and descend the steps to the beach, relax or surf."},
+      {"time": "12:00", "location": "Beach Shack Café", "description": "Enjoy a snack or drink at a local shack."},
+      {"time": "13:00", "location": "Sakala Resort Bali", "description": "Return to the resort."}
+    ],
+    "highlights": ["Surfing", "Beach shacks", "Cliffside views"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Bingin Surf & Relax (Full-day)",
+    "overview": "A full day of surfing, sunbathing, and cliffside relaxation at Bingin Beach.",
+    "stops": [
+      {"time": "08:30", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "09:15", "location": "Bingin Beach", "description": "Surf or relax on the sand."},
+      {"time": "12:00", "location": "Beach Shack Café", "description": "Lunch at a cliffside shack with ocean views."},
+      {"time": "14:00", "location": "Bingin Beach", "description": "Swim, sunbathe, or explore tide pools."},
+      {"time": "16:00", "location": "Sakala Resort Bali", "description": "Return to the resort."}
+    ],
+    "highlights": ["Surfing", "Beach shacks", "Cliffside views"]
+  }
+]

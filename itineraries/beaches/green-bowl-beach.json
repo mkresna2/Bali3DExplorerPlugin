@@ -1,0 +1,27 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Green Bowl Beach Discovery (Half-day)",
+    "overview": "Visit this hidden gem, famous for its green waters, sea caves, and tranquil setting.",
+    "stops": [
+      {"time": "10:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "10:55", "location": "Green Bowl Beach", "description": "Arrive and descend the steps to the beach, explore sea caves or swim."},
+      {"time": "12:30", "location": "Cliffside Rest Area", "description": "Relax with a drink and enjoy the cliff views."},
+      {"time": "13:30", "location": "Sakala Resort Bali", "description": "Return to the resort."}
+    ],
+    "highlights": ["Lagoon", "Cliff views", "Sea caves"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Green Bowl Adventure (Full-day)",
+    "overview": "A day of swimming, cave exploration, and scenic relaxation at Green Bowl Beach.",
+    "stops": [
+      {"time": "09:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "09:55", "location": "Green Bowl Beach", "description": "Swim, explore the sea caves, or relax on the sand."},
+      {"time": "12:00", "location": "Cliffside Rest Area", "description": "Lunch with panoramic views."},
+      {"time": "14:00", "location": "Green Bowl Beach", "description": "Snorkel or continue exploring the area."},
+      {"time": "16:00", "location": "Sakala Resort Bali", "description": "Return to the resort."}
+    ],
+    "highlights": ["Lagoon", "Cliff views", "Sea caves"]
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Padang Padang Beach Escape (Half-day)",
+    "overview": "Relax at this scenic cove, swim, and enjoy the unique cliff access featured in 'Eat Pray Love'.",
+    "stops": [
+      {"time": "10:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "10:40", "location": "Padang Padang Beach", "description": "Arrive and descend the stairs through the cliffs to the beach."},
+      {"time": "12:00", "location": "Beachside Warung", "description": "Enjoy a snack or drink at a local warung."},
+      {"time": "13:00", "location": "Sakala Resort Bali", "description": "Return to the resort."}
+    ],
+    "highlights": ["Surfing", "Scenic cove", "Cliff access"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Padang Padang Surf & Chill (Full-day)",
+    "overview": "A day of surfing, swimming, and relaxing at Padang Padang Beach.",
+    "stops": [
+      {"time": "09:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "09:40", "location": "Padang Padang Beach", "description": "Surf or swim in the clear waters."},
+      {"time": "12:00", "location": "Beachside Warung", "description": "Lunch at a local warung with ocean views."},
+      {"time": "14:00", "location": "Cliff Walk", "description": "Take a walk along the cliffs for panoramic views."},
+      {"time": "16:00", "location": "Sakala Resort Bali", "description": "Return to the resort."}
+    ],
+    "highlights": ["Surfing", "Scenic cove", "Cliff access"]
+  }
+]

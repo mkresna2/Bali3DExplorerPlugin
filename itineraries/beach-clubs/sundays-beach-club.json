@@ -1,0 +1,28 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Sundays Beach Club Afternoon (Half-day)",
+    "overview": "Enjoy a private white sand beach, water sports, and beachfront dining at Sundays Beach Club.",
+    "stops": [
+      {"time": "13:00", "location": "Sakala Resort Bali", "description": "Depart for Sundays Beach Club."},
+      {"time": "13:45", "location": "Sundays Beach Club", "description": "Arrive and enjoy water sports, sunbathing, and swimming."},
+      {"time": "16:00", "location": "Beach Bonfire", "description": "Experience the daily beach bonfire at sunset."},
+      {"time": "18:00", "location": "Return to Sakala Resort Bali"}
+    ],
+    "highlights": ["Private beach", "Water sports", "Beachfront dining", "Beach bonfires"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Sundays Beach Club Experience (Full-day)",
+    "overview": "A full day of beach fun, water sports, and relaxation at Sundays Beach Club, including bonfires and great food.",
+    "stops": [
+      {"time": "09:00", "location": "Sakala Resort Bali", "description": "Depart for Sundays Beach Club."},
+      {"time": "09:45", "location": "Sundays Beach Club", "description": "Arrive and enjoy water sports, sunbathing, and swimming."},
+      {"time": "12:30", "location": "Lunch at Sundays Beach Club", "description": "Lunch with ocean views."},
+      {"time": "14:00", "location": "Relaxation & Activities", "description": "Participate in water sports, relax by the beach, or enjoy the club facilities."},
+      {"time": "16:00", "location": "Beach Bonfire", "description": "Experience the daily beach bonfire at sunset."},
+      {"time": "18:00", "location": "Return to Sakala Resort Bali"}
+    ],
+    "highlights": ["Private beach", "Water sports", "Beachfront dining", "Beach bonfires"]
+  }
+]

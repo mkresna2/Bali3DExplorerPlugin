@@ -1,0 +1,28 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Jimbaran Beach Relaxation (Half-day)",
+    "overview": "Experience the calm waters and famous seafood dining of Jimbaran Beach.",
+    "stops": [
+      {"time": "10:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "10:25", "location": "Jimbaran Beach", "description": "Arrive and relax on the sand or swim in the bay."},
+      {"time": "12:00", "location": "Beachside Seafood Cafés", "description": "Enjoy a seafood lunch on the sand."},
+      {"time": "13:30", "location": "Sakala Resort Bali", "description": "Return to the resort."}
+    ],
+    "highlights": ["Seafood dining", "Sunset views", "Calm waters"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Jimbaran Beach & Sunset Dinner (Full-day)",
+    "overview": "Spend a full day at Jimbaran Beach, with swimming, seafood, and a sunset dinner.",
+    "stops": [
+      {"time": "09:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "09:25", "location": "Jimbaran Beach", "description": "Swim and sunbathe on the soft sand."},
+      {"time": "12:00", "location": "Jimbaran Fish Market", "description": "Visit the local fish market and sample fresh catches."},
+      {"time": "14:00", "location": "Beachside Cafés", "description": "Relax at a café or take a stroll along the bay."},
+      {"time": "17:30", "location": "Jimbaran Beach", "description": "Enjoy a sunset seafood dinner on the sand."},
+      {"time": "19:00", "location": "Sakala Resort Bali", "description": "Return to the resort."}
+    ],
+    "highlights": ["Seafood dining", "Sunset views", "Calm waters"]
+  }
+]

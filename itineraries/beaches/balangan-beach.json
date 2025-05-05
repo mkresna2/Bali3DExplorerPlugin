@@ -1,0 +1,27 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Balangan Beach Break (Half-day)",
+    "overview": "Enjoy golden sands, surfing, and cliff-top views at this quiet beach.",
+    "stops": [
+      {"time": "09:30", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "10:15", "location": "Balangan Beach", "description": "Arrive and relax on the sand or try surfing."},
+      {"time": "12:00", "location": "Cliff-top Café", "description": "Enjoy a drink or snack with panoramic views."},
+      {"time": "13:00", "location": "Sakala Resort Bali", "description": "Return to the resort."}
+    ],
+    "highlights": ["Surfing", "Sunbathing", "Cliff-top cafes"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Balangan Surf & Relax (Full-day)",
+    "overview": "A full day of surfing, sunbathing, and cliffside relaxation at Balangan Beach.",
+    "stops": [
+      {"time": "08:30", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "09:15", "location": "Balangan Beach", "description": "Surf or relax on the quiet sands."},
+      {"time": "12:00", "location": "Cliff-top Café", "description": "Lunch with a view of the ocean and surfers."},
+      {"time": "14:00", "location": "Balangan Beach", "description": "Swim or sunbathe."},
+      {"time": "16:00", "location": "Sakala Resort Bali", "description": "Return to the resort."}
+    ],
+    "highlights": ["Surfing", "Sunbathing", "Cliff-top cafes"]
+  }
+]

@@ -1,0 +1,28 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Vue Beach Club Afternoon Escape (Half-day)",
+    "overview": "Relax at Vue Beach Club with its beachfront pool, chic daybeds, and ocean views in Canggu.",
+    "stops": [
+      {"time": "13:00", "location": "Sakala Resort Bali", "description": "Depart for Vue Beach Club."},
+      {"time": "13:45", "location": "Vue Beach Club", "description": "Arrive and enjoy the beachfront pool and daybeds."},
+      {"time": "16:00", "location": "Sunset Cocktails", "description": "Sip cocktails while watching the sunset over the Indian Ocean."},
+      {"time": "18:00", "location": "Return to Sakala Resort Bali"}
+    ],
+    "highlights": ["Beachfront pool", "Chic daybeds", "Ocean views", "Sunset cocktails"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Vue Beach Club Full Experience (Full-day)",
+    "overview": "A full day of poolside lounging, delicious food, and sunset cocktails at Vue Beach Club.",
+    "stops": [
+      {"time": "10:00", "location": "Sakala Resort Bali", "description": "Depart for Vue Beach Club."},
+      {"time": "10:45", "location": "Vue Beach Club", "description": "Arrive and enjoy the beachfront pool, daybeds, and facilities."},
+      {"time": "13:00", "location": "Lunch at Vue Beach Club", "description": "Lunch with a view of the ocean."},
+      {"time": "14:00", "location": "Poolside & Activities", "description": "Relax by the pool, enjoy the club's amenities, or take a stroll on the beach."},
+      {"time": "16:00", "location": "Sunset Cocktails", "description": "Sip cocktails while watching the sunset over the Indian Ocean."},
+      {"time": "18:00", "location": "Return to Sakala Resort Bali"}
+    ],
+    "highlights": ["Beachfront pool", "Chic daybeds", "Ocean views", "Sunset cocktails"]
+  }
+]

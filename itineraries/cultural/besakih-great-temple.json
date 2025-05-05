@@ -1,0 +1,26 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Besakih Great Temple Tour (Half-day)",
+    "overview": "Visit Bali's Mother Temple, Besakih, and explore its ancient architecture and mountain views.",
+    "stops": [
+      {"time": "08:00", "location": "Hotel Pickup", "description": "Depart for Besakih Great Temple."},
+      {"time": "10:00", "location": "Besakih Great Temple", "description": "Arrive and explore the temple complex with a guide."},
+      {"time": "12:00", "location": "Return to Hotel"}
+    ],
+    "highlights": ["Mother Temple of Bali", "Ancient architecture", "Mountain views"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Besakih Great Temple & Surroundings (Full-day)",
+    "overview": "A full day exploring Besakih Great Temple and nearby cultural sites on the slopes of Mount Agung.",
+    "stops": [
+      {"time": "08:00", "location": "Hotel Pickup", "description": "Depart for Besakih Great Temple."},
+      {"time": "10:00", "location": "Besakih Great Temple", "description": "Arrive and explore the temple complex with a guide."},
+      {"time": "12:00", "location": "Lunch Break", "description": "Lunch at a local restaurant (optional)."},
+      {"time": "13:00", "location": "Cultural Sites Tour", "description": "Visit nearby temples and villages."},
+      {"time": "16:00", "location": "Return to Hotel"}
+    ],
+    "highlights": ["Mother Temple of Bali", "Ancient architecture", "Cultural sites", "Mountain views"]
+  }
+]

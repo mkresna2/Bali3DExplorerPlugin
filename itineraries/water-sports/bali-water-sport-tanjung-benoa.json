@@ -1,0 +1,30 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Bali Water Sport Tanjung Benoa (Half-day)",
+    "overview": "Experience popular water sports like jet skiing, parasailing, and donut boat rides at Tanjung Benoa.",
+    "stops": [
+      {"time": "09:00", "location": "Hotel Pickup", "description": "Depart for Tanjung Benoa."},
+      {"time": "09:30", "location": "Bali Water Sport Tanjung Benoa", "description": "Arrive and prepare for water sports."},
+      {"time": "09:45", "location": "Jet Ski & Parasailing", "description": "Enjoy jet skiing and parasailing adventures."},
+      {"time": "11:00", "location": "Donut Boat Ride", "description": "Try the fun donut boat ride."},
+      {"time": "12:30", "location": "Return to Hotel"}
+    ],
+    "highlights": ["Jet skiing", "Parasailing", "Donut boat", "Family-friendly"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Bali Water Sport Tanjung Benoa Full Experience (Full-day)",
+    "overview": "A full day of water sports excitement at Tanjung Benoa, including banana boat, snorkeling, and more.",
+    "stops": [
+      {"time": "09:00", "location": "Hotel Pickup", "description": "Depart for Tanjung Benoa."},
+      {"time": "09:30", "location": "Bali Water Sport Tanjung Benoa", "description": "Arrive and prepare for a day of activities."},
+      {"time": "09:45", "location": "Banana Boat & Jet Ski", "description": "Ride banana boats and jet skis."},
+      {"time": "11:00", "location": "Parasailing", "description": "Fly high with parasailing."},
+      {"time": "13:00", "location": "Lunch Break", "description": "Lunch at a local restaurant (optional)."},
+      {"time": "14:00", "location": "Snorkeling & Donut Boat", "description": "Snorkel and enjoy a donut boat ride."},
+      {"time": "16:00", "location": "Return to Hotel"}
+    ],
+    "highlights": ["Banana boat", "Jet skiing", "Parasailing", "Snorkeling", "Donut boat"]
+  }
+]

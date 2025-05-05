@@ -1,0 +1,28 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Tropical Temptation Beach Club Afternoon (Half-day)",
+    "overview": "Chic beach club offering sunset cocktails, daybeds, and ocean views at Pecatu.",
+    "stops": [
+      {"time": "14:00", "location": "Sakala Resort Bali", "description": "Depart for Tropical Temptation Beach Club."},
+      {"time": "14:45", "location": "Tropical Temptation Beach Club", "description": "Arrive and relax on daybeds, enjoy cocktails, and ocean views."},
+      {"time": "17:30", "location": "Sunset Session", "description": "Experience the sunset from the club's terrace."},
+      {"time": "19:00", "location": "Return to Sakala Resort Bali"}
+    ],
+    "highlights": ["Sunset cocktails", "Daybeds", "Ocean views"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Tropical Temptation Beach Club Experience (Full-day)",
+    "overview": "A full day of relaxation, cocktails, and ocean views at Tropical Temptation Beach Club.",
+    "stops": [
+      {"time": "10:00", "location": "Sakala Resort Bali", "description": "Depart for Tropical Temptation Beach Club."},
+      {"time": "10:45", "location": "Tropical Temptation Beach Club", "description": "Arrive and enjoy daybeds, ocean views, and cocktails."},
+      {"time": "13:00", "location": "Lunch at Tropical Temptation", "description": "Lunch with a view of the ocean."},
+      {"time": "14:00", "location": "Relaxation & Activities", "description": "Relax by the pool or enjoy club activities."},
+      {"time": "17:30", "location": "Sunset Session", "description": "Experience the sunset from the club's terrace."},
+      {"time": "19:00", "location": "Return to Sakala Resort Bali"}
+    ],
+    "highlights": ["Sunset cocktails", "Daybeds", "Ocean views"]
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Baris Kraras Dance Experience (Half-day)",
+    "overview": "Witness the powerful Baris Kraras dance, a traditional Balinese warrior dance.",
+    "stops": [
+      {"time": "09:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "10:30", "location": "Performance Venue", "description": "Arrive and observe the Baris Kraras dance performance."},
+      {"time": "12:30", "location": "Return to Sakala Resort Bali", "description": "Return to Sakala Resort Bali."}
+    ],
+    "highlights": ["Warrior dance", "Traditional music", "Cultural performance"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Baris Kraras Dance & Workshop (Full-day)",
+    "overview": "A full day with the Baris Kraras dance, including a performance and cultural workshop.",
+    "stops": [
+      {"time": "09:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "10:30", "location": "Performance Venue", "description": "Arrive and witness the Baris Kraras dance performance."},
+      {"time": "12:00", "location": "Lunch Break", "description": "Lunch at a local warung (optional)."},
+      {"time": "13:00", "location": "Cultural Workshop", "description": "Participate in a workshop or discussion about the Baris Kraras dance."},
+      {"time": "16:00", "location": "Return to Sakala Resort Bali", "description": "Return to Sakala Resort Bali."}
+    ],
+    "highlights": ["Warrior dance", "Cultural workshop", "Traditional music"]
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Ulun Danu Beratan Temple Visit (Half-day)",
+    "overview": "Visit the picturesque Ulun Danu Beratan Temple, set on Lake Beratan in the mountains of Bedugul.",
+    "stops": [
+      {"time": "08:00", "location": "Hotel Pickup", "description": "Depart for Ulun Danu Beratan Temple."},
+      {"time": "10:00", "location": "Ulun Danu Beratan Temple", "description": "Arrive and explore the temple complex and lakeside gardens."},
+      {"time": "12:00", "location": "Return to Hotel"}
+    ],
+    "highlights": ["Lakeside temple", "Mountain scenery", "Gardens"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Ulun Danu Beratan Temple & Bedugul (Full-day)",
+    "overview": "A full day exploring Ulun Danu Beratan Temple and the scenic Bedugul area.",
+    "stops": [
+      {"time": "08:00", "location": "Hotel Pickup", "description": "Depart for Ulun Danu Beratan Temple."},
+      {"time": "10:00", "location": "Ulun Danu Beratan Temple", "description": "Arrive and explore the temple complex and lakeside gardens."},
+      {"time": "12:00", "location": "Lunch Break", "description": "Lunch at a local restaurant (optional)."},
+      {"time": "13:00", "location": "Bedugul Tour", "description": "Visit the Bedugul botanical gardens or local markets."},
+      {"time": "16:00", "location": "Return to Hotel"}
+    ],
+    "highlights": ["Lakeside temple", "Mountain scenery", "Bedugul attractions"]
+  }
+]

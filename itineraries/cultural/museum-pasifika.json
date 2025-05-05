@@ -1,0 +1,26 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Museum PASIFIKA Art & Culture (Half-day)",
+    "overview": "Explore Southeast Asian art and culture at Museum PASIFIKA in Nusa Dua.",
+    "stops": [
+      {"time": "10:00", "location": "Hotel Pickup", "description": "Depart for Museum PASIFIKA."},
+      {"time": "10:30", "location": "Museum PASIFIKA", "description": "Arrive and begin exploring the galleries."},
+      {"time": "12:30", "location": "Return to Hotel"}
+    ],
+    "highlights": ["Southeast Asian art", "Cultural exhibits", "Historical artifacts"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Museum PASIFIKA Full Experience (Full-day)",
+    "overview": "A full day of art, culture, and workshops at Museum PASIFIKA.",
+    "stops": [
+      {"time": "10:00", "location": "Hotel Pickup", "description": "Depart for Museum PASIFIKA."},
+      {"time": "10:30", "location": "Museum PASIFIKA", "description": "Arrive and explore all galleries and special exhibits."},
+      {"time": "13:00", "location": "Lunch Break", "description": "Lunch at a nearby restaurant (optional)."},
+      {"time": "14:00", "location": "Art Workshops & Activities", "description": "Participate in art workshops or guided tours."},
+      {"time": "16:00", "location": "Return to Hotel"}
+    ],
+    "highlights": ["Southeast Asian art", "Cultural exhibits", "Workshops", "Historical artifacts"]
+  }
+]

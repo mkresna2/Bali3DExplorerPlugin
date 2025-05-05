@@ -1,0 +1,28 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Rock Bar at AYANA Jimbaran (Half-day)",
+    "overview": "Experience Bali's iconic Rock Bar at AYANA with dramatic oceanfront views, cocktails, and sunset sessions in Jimbaran.",
+    "stops": [
+      {"time": "15:00", "location": "Sakala Resort Bali", "description": "Depart for Rock Bar at AYANA, Jimbaran."},
+      {"time": "15:45", "location": "Rock Bar at AYANA, Jimbaran", "description": "Arrive and enjoy cocktails with panoramic ocean views."},
+      {"time": "17:30", "location": "Sunset Session", "description": "Experience the famous sunset session with live DJs and signature drinks."},
+      {"time": "19:00", "location": "Return to Sakala Resort Bali"}
+    ],
+    "highlights": ["Oceanfront bar", "Dramatic views", "Signature cocktails", "Sunset DJs"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Rock Bar at AYANA Jimbaran Experience (Full-day)",
+    "overview": "A full day of luxury, oceanfront lounging, and sunset sessions at Rock Bar, AYANA, Jimbaran.",
+    "stops": [
+      {"time": "10:00", "location": "Sakala Resort Bali", "description": "Depart for Rock Bar at AYANA, Jimbaran."},
+      {"time": "10:45", "location": "Rock Bar at AYANA, Jimbaran", "description": "Arrive and enjoy the bar, ocean views, and club facilities."},
+      {"time": "13:00", "location": "Lunch at Rock Bar", "description": "Lunch with panoramic ocean views."},
+      {"time": "14:00", "location": "Oceanfront & Activities", "description": "Relax by the bar, enjoy club amenities, or stroll the cliffs."},
+      {"time": "17:30", "location": "Sunset Session", "description": "Experience the famous sunset session with live DJs and signature drinks."},
+      {"time": "19:00", "location": "Return to Sakala Resort Bali"}
+    ],
+    "highlights": ["Oceanfront bar", "Dramatic views", "Signature cocktails", "Sunset DJs"]
+  }
+]

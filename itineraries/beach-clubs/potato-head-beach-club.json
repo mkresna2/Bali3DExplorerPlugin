@@ -1,0 +1,27 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Potato Head Beach Club Afternoon (Half-day)",
+    "overview": "Experience the iconic Potato Head Beach Club with its beachfront pool, creative cocktails, and artful architecture in Seminyak.",
+    "stops": [
+      {"time": "13:00", "location": "Sakala Resort Bali", "description": "Depart for Potato Head Beach Club."},
+      {"time": "13:35", "location": "Potato Head Beach Club", "description": "Arrive and enjoy the pool, cocktails, and beachfront views."},
+      {"time": "16:00", "location": "Art & Architecture Tour", "description": "Explore the club's unique design and art installations."},
+      {"time": "18:00", "location": "Return to Sakala Resort Bali"}
+    ],
+    "highlights": ["Beachfront pool", "Creative cocktails", "Art & architecture", "Sunset views"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Potato Head Beach Club Experience (Full-day)",
+    "overview": "A full day of poolside lounging, creative cuisine, and sunset at Potato Head Beach Club.",
+    "stops": [
+      {"time": "10:00", "location": "Sakala Resort Bali", "description": "Depart for Potato Head Beach Club."},
+      {"time": "10:35", "location": "Potato Head Beach Club", "description": "Arrive and enjoy the pool, art, and club facilities."},
+      {"time": "13:00", "location": "Lunch at Potato Head", "description": "Lunch with creative cuisine and ocean views."},
+      {"time": "14:00", "location": "Poolside & Activities", "description": "Relax by the pool, explore art installations, or enjoy club amenities."},
+      {"time": "18:00", "location": "Return to Sakala Resort Bali"}
+    ],
+    "highlights": ["Beachfront pool", "Creative cocktails", "Art & architecture", "Sunset views"]
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Manta Point, Nusa Penida Snorkeling (Half-day)",
+    "overview": "Snorkel with majestic manta rays at Manta Point, Nusa Penida, and enjoy the vibrant marine life.",
+    "stops": [
+      {"time": "07:00", "location": "Hotel Pickup", "description": "Depart for Nusa Penida harbor."},
+      {"time": "08:00", "location": "Boat to Nusa Penida", "description": "Take a fast boat to Nusa Penida."},
+      {"time": "09:00", "location": "Manta Point", "description": "Arrive and snorkel with manta rays."},
+      {"time": "11:30", "location": "Beach Relaxation", "description": "Relax on the beach or explore nearby spots."},
+      {"time": "13:00", "location": "Return to Hotel"}
+    ],
+    "highlights": ["Snorkeling", "Manta rays", "Boat trip", "Marine life"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Manta Point, Nusa Penida Full Experience (Full-day)",
+    "overview": "A full day of snorkeling, beach relaxation, and marine exploration at Manta Point, Nusa Penida.",
+    "stops": [
+      {"time": "07:00", "location": "Hotel Pickup", "description": "Depart for Nusa Penida harbor."},
+      {"time": "08:00", "location": "Boat to Nusa Penida", "description": "Take a fast boat to Nusa Penida."},
+      {"time": "09:00", "location": "Manta Point", "description": "Arrive and snorkel with manta rays."},
+      {"time": "11:30", "location": "Beach Relaxation", "description": "Relax on the beach or explore more snorkeling spots."},
+      {"time": "13:00", "location": "Lunch Break", "description": "Lunch at a local beach cafe (optional)."},
+      {"time": "14:00", "location": "Marine Exploration", "description": "Explore other snorkeling sites or relax at Manta Point."},
+      {"time": "16:00", "location": "Return to Hotel"}
+    ],
+    "highlights": ["Snorkeling", "Manta rays", "Boat trip", "Marine life"]
+  }
+]

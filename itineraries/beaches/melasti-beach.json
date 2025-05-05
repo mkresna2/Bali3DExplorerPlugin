@@ -1,0 +1,28 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Melasti Beach Cliffside Escape (Half-day)",
+    "overview": "Experience the dramatic cliffs and turquoise waters of Melasti Beach, perfect for relaxation and stunning photography.",
+    "stops": [
+      {"time": "09:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "09:45", "location": "Melasti Beach", "description": "Arrive and explore the beach, swim, or relax on the white sand."},
+      {"time": "11:30", "location": "Cliffside Viewpoint", "description": "Enjoy panoramic views and take photos from the cliffs."},
+      {"time": "12:30", "location": "Return to Sakala Resort Bali"}
+    ],
+    "highlights": ["Cliffside views", "Rock formations", "Sunny dunes"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Melasti Beach & Spiritual Cleansing (Full-day)",
+    "overview": "A full day at Melasti Beach, including time for swimming, cliff walks, and a visit to the local spiritual cleansing site.",
+    "stops": [
+      {"time": "09:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "09:45", "location": "Melasti Beach", "description": "Arrive and relax, swim, or sunbathe on the beach."},
+      {"time": "12:00", "location": "Cliffside Warung", "description": "Lunch at a local warung with ocean views."},
+      {"time": "13:30", "location": "Spiritual Cleansing Site", "description": "Participate in or observe a traditional Melasti cleansing ceremony (if available)."},
+      {"time": "15:00", "location": "Cliff Walk & Photo Spots", "description": "Walk along the cliffs and capture the scenery."},
+      {"time": "16:00", "location": "Return to Sakala Resort Bali"}
+    ],
+    "highlights": ["Cliffside views", "Spiritual cleansing", "Photography", "White sand beach"]
+  }
+]

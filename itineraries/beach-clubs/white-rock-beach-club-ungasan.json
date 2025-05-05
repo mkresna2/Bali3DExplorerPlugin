@@ -1,0 +1,27 @@
+[
+  {
+    "type": "Half-day",
+    "title": "White Rock Beach Club Ungasan (Half-day)",
+    "overview": "Enjoy the dramatic cliffs, infinity pool, and ocean views at White Rock Beach Club in Ungasan.",
+    "stops": [
+      {"time": "13:00", "location": "Sakala Resort Bali", "description": "Depart for White Rock Beach Club Ungasan."},
+      {"time": "13:50", "location": "White Rock Beach Club Ungasan", "description": "Arrive and enjoy the infinity pool and cliffside views."},
+      {"time": "16:00", "location": "Sunset Cocktails", "description": "Sip cocktails and enjoy the sunset from the cliffs."},
+      {"time": "18:00", "location": "Return to Sakala Resort Bali"}
+    ],
+    "highlights": ["Infinity pool", "Cliffside views", "Ocean views", "Sunset cocktails"]
+  },
+  {
+    "type": "Full-day",
+    "title": "White Rock Beach Club Ungasan Experience (Full-day)",
+    "overview": "A full day of relaxation, food, and sunsets at White Rock Beach Club in Ungasan.",
+    "stops": [
+      {"time": "10:00", "location": "Sakala Resort Bali", "description": "Depart for White Rock Beach Club Ungasan."},
+      {"time": "10:50", "location": "White Rock Beach Club Ungasan", "description": "Arrive and enjoy the infinity pool, food, and club facilities."},
+      {"time": "13:00", "location": "Lunch at White Rock Beach Club", "description": "Lunch with ocean and cliff views."},
+      {"time": "14:00", "location": "Poolside & Activities", "description": "Relax by the pool, enjoy club amenities, or stroll the cliffs."},
+      {"time": "18:00", "location": "Return to Sakala Resort Bali"}
+    ],
+    "highlights": ["Infinity pool", "Cliffside views", "Ocean views", "Sunset cocktails"]
+  }
+]

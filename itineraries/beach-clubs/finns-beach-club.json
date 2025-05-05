@@ -1,0 +1,27 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Finns Beach Club Poolside Fun (Half-day)",
+    "overview": "Enjoy pools, bars, and live entertainment at the lively Finns Beach Club in Canggu.",
+    "stops": [
+      {"time": "13:00", "location": "Sakala Resort Bali", "description": "Depart for Finns Beach Club."},
+      {"time": "13:50", "location": "Finns Beach Club", "description": "Arrive and relax by the pool, enjoy drinks and music."},
+      {"time": "16:00", "location": "Live Entertainment", "description": "Experience live DJs and entertainment."},
+      {"time": "18:00", "location": "Return to Sakala Resort Bali"}
+    ],
+    "highlights": ["Beachfront bar", "Infinity pool", "Live music", "Cabanas"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Finns Beach Club All Day (Full-day)",
+    "overview": "A full day of poolside lounging, live music, and beachfront fun at Finns Beach Club.",
+    "stops": [
+      {"time": "10:00", "location": "Sakala Resort Bali", "description": "Depart for Finns Beach Club."},
+      {"time": "10:50", "location": "Finns Beach Club", "description": "Arrive and enjoy the pool, cabanas, and beachfront bar."},
+      {"time": "13:00", "location": "Lunch at Finns Beach Club", "description": "Lunch with ocean views."},
+      {"time": "14:00", "location": "Poolside & Activities", "description": "Relax by the pool, enjoy live music, or participate in club activities."},
+      {"time": "18:00", "location": "Return to Sakala Resort Bali"}
+    ],
+    "highlights": ["Beachfront bar", "Infinity pool", "Live music", "Cabanas"]
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Amed Beach Diving & Relaxation (Half-day)",
+    "overview": "Experience the peaceful fishing village of Amed Beach, known for its black volcanic sand and excellent diving/snorkeling spots.",
+    "stops": [
+      {"time": "07:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "10:00", "location": "Amed Beach", "description": "Arrive and enjoy diving or snorkeling in the clear waters."},
+      {"time": "12:00", "location": "Beach Warung", "description": "Lunch at a local warung with sea views."},
+      {"time": "13:00", "location": "Return to Sakala Resort Bali"}
+    ],
+    "highlights": ["Diving", "Snorkeling", "Black sand beach"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Amed Beach & Underwater Adventure (Full-day)",
+    "overview": "A full day at Amed Beach, featuring diving, snorkeling, and relaxing in a tranquil coastal setting.",
+    "stops": [
+      {"time": "07:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "10:00", "location": "Amed Beach", "description": "Arrive and enjoy diving, snorkeling, or exploring the village."},
+      {"time": "12:30", "location": "Beach Warung", "description": "Lunch at a beachside warung."},
+      {"time": "14:00", "location": "Relax on the Beach", "description": "Free time for sunbathing, swimming, or exploring the coastline."},
+      {"time": "16:00", "location": "Return to Sakala Resort Bali"}
+    ],
+    "highlights": ["Diving", "Snorkeling", "Black sand beach", "Village exploration"]
+  }
+]

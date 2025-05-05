@@ -1,0 +1,28 @@
+[
+  {
+    "type": "Half-day",
+    "title": "The Lawn Canggu Sunset (Half-day)",
+    "overview": "Chill at The Lawn, Canggu's beachfront lounge with sunset views, cocktails, and live music.",
+    "stops": [
+      {"time": "15:00", "location": "Sakala Resort Bali", "description": "Depart for The Lawn Canggu."},
+      {"time": "15:40", "location": "The Lawn Canggu", "description": "Arrive and relax on bean bags or daybeds."},
+      {"time": "17:30", "location": "Sunset Cocktails", "description": "Sip cocktails and enjoy live music as the sun sets."},
+      {"time": "19:00", "location": "Return to Sakala Resort Bali"}
+    ],
+    "highlights": ["Sunset views", "Cocktails", "Live music", "Beachfront location"]
+  },
+  {
+    "type": "Full-day",
+    "title": "The Lawn Canggu Day (Full-day)",
+    "overview": "A full day of lounging, food, and sunset at The Lawn Canggu.",
+    "stops": [
+      {"time": "10:00", "location": "Sakala Resort Bali", "description": "Depart for The Lawn Canggu."},
+      {"time": "10:40", "location": "The Lawn Canggu", "description": "Arrive and enjoy the daybeds, pool, and beachfront."},
+      {"time": "13:00", "location": "Lunch at The Lawn", "description": "Lunch with a view of the ocean."},
+      {"time": "14:00", "location": "Relaxation & Activities", "description": "Relax on the lawn, swim, or enjoy the club's amenities."},
+      {"time": "17:30", "location": "Sunset Cocktails", "description": "Enjoy sunset cocktails and live music."},
+      {"time": "19:00", "location": "Return to Sakala Resort Bali"}
+    ],
+    "highlights": ["Sunset views", "Cocktails", "Live music", "Beachfront location"]
+  }
+]

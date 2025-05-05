@@ -1,0 +1,27 @@
+[
+  {
+    "type": "Half-day",
+    "title": "OMNIA Dayclub Afternoon (Half-day)",
+    "overview": "Enjoy a luxurious afternoon at OMNIA Dayclub (now Savaya Bali) with infinity pool views and world-class DJs.",
+    "stops": [
+      {"time": "14:00", "location": "Sakala Resort Bali", "description": "Depart for OMNIA Dayclub."},
+      {"time": "15:00", "location": "OMNIA Dayclub", "description": "Arrive and relax by the infinity pool, enjoy cocktails, and music."},
+      {"time": "17:30", "location": "VIP Cabana or Poolside", "description": "Upgrade to a cabana or stay poolside for sunset DJ sets."},
+      {"time": "19:00", "location": "Return to Sakala Resort Bali"}
+    ],
+    "highlights": ["Infinity pool", "World-class DJs", "VIP cabanas", "Cliff-edge views"]
+  },
+  {
+    "type": "Full-day",
+    "title": "OMNIA Dayclub Experience (Full-day)",
+    "overview": "A full day of luxury, music, and dining at OMNIA Dayclub (now Savaya Bali).",
+    "stops": [
+      {"time": "11:00", "location": "Sakala Resort Bali", "description": "Depart for OMNIA Dayclub."},
+      {"time": "12:00", "location": "OMNIA Dayclub", "description": "Arrive, enjoy the infinity pool, and premium dining."},
+      {"time": "14:00", "location": "VIP Cabana", "description": "Relax in a cabana with personalized service."},
+      {"time": "17:00", "location": "Sunset DJ Set", "description": "Enjoy the sunset with DJ performances."},
+      {"time": "19:00", "location": "Return to Sakala Resort Bali"}
+    ],
+    "highlights": ["Infinity pool", "VIP cabanas", "World-class DJs", "Premium dining", "Cliff-edge views"]
+  }
+]

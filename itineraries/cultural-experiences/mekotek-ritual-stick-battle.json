@@ -1,0 +1,27 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Mekotek (Ritual Stick Battle) (Half-day)",
+    "overview": "Witness the energetic Mekotek ritual, a traditional stick battle held in Munggu village.",
+    "stops": [
+      {"time": "09:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "10:30", "location": "Munggu Village", "description": "Arrive and observe the Mekotek ritual and its significance."},
+      {"time": "12:30", "location": "Return to Sakala Resort Bali", "description": "Return to Sakala Resort Bali."}
+    ],
+    "highlights": ["Stick battle", "Village ritual", "Community tradition"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Mekotek Ritual & Village Tour (Full-day)",
+    "overview": "A full day exploring the Mekotek ritual and Balinese village culture.",
+    "stops": [
+      {"time": "09:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "10:30", "location": "Munggu Village", "description": "Arrive and witness the Mekotek ritual."},
+      {"time": "12:00", "location": "Village Tour", "description": "Tour the local village and interact with the community."},
+      {"time": "13:00", "location": "Lunch Break", "description": "Lunch at a local warung (optional)."},
+      {"time": "14:00", "location": "Cultural Workshop", "description": "Participate in a workshop or discussion about Balinese rituals."},
+      {"time": "16:00", "location": "Return to Sakala Resort Bali", "description": "Return to Sakala Resort Bali."}
+    ],
+    "highlights": ["Stick battle", "Village culture", "Cultural workshop"]
+  }
+]

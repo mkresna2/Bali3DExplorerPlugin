@@ -1,0 +1,26 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Tirta Gangga Water Gardens (Half-day)",
+    "overview": "Wander through the beautiful Tirta Gangga Water Gardens, famous for its pools, fountains, and statues.",
+    "stops": [
+      {"time": "09:00", "location": "Hotel Pickup", "description": "Depart for Tirta Gangga."},
+      {"time": "10:30", "location": "Tirta Gangga Water Gardens", "description": "Arrive and explore the gardens and pools."},
+      {"time": "12:00", "location": "Return to Hotel"}
+    ],
+    "highlights": ["Water gardens", "Fountains & statues", "Photography"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Tirta Gangga & East Bali (Full-day)",
+    "overview": "A full day exploring Tirta Gangga Water Gardens and nearby East Bali attractions.",
+    "stops": [
+      {"time": "09:00", "location": "Hotel Pickup", "description": "Depart for Tirta Gangga."},
+      {"time": "10:30", "location": "Tirta Gangga Water Gardens", "description": "Arrive and explore the gardens and pools."},
+      {"time": "12:00", "location": "Lunch Break", "description": "Lunch at a local restaurant (optional)."},
+      {"time": "13:00", "location": "East Bali Tour", "description": "Visit nearby attractions such as Ujung Water Palace."},
+      {"time": "16:00", "location": "Return to Hotel"}
+    ],
+    "highlights": ["Water gardens", "East Bali attractions", "Photography"]
+  }
+]

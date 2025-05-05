@@ -1,0 +1,27 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Caow Eng Bio Chinese Buddhist Temple Visit (Half-day)",
+    "overview": "Discover the history and architecture of Caow Eng Bio, Bali's oldest Chinese Buddhist temple.",
+    "stops": [
+      {"time": "09:00", "location": "Hotel Pickup", "description": "Depart for Caow Eng Bio Temple."},
+      {"time": "09:30", "location": "Caow Eng Bio Temple", "description": "Arrive and explore the temple grounds and shrines."},
+      {"time": "11:00", "location": "Cultural Walk", "description": "Take a cultural walk in the surrounding area."},
+      {"time": "12:00", "location": "Return to Hotel"}
+    ],
+    "highlights": ["Chinese Buddhist architecture", "Historical shrine", "Cultural walk"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Caow Eng Bio Temple & Heritage (Full-day)",
+    "overview": "A full day of temple exploration and cultural immersion at Caow Eng Bio and surrounding heritage sites.",
+    "stops": [
+      {"time": "09:00", "location": "Hotel Pickup", "description": "Depart for Caow Eng Bio Temple."},
+      {"time": "09:30", "location": "Caow Eng Bio Temple", "description": "Arrive and explore the temple and participate in a guided heritage tour."},
+      {"time": "12:00", "location": "Lunch Break", "description": "Lunch at a local restaurant (optional)."},
+      {"time": "13:00", "location": "Cultural Heritage Sites", "description": "Visit nearby cultural and historical sites."},
+      {"time": "16:00", "location": "Return to Hotel"}
+    ],
+    "highlights": ["Chinese Buddhist architecture", "Historical shrine", "Guided heritage tour"]
+  }
+]

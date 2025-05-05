@@ -1,0 +1,26 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Lempuyang Temple Visit (Half-day)",
+    "overview": "Visit the iconic Lempuyang Temple, known for the Gates of Heaven and panoramic mountain views.",
+    "stops": [
+      {"time": "07:00", "location": "Hotel Pickup", "description": "Depart for Lempuyang Temple."},
+      {"time": "09:30", "location": "Lempuyang Temple", "description": "Arrive and explore the temple complex and Gates of Heaven."},
+      {"time": "12:00", "location": "Return to Hotel"}
+    ],
+    "highlights": ["Gates of Heaven", "Panoramic views", "Sacred temple"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Lempuyang Temple & East Bali (Full-day)",
+    "overview": "A full day exploring Lempuyang Temple and nearby East Bali landmarks.",
+    "stops": [
+      {"time": "07:00", "location": "Hotel Pickup", "description": "Depart for Lempuyang Temple."},
+      {"time": "09:30", "location": "Lempuyang Temple", "description": "Arrive and explore the temple complex and Gates of Heaven."},
+      {"time": "12:00", "location": "Lunch Break", "description": "Lunch at a local restaurant (optional)."},
+      {"time": "13:00", "location": "East Bali Tour", "description": "Visit nearby landmarks such as Tirta Gangga or Ujung Water Palace."},
+      {"time": "16:00", "location": "Return to Hotel"}
+    ],
+    "highlights": ["Gates of Heaven", "Panoramic views", "East Bali landmarks"]
+  }
+]

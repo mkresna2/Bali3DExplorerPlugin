@@ -1,0 +1,27 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Atlas Beach Club Vibes (Half-day)",
+    "overview": "Vibrant poolside club with cocktails, DJ sets, and lounging areas in Seminyak.",
+    "stops": [
+      {"time": "15:00", "location": "Sakala Resort Bali", "description": "Depart for Atlas Beach Club."},
+      {"time": "15:35", "location": "Atlas Beach Club", "description": "Arrive, enjoy cocktails, and poolside lounging."},
+      {"time": "17:30", "location": "Live DJ Set", "description": "Experience live DJ performances by the pool."},
+      {"time": "19:00", "location": "Return to Sakala Resort Bali"}
+    ],
+    "highlights": ["Cocktails", "Live DJs", "Poolside lounging"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Atlas Beach Club All Day (Full-day)",
+    "overview": "A full day of poolside fun, cocktails, and live music at Atlas Beach Club.",
+    "stops": [
+      {"time": "10:00", "location": "Sakala Resort Bali", "description": "Depart for Atlas Beach Club."},
+      {"time": "10:35", "location": "Atlas Beach Club", "description": "Arrive and enjoy the pool, cocktails, and live music."},
+      {"time": "13:00", "location": "Lunch at Atlas Beach Club", "description": "Lunch with poolside views."},
+      {"time": "14:00", "location": "Poolside & Activities", "description": "Relax by the pool, enjoy live DJs, or participate in club activities."},
+      {"time": "19:00", "location": "Return to Sakala Resort Bali"}
+    ],
+    "highlights": ["Cocktails", "Live DJs", "Poolside lounging"]
+  }
+]

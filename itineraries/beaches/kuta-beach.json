@@ -1,0 +1,29 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Kuta Beach Essentials (Half-day)",
+    "overview": "Enjoy Bali's most famous beach with sunbathing, surfing, and vibrant street life.",
+    "stops": [
+      {"time": "09:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "09:45", "location": "Kuta Beach", "description": "Arrive and relax on the sandy shore, try beginner surfing or swim."},
+      {"time": "11:00", "location": "Beachfront Cafés", "description": "Enjoy refreshments and people-watching at a local café."},
+      {"time": "12:00", "location": "Kuta Art Market", "description": "Browse souvenirs and local crafts."},
+      {"time": "13:00", "location": "Sakala Resort Bali", "description": "Return to the resort."}
+    ],
+    "highlights": ["Surfing", "Sunset viewing", "Street food stalls", "Beach bars"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Classic Kuta Experience (Full-day)",
+    "overview": "A full day at Kuta Beach with surfing lessons, shopping, and sunset views.",
+    "stops": [
+      {"time": "08:30", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "09:15", "location": "Kuta Beach", "description": "Take a surfing lesson or swim in the ocean."},
+      {"time": "11:30", "location": "Discovery Shopping Mall", "description": "Shop for beachwear and enjoy lunch."},
+      {"time": "14:00", "location": "Kuta Beachwalk", "description": "Stroll along the beachfront promenade, visit cafés."},
+      {"time": "17:30", "location": "Kuta Beach", "description": "Relax and watch the famous Bali sunset."},
+      {"time": "18:30", "location": "Sakala Resort Bali", "description": "Return to the resort."}
+    ],
+    "highlights": ["Surfing", "Sunset viewing", "Shopping", "Beach bars"]
+  }
+]

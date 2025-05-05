@@ -1,0 +1,29 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Lovina Beach Dolphin Watch (Half-day)",
+    "overview": "Experience calm waters and black sand, with a morning dolphin-watching boat trip at Lovina Beach.",
+    "stops": [
+      {"time": "04:30", "location": "Sakala Resort Bali", "description": "Depart early from Sakala Resort Bali for Lovina."},
+      {"time": "08:00", "location": "Lovina Beach", "description": "Arrive and join a dolphin-watching boat tour."},
+      {"time": "10:00", "location": "Hot Springs", "description": "Relax in nearby Banjar Hot Springs."},
+      {"time": "12:00", "location": "Local Café", "description": "Enjoy lunch at a beachside café."},
+      {"time": "13:00", "location": "Return to Sakala Resort Bali"}
+    ],
+    "highlights": ["Dolphin watching", "Hot springs", "Black sand", "Calm waters"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Lovina Beach & North Bali (Full-day)",
+    "overview": "A full day exploring Lovina Beach, dolphin watching, hot springs, and North Bali sights.",
+    "stops": [
+      {"time": "04:30", "location": "Sakala Resort Bali", "description": "Depart early from Sakala Resort Bali for Lovina."},
+      {"time": "08:00", "location": "Lovina Beach", "description": "Dolphin watching and relaxing on the black sand beach."},
+      {"time": "10:30", "location": "Banjar Hot Springs", "description": "Soak in the natural hot springs nearby."},
+      {"time": "12:00", "location": "Brahmavihara-Arama Buddhist Monastery", "description": "Visit the largest Buddhist monastery in Bali."},
+      {"time": "15:00", "location": "Lovina Beach", "description": "Return to the beach to swim or relax before heading back."},
+      {"time": "17:00", "location": "Return to Sakala Resort Bali"}
+    ],
+    "highlights": ["Dolphin watching", "Hot springs", "Black sand", "Buddhist monastery"]
+  }
+]

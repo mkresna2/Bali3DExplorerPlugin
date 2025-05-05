@@ -1,0 +1,26 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Makepung (Buffalo Races) (Half-day)",
+    "overview": "Experience the excitement of Makepung, Bali's traditional buffalo races in Jembrana.",
+    "stops": [
+      {"time": "06:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "09:00", "location": "Makepung Race Track, Jembrana", "description": "Arrive and watch the thrilling buffalo races."},
+      {"time": "12:00", "location": "Return to Sakala Resort Bali", "description": "Return to Sakala Resort Bali."}
+    ],
+    "highlights": ["Buffalo races", "Traditional festival", "Local culture"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Makepung Festival & West Bali Tour (Full-day)",
+    "overview": "A full day at the Makepung buffalo races and exploring West Bali's unique culture.",
+    "stops": [
+      {"time": "06:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "09:00", "location": "Makepung Race Track, Jembrana", "description": "Arrive and watch the buffalo races."},
+      {"time": "12:00", "location": "Lunch Break", "description": "Lunch at a local warung (optional)."},
+      {"time": "13:00", "location": "West Bali Tour", "description": "Explore Jembrana or visit local markets and attractions."},
+      {"time": "16:00", "location": "Return to Sakala Resort Bali", "description": "Return to Sakala Resort Bali."}
+    ],
+    "highlights": ["Buffalo races", "West Bali culture", "Local attractions"]
+  }
+]

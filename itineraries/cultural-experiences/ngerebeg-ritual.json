@@ -1,0 +1,27 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Ngerebeg Ritual Experience (Half-day)",
+    "overview": "Witness the vibrant Ngerebeg ritual, a colorful procession and purification ceremony in Bali.",
+    "stops": [
+      {"time": "09:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "10:30", "location": "Ngerebeg Venue", "description": "Arrive and observe the Ngerebeg ritual and procession."},
+      {"time": "12:30", "location": "Return to Sakala Resort Bali", "description": "Return to Sakala Resort Bali."}
+    ],
+    "highlights": ["Colorful procession", "Purification ceremony", "Balinese culture"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Ngerebeg Ritual & Village Tour (Full-day)",
+    "overview": "A full day exploring the Ngerebeg ritual and village culture.",
+    "stops": [
+      {"time": "09:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "10:30", "location": "Ngerebeg Venue", "description": "Arrive and witness the Ngerebeg ritual."},
+      {"time": "12:00", "location": "Village Tour", "description": "Tour the local village and interact with the community."},
+      {"time": "13:00", "location": "Lunch Break", "description": "Lunch at a local warung (optional)."},
+      {"time": "14:00", "location": "Cultural Workshop", "description": "Participate in a workshop or discussion about Balinese rituals."},
+      {"time": "16:00", "location": "Return to Sakala Resort Bali", "description": "Return to Sakala Resort Bali."}
+    ],
+    "highlights": ["Colorful procession", "Village culture", "Cultural workshop"]
+  }
+]

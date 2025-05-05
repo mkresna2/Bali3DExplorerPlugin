@@ -1,0 +1,27 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Wanna Jungle Pool & Bar Ubud (Half-day)",
+    "overview": "Enjoy a half-day at Wanna Jungle Pool & Bar with tiered pools, jungle views, and tropical drinks in Ubud.",
+    "stops": [
+      {"time": "12:00", "location": "Sakala Resort Bali", "description": "Depart for Wanna Jungle Pool & Bar."},
+      {"time": "13:30", "location": "Wanna Jungle Pool & Bar", "description": "Arrive and enjoy tiered pools and jungle scenery."},
+      {"time": "16:00", "location": "Tropical Drinks", "description": "Sip cocktails and enjoy the view."},
+      {"time": "18:00", "location": "Return to Sakala Resort Bali"}
+    ],
+    "highlights": ["Tiered pools", "Jungle views", "Tropical drinks", "Relaxation"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Wanna Jungle Pool & Bar Ubud Experience (Full-day)",
+    "overview": "A full day of jungle poolside fun, food, and relaxation at Wanna Jungle Pool & Bar in Ubud.",
+    "stops": [
+      {"time": "09:00", "location": "Sakala Resort Bali", "description": "Depart for Wanna Jungle Pool & Bar."},
+      {"time": "10:30", "location": "Wanna Jungle Pool & Bar", "description": "Arrive and enjoy tiered pools, jungle views, and club facilities."},
+      {"time": "13:00", "location": "Lunch at Wanna Jungle Pool & Bar", "description": "Lunch with a jungle view."},
+      {"time": "14:00", "location": "Poolside & Activities", "description": "Relax by the pool, enjoy club amenities, or explore Ubud."},
+      {"time": "18:00", "location": "Return to Sakala Resort Bali"}
+    ],
+    "highlights": ["Tiered pools", "Jungle views", "Tropical drinks", "Relaxation"]
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Perang Pandan (Pandanus War) Experience (Half-day)",
+    "overview": "Witness the unique Perang Pandan ritual, a traditional pandanus leaf battle in Tenganan village.",
+    "stops": [
+      {"time": "09:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "11:00", "location": "Tenganan Village", "description": "Arrive and observe the Perang Pandan ritual and its cultural significance."},
+      {"time": "13:00", "location": "Return to Sakala Resort Bali", "description": "Return to Sakala Resort Bali."}
+    ],
+    "highlights": ["Pandanus leaf battle", "Ancient ritual", "Village culture"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Perang Pandan Ritual & Village Tour (Full-day)",
+    "overview": "A full day exploring the Perang Pandan ritual and Tenganan's unique culture.",
+    "stops": [
+      {"time": "09:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "11:00", "location": "Tenganan Village", "description": "Arrive and witness the Perang Pandan ritual."},
+      {"time": "12:30", "location": "Village Tour", "description": "Explore Tenganan village and its traditions."},
+      {"time": "13:30", "location": "Lunch Break", "description": "Lunch at a local warung (optional)."},
+      {"time": "14:30", "location": "Cultural Workshop", "description": "Participate in a workshop or discussion about Balinese rituals."},
+      {"time": "16:00", "location": "Return to Sakala Resort Bali", "description": "Return to Sakala Resort Bali."}
+    ],
+    "highlights": ["Pandanus leaf battle", "Village culture", "Cultural workshop"]
+  }
+]
