@@ -1,0 +1,27 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Bali Safari & Marine Park Highlights (Half-day)",
+    "overview": "A family-friendly half-day adventure at Bali’s top wildlife park, with safari rides and animal encounters.",
+    "stops": [
+      {"time": "09:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "10:30", "location": "Bali Safari & Marine Park", "description": "Arrive at the park, enjoy a safari journey, and see animal shows."},
+      {"time": "13:00", "location": "Sakala Resort Bali", "description": "Return to the resort."}
+    ],
+    "highlights": ["Safari journey", "Animal shows", "Wildlife encounters"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Ultimate Bali Safari Experience (Full-day)",
+    "overview": "A full day at Bali Safari & Marine Park, including marine shows, water play, and a special dinner.",
+    "stops": [
+      {"time": "08:30", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "10:00", "location": "Bali Safari & Marine Park", "description": "Explore the park, join a safari tour, and see animal encounters."},
+      {"time": "12:30", "location": "Marine Show", "description": "Enjoy the marine animal performance."},
+      {"time": "13:30", "location": "Water Play Zone", "description": "Cool off at the water play area."},
+      {"time": "15:00", "location": "Night Safari or Special Dinner", "description": "Choose a night safari or have dinner at Tsavo Lion Restaurant (optional)."},
+      {"time": "17:00", "location": "Sakala Resort Bali", "description": "Return to the resort."}
+    ],
+    "highlights": ["Safari journey", "Marine show", "Water play zone", "Night safari"]
+  }
+]

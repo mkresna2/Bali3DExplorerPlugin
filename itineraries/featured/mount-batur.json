@@ -1,0 +1,31 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Mount Batur Sunrise Trek (Half-day)",
+    "overview": "An early morning adventure to hike Mount Batur and witness a breathtaking sunrise over Bali.",
+    "stops": [
+      {"time": "02:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali (pre-dawn)."},
+      {"time": "04:00", "location": "Mount Batur Base", "description": "Arrive at the base and meet your trekking guide."},
+      {"time": "04:15", "location": "Mount Batur Summit Trail", "description": "Begin the trek to the summit."},
+      {"time": "06:00", "location": "Mount Batur Summit", "description": "Reach the summit in time for sunrise and breakfast."},
+      {"time": "08:00", "location": "Hot Springs", "description": "Relax in natural hot springs nearby (optional)."},
+      {"time": "09:30", "location": "Sakala Resort Bali", "description": "Return to the resort."}
+    ],
+    "highlights": ["Mount Batur sunrise", "Volcano trekking", "Hot springs", "Panoramic views"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Kintamani Highlands & Mount Batur (Full-day)",
+    "overview": "A full-day exploration of Bali’s volcanic region, including Mount Batur, Lake Batur, and local villages.",
+    "stops": [
+      {"time": "07:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "09:00", "location": "Mount Batur Base", "description": "Arrive at the base for a short trek or viewpoint visit."},
+      {"time": "10:30", "location": "Lake Batur", "description": "Enjoy the views and take a boat ride on the lake."},
+      {"time": "12:00", "location": "Kintamani Village", "description": "Lunch with views of the volcano and lake."},
+      {"time": "13:30", "location": "Toya Devasya Hot Springs", "description": "Relax in the hot springs."},
+      {"time": "15:00", "location": "Coffee Plantation", "description": "Visit a local coffee plantation for tasting."},
+      {"time": "16:30", "location": "Sakala Resort Bali", "description": "Return to the resort."}
+    ],
+    "highlights": ["Mount Batur", "Lake Batur", "Kintamani Village", "Hot springs"]
+  }
+]

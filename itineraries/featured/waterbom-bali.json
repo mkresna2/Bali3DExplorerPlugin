@@ -1,0 +1,26 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Waterbom Bali Splash (Half-day)",
+    "overview": "A fun-filled half-day at Asia’s top water park, with thrilling slides and relaxing pools.",
+    "stops": [
+      {"time": "10:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "10:30", "location": "Waterbom Bali", "description": "Arrive at Waterbom Bali and enjoy water slides, pools, and attractions."},
+      {"time": "14:00", "location": "Sakala Resort Bali", "description": "Return to the resort."}
+    ],
+    "highlights": ["Water slides", "Lazy river", "Kids area", "Relaxation"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Ultimate Waterbom Bali Day (Full-day)",
+    "overview": "A full day at Waterbom Bali, with time for all the rides, lunch, and relaxation in the tropical gardens.",
+    "stops": [
+      {"time": "09:30", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "10:00", "location": "Waterbom Bali", "description": "Arrive and enjoy all the slides and pools."},
+      {"time": "12:30", "location": "Waterbom Café", "description": "Lunch at one of the park’s restaurants."},
+      {"time": "13:30", "location": "Waterbom Bali", "description": "Continue to enjoy the attractions or relax in a cabana."},
+      {"time": "16:00", "location": "Sakala Resort Bali", "description": "Return to the resort."}
+    ],
+    "highlights": ["All water slides", "Tropical gardens", "Cabanas", "Family fun"]
+  }
+]

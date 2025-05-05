@@ -1,0 +1,30 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Bali Zoo Family Adventure (Half-day)",
+    "overview": "A fun and educational half-day trip to Bali Zoo, with animal encounters and wildlife shows.",
+    "stops": [
+      {"time": "09:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "10:00", "location": "Bali Zoo", "description": "Arrive and explore the zoo, visit animal exhibits, and enjoy interactive experiences."},
+      {"time": "11:00", "location": "Animal Encounter Area", "description": "Get up close with elephants, birds, or reptiles (guided encounter)."},
+      {"time": "12:00", "location": "Zoo Restaurant", "description": "Lunch or snack at the zoo’s restaurant overlooking animal enclosures."},
+      {"time": "13:00", "location": "Sakala Resort Bali", "description": "Return to the resort."}
+    ],
+    "highlights": ["Bali Zoo", "Animal encounters", "Wildlife shows", "Family fun"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Ultimate Bali Zoo Experience (Full-day)",
+    "overview": "A full day at Bali Zoo, including animal feeding, shows, and water play zone for families.",
+    "stops": [
+      {"time": "09:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "10:00", "location": "Bali Zoo", "description": "Arrive and explore the zoo’s animal exhibits."},
+      {"time": "11:00", "location": "Animal Feeding Session", "description": "Join an animal feeding session (elephants, deer, or birds)."},
+      {"time": "12:00", "location": "Zoo Restaurant", "description": "Lunch at the zoo restaurant."},
+      {"time": "13:00", "location": "Wildlife Show Area", "description": "Watch a wildlife or bird show."},
+      {"time": "14:00", "location": "Miniapolis Jungle Waterplay", "description": "Kids can enjoy the water play zone (optional)."},
+      {"time": "15:30", "location": "Sakala Resort Bali", "description": "Return to the resort."}
+    ],
+    "highlights": ["Bali Zoo", "Animal feeding", "Wildlife shows", "Water play zone"]
+  }
+]

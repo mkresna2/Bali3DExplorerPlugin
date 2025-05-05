@@ -1,0 +1,30 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Uluwatu Temple & Sunset Kecak (Half-day)",
+    "overview": "A cultural half-day trip to Uluwatu Temple, ending with a dramatic sunset Kecak dance performance on the cliffs.",
+    "stops": [
+      {"time": "14:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "15:00", "location": "Padang Padang Beach", "description": "Stop for a swim or a stroll at one of Bali’s most famous beaches."},
+      {"time": "16:00", "location": "Uluwatu Temple", "description": "Explore the ancient sea temple and walk along the clifftop paths."},
+      {"time": "17:30", "location": "Uluwatu Amphitheatre", "description": "Watch the iconic Kecak fire dance at sunset."},
+      {"time": "18:45", "location": "Sakala Resort Bali", "description": "Return to the resort."}
+    ],
+    "highlights": ["Uluwatu Temple", "Clifftop views", "Padang Padang Beach", "Kecak dance performance"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Bukit Peninsula & Uluwatu (Full-day)",
+    "overview": "A full day exploring Bali’s Bukit Peninsula, including Uluwatu Temple, beaches, and a sunset Kecak show.",
+    "stops": [
+      {"time": "09:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "10:00", "location": "Melasti Beach", "description": "Swim and relax at one of the Bukit’s most beautiful beaches."},
+      {"time": "12:00", "location": "Padang Padang Beach", "description": "Visit the famous surf spot and enjoy the sand and sea."},
+      {"time": "13:30", "location": "Local Restaurant", "description": "Lunch with a view of the Indian Ocean."},
+      {"time": "15:00", "location": "Uluwatu Temple", "description": "Tour the temple and dramatic cliffs."},
+      {"time": "17:30", "location": "Uluwatu Amphitheatre", "description": "Experience the sunset Kecak dance performance."},
+      {"time": "18:45", "location": "Sakala Resort Bali", "description": "Return to the resort."}
+    ],
+    "highlights": ["Uluwatu Temple", "Melasti Beach", "Padang Padang Beach", "Kecak dance"]
+  }
+]

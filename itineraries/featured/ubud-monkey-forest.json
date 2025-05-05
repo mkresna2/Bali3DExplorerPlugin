@@ -1,0 +1,29 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Ubud Monkey Forest Adventure (Half-day)",
+    "overview": "A fun and educational half-day trip to the Sacred Monkey Forest Sanctuary in Ubud.",
+    "stops": [
+      {"time": "08:30", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "10:00", "location": "Ubud Monkey Forest", "description": "Explore the sanctuary, observe macaques, and visit ancient temples."},
+      {"time": "11:30", "location": "Ubud Café", "description": "Enjoy a snack or drink at a nearby café."},
+      {"time": "12:30", "location": "Sakala Resort Bali", "description": "Return to the resort."}
+    ],
+    "highlights": ["Monkey Forest", "Balinese temples", "Wildlife observation", "Ubud cafes"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Ubud Nature & Culture (Full-day)",
+    "overview": "A full day in Ubud, visiting the Monkey Forest, temples, art markets, and scenic walks.",
+    "stops": [
+      {"time": "08:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "09:30", "location": "Ubud Monkey Forest", "description": "Visit the sanctuary and observe monkeys."},
+      {"time": "11:00", "location": "Pura Dalem Agung Temple", "description": "See the main temple inside the forest."},
+      {"time": "12:00", "location": "Ubud Art Market", "description": "Shop for local crafts and souvenirs."},
+      {"time": "13:00", "location": "Local Restaurant in Ubud", "description": "Lunch in Ubud town."},
+      {"time": "14:30", "location": "Campuhan Ridge Walk", "description": "Take a scenic walk along the ridge."},
+      {"time": "16:00", "location": "Sakala Resort Bali", "description": "Return to the resort."}
+    ],
+    "highlights": ["Monkey Forest", "Pura Dalem Agung", "Ubud Art Market", "Campuhan Ridge Walk"]
+  }
+]

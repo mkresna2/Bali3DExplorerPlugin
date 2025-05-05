@@ -1,0 +1,30 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Campuhan Ridge Walk & Ubud Sights (Half-day)",
+    "overview": "A relaxing half-day trek along the scenic Campuhan Ridge, with time to explore Ubud’s highlights.",
+    "stops": [
+      {"time": "08:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "09:30", "location": "Campuhan Ridge Walk", "description": "Enjoy a gentle hike along the ridge with panoramic valley views."},
+      {"time": "11:00", "location": "Ubud Café", "description": "Stop for coffee or juice at a local café in Ubud."},
+      {"time": "12:00", "location": "Ubud Art Market", "description": "Browse for local crafts and souvenirs."},
+      {"time": "13:00", "location": "Sakala Resort Bali", "description": "Return to the resort."}
+    ],
+    "highlights": ["Campuhan Ridge Walk", "Valley views", "Ubud Art Market", "Local cafés"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Ubud Nature & Culture Day (Full-day)",
+    "overview": "A full day exploring Ubud’s natural beauty and culture, including the Campuhan Ridge Walk, Monkey Forest, and temples.",
+    "stops": [
+      {"time": "08:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "09:30", "location": "Campuhan Ridge Walk", "description": "Hike the scenic ridge and enjoy the views."},
+      {"time": "11:00", "location": "Ubud Monkey Forest", "description": "Visit the Sacred Monkey Forest Sanctuary."},
+      {"time": "12:30", "location": "Local Restaurant in Ubud", "description": "Lunch in Ubud town."},
+      {"time": "13:30", "location": "Ubud Palace", "description": "Tour the historic royal palace."},
+      {"time": "14:30", "location": "Ubud Art Market", "description": "Shop for crafts and souvenirs."},
+      {"time": "16:00", "location": "Sakala Resort Bali", "description": "Return to the resort."}
+    ],
+    "highlights": ["Campuhan Ridge Walk", "Ubud Monkey Forest", "Ubud Palace", "Ubud Art Market"]
+  }
+]

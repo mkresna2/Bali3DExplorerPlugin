@@ -1,0 +1,30 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Tanah Lot Temple & Coastal Wonders (Half-day)",
+    "overview": "A scenic journey to Bali's iconic sea temple, with time for coastal exploration and sunset views.",
+    "stops": [
+      {"time": "14:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "15:45", "location": "Tanah Lot Temple", "description": "Arrive at Tanah Lot Temple, explore the temple grounds, and learn about its history."},
+      {"time": "16:30", "location": "Tanah Lot Market", "description": "Browse local souvenirs and snacks at the market near the temple."},
+      {"time": "17:30", "location": "Tanah Lot Cliffside", "description": "Find a spot on the cliffs for a spectacular sunset view over the Indian Ocean."},
+      {"time": "18:30", "location": "Sakala Resort Bali", "description": "Return to the resort."}
+    ],
+    "highlights": ["Tanah Lot Temple", "Sunset views", "Local market shopping", "Photography"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Bali’s West Coast & Tanah Lot (Full-day)",
+    "overview": "A full day exploring Bali’s west coast, including Tanah Lot Temple, rice terraces, and a sunset dinner by the sea.",
+    "stops": [
+      {"time": "09:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "10:30", "location": "Seseh Beach", "description": "Stop at Seseh Beach for a morning stroll on the black sand and ocean breeze."},
+      {"time": "12:00", "location": "Jatiluwih Rice Terraces", "description": "Visit the UNESCO-listed Jatiluwih Rice Terraces for a scenic walk and photo opportunities."},
+      {"time": "13:30", "location": "Local Restaurant", "description": "Enjoy a Balinese lunch with rice terrace views."},
+      {"time": "15:30", "location": "Tanah Lot Temple", "description": "Explore Tanah Lot Temple and its dramatic sea setting."},
+      {"time": "17:30", "location": "Cliffside Café near Tanah Lot", "description": "Relax with a drink and watch the sunset over the temple."},
+      {"time": "18:30", "location": "Sakala Resort Bali", "description": "Return to the resort."}
+    ],
+    "highlights": ["Tanah Lot Temple", "Jatiluwih Rice Terraces", "Seseh Beach", "Sunset dinner"]
+  }
+]

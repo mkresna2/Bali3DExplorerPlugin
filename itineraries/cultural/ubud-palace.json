@@ -1,0 +1,29 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Ubud Palace Cultural Highlights (Half-day)",
+    "overview": "A brief yet immersive journey into the heart of Ubud's royal heritage and nearby attractions.",
+    "stops": [
+      {"time": "09:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "10:00", "location": "Ubud Palace", "description": "Explore the historic Ubud Palace and its traditional Balinese architecture."},
+      {"time": "11:00", "location": "Ubud Art Market", "description": "Browse local crafts and souvenirs at the vibrant art market nearby."},
+      {"time": "12:30", "location": "Sakala Resort Bali", "description": "Return to the resort."}
+    ],
+    "highlights": ["Ubud Palace tour", "Balinese architecture", "Local art market"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Ubud Palace & Surroundings (Full-day)",
+    "overview": "A comprehensive exploration of Ubud’s royal, artistic, and natural treasures, including iconic temples and rice terraces.",
+    "stops": [
+      {"time": "08:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "09:30", "location": "Ubud Palace", "description": "Start your day with a guided tour of Ubud Palace."},
+      {"time": "10:30", "location": "Ubud Art Market", "description": "Shop for unique Balinese handicrafts."},
+      {"time": "11:30", "location": "Saraswati Temple", "description": "Visit the beautiful water temple nearby."},
+      {"time": "12:30", "location": "Local Restaurant", "description": "Enjoy a traditional Balinese lunch."},
+      {"time": "14:00", "location": "Tegalalang Rice Terrace", "description": "Marvel at the iconic rice terraces and take a short walk."},
+      {"time": "16:00", "location": "Sakala Resort Bali", "description": "Return to the resort."}
+    ],
+    "highlights": ["Ubud Palace", "Saraswati Temple", "Tegalalang Rice Terrace", "Balinese arts & crafts"]
+  }
+]

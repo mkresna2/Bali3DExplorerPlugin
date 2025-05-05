@@ -2,6 +2,12 @@
 // This template renders the main Bali 3D Explorer UI as used in the original index.html
 ?>
 <div class="bali3d-explorer">
+    <!-- Mobile menu toggle button (hamburger) for mobile view -->
+    <button class="mobile-menu-toggle" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
     <main>
         <aside class="destination-sidebar">
             <div class="search-container">

@@ -1,0 +1,29 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Tegalalang Rice Terraces Scenic Walk (Half-day)",
+    "overview": "A relaxing half-day trip to Bali’s iconic rice terraces, with time for walking, photos, and a coffee stop.",
+    "stops": [
+      {"time": "08:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "09:30", "location": "Tegalalang Rice Terraces", "description": "Arrive and explore the lush rice terraces. Walk the paths, take photos, and enjoy the scenery."},
+      {"time": "11:00", "location": "Tegalalang Coffee Plantation", "description": "Sample Bali coffee and learn about local production."},
+      {"time": "12:30", "location": "Sakala Resort Bali", "description": "Return to the resort."}
+    ],
+    "highlights": ["Tegalalang Rice Terraces", "Coffee tasting", "Scenic walks", "Photography"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Ubud Highlights & Tegalalang (Full-day)",
+    "overview": "A full day in Ubud, visiting Tegalalang Rice Terraces, temples, and art markets.",
+    "stops": [
+      {"time": "08:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "09:30", "location": "Tegalalang Rice Terraces", "description": "Explore the famous rice terraces and take a scenic walk."},
+      {"time": "11:00", "location": "Tirta Empul Temple", "description": "Visit the sacred water temple nearby."},
+      {"time": "12:30", "location": "Ubud Art Market", "description": "Shop for local crafts and souvenirs."},
+      {"time": "13:30", "location": "Local Restaurant in Ubud", "description": "Enjoy lunch in Ubud town."},
+      {"time": "15:00", "location": "Campuhan Ridge Walk", "description": "Take a gentle hike along the scenic ridge."},
+      {"time": "17:00", "location": "Sakala Resort Bali", "description": "Return to the resort."}
+    ],
+    "highlights": ["Tegalalang Rice Terraces", "Tirta Empul Temple", "Ubud Art Market", "Campuhan Ridge Walk"]
+  }
+]

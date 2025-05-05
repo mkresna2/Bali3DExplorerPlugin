@@ -1,0 +1,28 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Goa Gajah & Ubud Sights (Half-day)",
+    "overview": "A cultural half-day trip to the ancient Elephant Cave and nearby Ubud highlights.",
+    "stops": [
+      {"time": "08:30", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "10:00", "location": "Goa Gajah (Elephant Cave)", "description": "Explore the 9th-century cave, bathing pools, and stone carvings."},
+      {"time": "11:00", "location": "Ubud Palace", "description": "Visit the royal palace in Ubud center."},
+      {"time": "12:30", "location": "Sakala Resort Bali", "description": "Return to the resort."}
+    ],
+    "highlights": ["Goa Gajah", "Ubud Palace", "Ancient carvings", "Cultural history"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Temples & Caves of Ubud (Full-day)",
+    "overview": "A full day exploring Goa Gajah, sacred temples, and the cultural heart of Ubud.",
+    "stops": [
+      {"time": "08:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "09:30", "location": "Goa Gajah (Elephant Cave)", "description": "Tour the ancient cave and temple grounds."},
+      {"time": "10:30", "location": "Gunung Kawi Temple", "description": "Visit the temple complex with rock-cut shrines."},
+      {"time": "12:00", "location": "Ubud Palace", "description": "See the royal palace and gardens."},
+      {"time": "13:00", "location": "Ubud Art Market", "description": "Shop for Balinese crafts and souvenirs."},
+      {"time": "15:00", "location": "Sakala Resort Bali", "description": "Return to the resort."}
+    ],
+    "highlights": ["Goa Gajah", "Gunung Kawi Temple", "Ubud Palace", "Ubud Art Market"]
+  }
+]

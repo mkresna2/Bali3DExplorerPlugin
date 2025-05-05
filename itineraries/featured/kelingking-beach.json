@@ -1,0 +1,33 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Kelingking Beach Viewpoint (Half-day)",
+    "overview": "A half-day trip to Nusa Penida’s iconic Kelingking Beach for stunning cliff views and photo opportunities.",
+    "stops": [
+      {"time": "07:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali (early ferry to Nusa Penida)."},
+      {"time": "08:30", "location": "Sanur Harbor", "description": "Take a fast boat to Nusa Penida."},
+      {"time": "09:30", "location": "Kelingking Beach Viewpoint", "description": "Arrive at the viewpoint, enjoy the scenery, and take photos."},
+      {"time": "11:00", "location": "Local Warung", "description": "Snack or drink at a local eatery."},
+      {"time": "12:30", "location": "Sanur Harbor", "description": "Return ferry to Bali."},
+      {"time": "13:30", "location": "Sakala Resort Bali", "description": "Return to the resort."}
+    ],
+    "highlights": ["Kelingking Beach viewpoint", "Nusa Penida ferry", "Photo spots"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Nusa Penida Highlights & Kelingking (Full-day)",
+    "overview": "A full day exploring Nusa Penida’s top sites, including Kelingking Beach, Broken Beach, and Angel’s Billabong.",
+    "stops": [
+      {"time": "06:30", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali (early ferry to Nusa Penida)."},
+      {"time": "08:00", "location": "Sanur Harbor", "description": "Fast boat to Nusa Penida."},
+      {"time": "09:00", "location": "Kelingking Beach Viewpoint", "description": "Take in the famous cliff views and photos."},
+      {"time": "10:30", "location": "Broken Beach", "description": "Visit the natural arch and stunning cove."},
+      {"time": "11:30", "location": "Angel’s Billabong", "description": "See the crystal-clear natural pool."},
+      {"time": "12:30", "location": "Local Restaurant", "description": "Lunch on Nusa Penida."},
+      {"time": "13:30", "location": "Crystal Bay", "description": "Relax or swim at the beach."},
+      {"time": "15:30", "location": "Sanur Harbor", "description": "Return ferry to Bali."},
+      {"time": "16:30", "location": "Sakala Resort Bali", "description": "Return to the resort."}
+    ],
+    "highlights": ["Kelingking Beach", "Broken Beach", "Angel’s Billabong", "Crystal Bay"]
+  }
+]

@@ -1,0 +1,28 @@
+[
+  {
+    "type": "Half-day",
+    "title": "GWK Cultural Park Highlights (Half-day)",
+    "overview": "A half-day visit to Garuda Wisnu Kencana Cultural Park, exploring the massive statue, cultural performances, and gardens.",
+    "stops": [
+      {"time": "09:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "10:00", "location": "Garuda Wisnu Kencana Cultural Park", "description": "Arrive and explore the GWK statue, exhibition halls, and Lotus Pond."},
+      {"time": "11:00", "location": "Cultural Performance Area", "description": "Watch a traditional Balinese dance or music performance."},
+      {"time": "12:00", "location": "GWK Park Café", "description": "Enjoy a snack or drink at the park café."},
+      {"time": "13:00", "location": "Sakala Resort Bali", "description": "Return to the resort."}
+    ],
+    "highlights": ["GWK statue", "Cultural performances", "Lotus Pond", "Balinese arts"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Bukit Culture & GWK Park (Full-day)",
+    "overview": "A full day exploring Bali’s Bukit Peninsula, including GWK Cultural Park, beaches, and local cuisine.",
+    "stops": [
+      {"time": "09:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "10:00", "location": "Garuda Wisnu Kencana Cultural Park", "description": "Tour the park, see the statue, and enjoy cultural shows."},
+      {"time": "12:30", "location": "Local Restaurant", "description": "Lunch near GWK Park with Bukit views."},
+      {"time": "14:00", "location": "Melasti Beach", "description": "Relax or swim at one of the Bukit’s top beaches."},
+      {"time": "16:00", "location": "Sakala Resort Bali", "description": "Return to the resort."}
+    ],
+    "highlights": ["GWK Cultural Park", "Melasti Beach", "Cultural shows", "Bukit Peninsula"]
+  }
+]

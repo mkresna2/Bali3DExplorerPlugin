@@ -1,0 +1,28 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Tegenungan Waterfall Escape (Half-day)",
+    "overview": "A refreshing half-day trip to one of Bali’s most popular waterfalls, with time for swimming and relaxation.",
+    "stops": [
+      {"time": "08:30", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "10:00", "location": "Tegenungan Waterfall", "description": "Arrive and enjoy the waterfall, swim, and explore the area."},
+      {"time": "12:00", "location": "Café near Tegenungan", "description": "Relax with a drink or snack at a riverside café."},
+      {"time": "13:00", "location": "Sakala Resort Bali", "description": "Return to the resort."}
+    ],
+    "highlights": ["Tegenungan Waterfall", "Swimming", "Nature views", "Café stop"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Waterfalls & Temples of Gianyar (Full-day)",
+    "overview": "A full day exploring Tegenungan Waterfall, Goa Gajah, and nearby temples in Gianyar.",
+    "stops": [
+      {"time": "08:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "09:30", "location": "Tegenungan Waterfall", "description": "Swim, relax, and enjoy the waterfall scenery."},
+      {"time": "11:30", "location": "Goa Gajah (Elephant Cave)", "description": "Visit the ancient cave and temple."},
+      {"time": "13:00", "location": "Local Restaurant", "description": "Lunch in Gianyar area."},
+      {"time": "14:30", "location": "Pura Tirta Empul", "description": "See the holy spring temple in Tampaksiring."},
+      {"time": "16:00", "location": "Sakala Resort Bali", "description": "Return to the resort."}
+    ],
+    "highlights": ["Tegenungan Waterfall", "Goa Gajah", "Tirta Empul", "Nature & culture"]
+  }
+]
