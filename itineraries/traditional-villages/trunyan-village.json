@@ -1,0 +1,26 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Trunyan Village Experience (Half-day)",
+    "overview": "Visit Trunyan Village, known for its unique burial traditions and ancient Bali Aga culture.",
+    "stops": [
+      {"time": "08:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "10:30", "location": "Trunyan Village", "description": "Arrive by boat and explore the village, learn about the open-air burial tradition."},
+      {"time": "12:30", "location": "Return to Sakala Resort Bali", "description": "Return to Sakala Resort Bali."}
+    ],
+    "highlights": ["Unique burial tradition", "Bali Aga culture", "Village tour"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Trunyan Village & Lake Batur Tour (Full-day)",
+    "overview": "A full day exploring Trunyan Village and the scenic Lake Batur area.",
+    "stops": [
+      {"time": "08:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "10:30", "location": "Trunyan Village", "description": "Arrive by boat, explore the village and burial site."},
+      {"time": "12:00", "location": "Lunch Break", "description": "Lunch at a local warung (optional)."},
+      {"time": "13:00", "location": "Lake Batur Tour", "description": "Tour Lake Batur, visit hot springs or local temples."},
+      {"time": "16:00", "location": "Return to Sakala Resort Bali", "description": "Return to Sakala Resort Bali."}
+    ],
+    "highlights": ["Lake Batur", "Unique traditions", "Village culture"]
+  }
+]

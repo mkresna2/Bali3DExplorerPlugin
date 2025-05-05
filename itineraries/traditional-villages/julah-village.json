@@ -1,0 +1,26 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Julah Village Experience (Half-day)",
+    "overview": "Visit Julah Village, a traditional Bali Aga community known for its ancient customs and unique culture.",
+    "stops": [
+      {"time": "09:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "11:00", "location": "Julah Village", "description": "Arrive and explore the village, meet locals and learn about their traditions."},
+      {"time": "13:00", "location": "Return to Sakala Resort Bali", "description": "Return to Sakala Resort Bali."}
+    ],
+    "highlights": ["Bali Aga culture", "Ancient traditions", "Village experience"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Julah Village & North Bali Tour (Full-day)",
+    "overview": "A full day exploring Julah Village and North Bali's attractions.",
+    "stops": [
+      {"time": "09:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "11:00", "location": "Julah Village", "description": "Arrive and explore the village, meet locals and learn about their traditions."},
+      {"time": "12:30", "location": "Lunch Break", "description": "Lunch at a local warung (optional)."},
+      {"time": "13:30", "location": "North Bali Tour", "description": "Visit nearby temples or waterfalls."},
+      {"time": "16:00", "location": "Return to Sakala Resort Bali", "description": "Return to Sakala Resort Bali."}
+    ],
+    "highlights": ["Village culture", "North Bali attractions", "Ancient traditions"]
+  }
+]

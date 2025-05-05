@@ -1,0 +1,26 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Sembiran Village Experience (Half-day)",
+    "overview": "Visit Sembiran Village, one of Bali's oldest settlements, known for its ancient culture and traditions.",
+    "stops": [
+      {"time": "09:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "11:00", "location": "Sembiran Village", "description": "Arrive and explore the village, meet elders and learn about its history."},
+      {"time": "13:00", "location": "Return to Sakala Resort Bali", "description": "Return to Sakala Resort Bali."}
+    ],
+    "highlights": ["Ancient village", "Traditional culture", "Village history"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Sembiran Village & North Bali Tour (Full-day)",
+    "overview": "A full day exploring Sembiran Village and North Bali's attractions.",
+    "stops": [
+      {"time": "09:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "11:00", "location": "Sembiran Village", "description": "Arrive and explore the village, meet elders and learn about its history."},
+      {"time": "12:30", "location": "Lunch Break", "description": "Lunch at a local warung (optional)."},
+      {"time": "13:30", "location": "North Bali Tour", "description": "Visit nearby temples or waterfalls."},
+      {"time": "16:00", "location": "Return to Sakala Resort Bali", "description": "Return to Sakala Resort Bali."}
+    ],
+    "highlights": ["Village culture", "North Bali attractions", "Ancient traditions"]
+  }
+]

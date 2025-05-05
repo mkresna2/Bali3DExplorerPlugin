@@ -1,0 +1,26 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Banyuseri Village Experience (Half-day)",
+    "overview": "Visit Banyuseri Village, a traditional settlement in North Bali known for its unique customs and serene setting.",
+    "stops": [
+      {"time": "09:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "11:00", "location": "Banyuseri Village", "description": "Arrive and explore the village, meet locals and learn about their customs."},
+      {"time": "13:00", "location": "Return to Sakala Resort Bali", "description": "Return to Sakala Resort Bali."}
+    ],
+    "highlights": ["Traditional customs", "Village culture", "Serene setting"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Banyuseri Village & North Bali Tour (Full-day)",
+    "overview": "A full day exploring Banyuseri Village and North Bali's attractions.",
+    "stops": [
+      {"time": "09:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "11:00", "location": "Banyuseri Village", "description": "Arrive and explore the village, meet locals and learn about their customs."},
+      {"time": "12:30", "location": "Lunch Break", "description": "Lunch at a local warung (optional)."},
+      {"time": "13:30", "location": "North Bali Tour", "description": "Visit nearby temples or waterfalls."},
+      {"time": "16:00", "location": "Return to Sakala Resort Bali", "description": "Return to Sakala Resort Bali."}
+    ],
+    "highlights": ["Village culture", "North Bali attractions", "Traditional customs"]
+  }
+]

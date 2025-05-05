@@ -1,0 +1,26 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Penglipuran Village Experience (Half-day)",
+    "overview": "Visit Penglipuran, renowned for its well-preserved traditional Balinese architecture and clean village environment.",
+    "stops": [
+      {"time": "09:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "10:30", "location": "Penglipuran Village", "description": "Arrive and explore the village lanes, traditional houses, and bamboo forest."},
+      {"time": "12:30", "location": "Return to Sakala Resort Bali", "description": "Return to Sakala Resort Bali."}
+    ],
+    "highlights": ["Traditional Balinese architecture", "Village culture", "Bamboo forest"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Penglipuran Village & Kintamani Tour (Full-day)",
+    "overview": "A full day exploring Penglipuran Village and the scenic Kintamani region.",
+    "stops": [
+      {"time": "09:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "10:30", "location": "Penglipuran Village", "description": "Arrive and explore the village and bamboo forest."},
+      {"time": "12:00", "location": "Lunch Break", "description": "Lunch at a local warung (optional)."},
+      {"time": "13:00", "location": "Kintamani Tour", "description": "Visit the Kintamani highlands and view Mount Batur."},
+      {"time": "16:00", "location": "Return to Sakala Resort Bali", "description": "Return to Sakala Resort Bali."}
+    ],
+    "highlights": ["Traditional village", "Kintamani highlands", "Mount Batur views"]
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Tigawasa Village Experience (Half-day)",
+    "overview": "Explore Tigawasa Village, known for its Bali Aga heritage and traditional crafts.",
+    "stops": [
+      {"time": "09:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "11:00", "location": "Tigawasa Village", "description": "Arrive and explore the village, learn about Bali Aga culture and crafts."},
+      {"time": "13:00", "location": "Return to Sakala Resort Bali", "description": "Return to Sakala Resort Bali."}
+    ],
+    "highlights": ["Bali Aga heritage", "Traditional crafts", "Village culture"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Tigawasa Village & North Bali Tour (Full-day)",
+    "overview": "A full day exploring Tigawasa Village and North Bali's attractions.",
+    "stops": [
+      {"time": "09:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "11:00", "location": "Tigawasa Village", "description": "Arrive and explore the village, learn about Bali Aga culture and crafts."},
+      {"time": "12:30", "location": "Lunch Break", "description": "Lunch at a local warung (optional)."},
+      {"time": "13:30", "location": "North Bali Tour", "description": "Visit nearby temples or waterfalls."},
+      {"time": "16:00", "location": "Return to Sakala Resort Bali", "description": "Return to Sakala Resort Bali."}
+    ],
+    "highlights": ["Bali Aga heritage", "North Bali attractions", "Village culture"]
+  }
+]

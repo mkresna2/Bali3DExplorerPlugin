@@ -1,0 +1,26 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Tenganan Pegringsingan Village Experience (Half-day)",
+    "overview": "Explore Tenganan Pegringsingan, one of Bali's oldest villages, famous for its unique traditions and double ikat weaving.",
+    "stops": [
+      {"time": "09:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "11:00", "location": "Tenganan Pegringsingan Village", "description": "Arrive and tour the village, interact with locals, and observe double ikat weaving."},
+      {"time": "13:00", "location": "Return to Sakala Resort Bali", "description": "Return to Sakala Resort Bali."}
+    ],
+    "highlights": ["Ancient village", "Double ikat weaving", "Unique traditions"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Tenganan Village & East Bali Tour (Full-day)",
+    "overview": "A full day exploring Tenganan Pegringsingan and the highlights of East Bali.",
+    "stops": [
+      {"time": "09:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "11:00", "location": "Tenganan Pegringsingan Village", "description": "Arrive and explore the village and observe traditional crafts."},
+      {"time": "12:30", "location": "Lunch Break", "description": "Lunch at a local warung (optional)."},
+      {"time": "13:30", "location": "East Bali Tour", "description": "Visit nearby attractions such as Tirta Gangga or Ujung Water Palace."},
+      {"time": "16:00", "location": "Return to Sakala Resort Bali", "description": "Return to Sakala Resort Bali."}
+    ],
+    "highlights": ["Traditional crafts", "East Bali attractions", "Village culture"]
+  }
+]

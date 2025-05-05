@@ -1,0 +1,26 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Cempaga Village Experience (Half-day)",
+    "overview": "Visit Cempaga Village, known for its traditional crafts and warm community.",
+    "stops": [
+      {"time": "09:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "10:30", "location": "Cempaga Village", "description": "Arrive and explore the village, meet local artisans."},
+      {"time": "12:30", "location": "Return to Sakala Resort Bali", "description": "Return to Sakala Resort Bali."}
+    ],
+    "highlights": ["Traditional crafts", "Village community", "Cultural experience"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Cempaga Village & North Bali Tour (Full-day)",
+    "overview": "A full day exploring Cempaga Village and the attractions of North Bali.",
+    "stops": [
+      {"time": "09:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "10:30", "location": "Cempaga Village", "description": "Arrive and explore the village and meet artisans."},
+      {"time": "12:00", "location": "Lunch Break", "description": "Lunch at a local warung (optional)."},
+      {"time": "13:00", "location": "North Bali Tour", "description": "Visit nearby temples or waterfalls."},
+      {"time": "16:00", "location": "Return to Sakala Resort Bali", "description": "Return to Sakala Resort Bali."}
+    ],
+    "highlights": ["Traditional crafts", "North Bali attractions", "Village culture"]
+  }
+]

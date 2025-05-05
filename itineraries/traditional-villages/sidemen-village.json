@@ -1,0 +1,26 @@
+[
+  {
+    "type": "Half-day",
+    "title": "Sidemen Village Experience (Half-day)",
+    "overview": "Discover Sidemen, a tranquil village in East Bali known for its rice terraces and traditional weaving.",
+    "stops": [
+      {"time": "09:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "10:30", "location": "Sidemen Village", "description": "Arrive and tour the rice fields, visit a weaving workshop."},
+      {"time": "12:30", "location": "Return to Sakala Resort Bali", "description": "Return to Sakala Resort Bali."}
+    ],
+    "highlights": ["Rice terraces", "Traditional weaving", "Village scenery"]
+  },
+  {
+    "type": "Full-day",
+    "title": "Sidemen Village & East Bali Tour (Full-day)",
+    "overview": "A full day exploring Sidemen Village and East Bali's highlights.",
+    "stops": [
+      {"time": "09:00", "location": "Sakala Resort Bali", "description": "Depart from Sakala Resort Bali."},
+      {"time": "10:30", "location": "Sidemen Village", "description": "Arrive and explore the village, rice fields, and weaving workshop."},
+      {"time": "12:00", "location": "Lunch Break", "description": "Lunch at a local warung (optional)."},
+      {"time": "13:00", "location": "East Bali Tour", "description": "Visit nearby temples or local markets."},
+      {"time": "16:00", "location": "Return to Sakala Resort Bali", "description": "Return to Sakala Resort Bali."}
+    ],
+    "highlights": ["Village culture", "Rice terraces", "East Bali attractions"]
+  }
+]
