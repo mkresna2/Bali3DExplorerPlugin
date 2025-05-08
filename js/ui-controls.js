@@ -322,7 +322,11 @@ class UIControls {
     const cacheKey = destination.id;
     // Check cache first
     if (this.aiItineraryCache && this.aiItineraryCache[cacheKey] && this.aiItineraryCache[cacheKey].itinerary) {
-      this.infoPanelContentAI.innerHTML = `<h3>Tour Itinerary</h3>${this.aiItineraryCache[cacheKey].itinerary}`;
+      this.infoPanelContentAI.innerHTML = `
+      <div class="ai-itinerary-container">
+        <h3 class="ai-itinerary-heading">Tour Itinerary</h3>
+        ${this.aiItineraryCache[cacheKey].itinerary}
+      </div>`;
       this.isAIItineraryLoading = false;
       if (this.infoTabBtns && this.infoTabBtns.length === 2) {
         this.infoTabBtns[1].classList.remove('disabled');
@@ -331,9 +335,9 @@ class UIControls {
     }
     this.isAIItineraryLoading = true;
     this.infoPanelContentAI.innerHTML = `
-      <div class="ai-loading">
+      <div class="ai-loading-container">
         <div class="ai-spinner"></div>
-        <p><em>Loading itinerary...</em></p>
+        <p class="ai-loading-text"><em>Loading itinerary...</em></p>
       </div>`;
     // Determine file path based on category and destination name
     const category = destination.category || 'uncategorized';
@@ -345,28 +349,64 @@ class UIControls {
       const itineraryArray = await response.json();
       let htmlItinerary = '';
       itineraryArray.forEach(tour => {
-        htmlItinerary += `<h3>${tour.title}</h3>`;
-        htmlItinerary += `<p><strong>Type:</strong> ${tour.type}</p>`;
-        htmlItinerary += `<p><strong>Overview:</strong> ${tour.overview}</p>`;
-        htmlItinerary += '<ul>';
+        htmlItinerary += `
+        <div class="ai-tour-card">
+          <h3 class="ai-tour-title">${tour.title}</h3>
+          <div>
+            <div class="ai-tour-type-badge">
+              <strong>Type:</strong> ${tour.type}
+            </div>
+          </div>
+          <div class="ai-tour-overview">
+            <p><strong class="ai-tour-overview-label">Overview:</strong> ${tour.overview}</p>
+          </div>
+          <div class="ai-itinerary-section">
+            <h4 class="ai-itinerary-section-title">Itinerary</h4>
+            <ul class="ai-stops-list">`;
+        
         tour.stops.forEach(stop => {
-          htmlItinerary += `<li><strong>${stop.time}</strong> - <strong>${stop.location}</strong>: ${stop.description}</li>`;
+          htmlItinerary += `
+              <li class="ai-stop-item">
+                <div class="ai-stop-header">
+                  <span class="ai-stop-time">${stop.time}</span>
+                  <span class="ai-stop-location">${stop.location}</span>
+                </div>
+                <div class="ai-stop-description">${stop.description}</div>
+              </li>`;
         });
-        htmlItinerary += '</ul>';
+        
+        htmlItinerary += `
+            </ul>
+          </div>`;
+        
         if (tour.highlights && tour.highlights.length > 0) {
-          htmlItinerary += `<p><strong>Highlights:</strong> ${tour.highlights.join(', ')}</p>`;
+          htmlItinerary += `
+          <div class="ai-highlights-section">
+            <h4 class="ai-highlights-title">Highlights</h4>
+            <ul class="ai-highlights-list">
+              ${tour.highlights.map(highlight => `<li class="ai-highlight-item">${highlight}</li>`).join('')}
+            </ul>
+          </div>`;
         }
-        htmlItinerary += '<hr>';
+        
+        htmlItinerary += `
+        </div>`;
       });
       this.aiItineraryCache[cacheKey] = { itinerary: htmlItinerary, timestamp: Date.now() };
       try {
         localStorage.setItem('aiItineraryCache', JSON.stringify(this.aiItineraryCache));
       } catch (e) {}
-      this.infoPanelContentAI.innerHTML = `<h3>Tour Itinerary</h3>${htmlItinerary}`;
+      this.infoPanelContentAI.innerHTML = `
+        <div class="ai-itinerary-container">
+          <h3 class="ai-itinerary-heading">Tour Itinerary</h3>
+          ${htmlItinerary}
+        </div>`;
     } catch (err) {
       this.infoPanelContentAI.innerHTML = `
-        <div style="color:red;">
-          Failed to load itinerary. Please try again later.
+        <div class="ai-error-container">
+          <div class="ai-error-icon">⚠️</div>
+          <h3 class="ai-error-title">Failed to Load Itinerary</h3>
+          <p>We couldn't load the itinerary for this destination. Please try again later.</p>
         </div>`;
       console.error(err);
     } finally {
@@ -671,7 +711,7 @@ class UIControls {
    * Show AI Itinerary tab handler
    * When user switches to AI tab, if empty, trigger generation
    */
-  async showAIItinerary() {
+  /* async showAIItinerary() {
     if (!this.infoPanelContentAI.innerHTML || this.infoPanelContentAI.innerHTML.trim() === '' || this.infoPanelContentAI.innerHTML.includes('Generating')) {
       console.log('[AIItinerary] Setting loading message', { caller: 'showAIItinerary' });
       this.infoPanelContentAI.innerHTML = '<p><em>Loading itinerary...</em></p>';
@@ -694,7 +734,7 @@ class UIControls {
         this.infoPanelContentDestination.classList.remove('active');
       }
     }
-  }
+  } */
 }
 
 // Create instance

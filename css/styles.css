@@ -23,34 +23,37 @@
     --sidebar-mobile-height: 200px;
 }
 
-* {
+/* Scoped reset: only applies to elements inside the Bali3DExplorer plugin */
+.bali3d-explorer * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
+
+/* Scoped styles: only apply to elements inside the Bali3DExplorer plugin */
+.bali3d-explorer {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     color: var(--text-dark);
     background-color: var(--primary-white);
     line-height: 1.6;
 }
 
-h1, h2, h3, h4, h5, h6 {
+.bali3d-explorer h1, .bali3d-explorer h2, .bali3d-explorer h3, .bali3d-explorer h4, .bali3d-explorer h5, .bali3d-explorer h6 {
     font-weight: 400;
     margin-bottom: 0.5em;
 }
 
-h1 {
+.bali3d-explorer h1 {
     font-size: 1.8rem;
 }
 
-h2 {
+.bali3d-explorer h2 {
     font-size: 1.5rem;
     color: var(--accent-blue);
 }
 
-h3 {
+.bali3d-explorer h3 {
     font-size: 1.2rem;
     color: var(--text-dark);
     border-bottom: 1px solid var(--text-light);
@@ -58,23 +61,25 @@ h3 {
     margin-bottom: 1rem;
 }
 
-h4 {
+.bali3d-explorer h4 {
     font-size: 1rem;
     color: var(--text-dark);
 }
 
-a {
+.bali3d-explorer a {
     color: var(--accent-blue);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-a:hover {
+.bali3d-explorer a:hover {
     color: var(--accent-gold);
 }
 
 
-main {
+
+/* Scoped main selector: only applies to the plugin */
+.bali3d-explorer main {
     display: flex;
     height: 100vh;
     width: 100vw;
@@ -82,7 +87,7 @@ main {
     overflow-y: auto;
 }
 
-.destination-sidebar {
+.bali3d-explorer .destination-sidebar {
     background: var(--primary-beige);
     box-shadow: 2px 0 16px 0 rgba(58, 124, 165, 0.07);
     border-radius: 0 18px 18px 0;
@@ -96,7 +101,7 @@ main {
     scroll-behavior: smooth;
 }
 
-.sidebar-content {
+.bali3d-explorer .sidebar-content {
     flex: 1 1 auto;
     display: flex;
     flex-direction: column;
@@ -105,50 +110,50 @@ main {
     max-height: 100vh;
 }
 
-.categories {
+.bali3d-explorer .categories {
     flex-shrink: 0;
     margin-bottom: 1rem;
     overflow-y: auto;
     max-height: 40vh;
 }
 
-.destination-list {
+.bali3d-explorer .destination-list {
     flex: 1 1 auto;
     min-height: 0;
     overflow: hidden;
 }
 
-.destination-sidebar::-webkit-scrollbar {
+.bali3d-explorer .destination-sidebar::-webkit-scrollbar {
     width: 8px;
 }
 
-.destination-sidebar::-webkit-scrollbar-thumb {
+.bali3d-explorer .destination-sidebar::-webkit-scrollbar-thumb {
     background: var(--accent-blue);
     border-radius: 8px;
 }
 
-.destination-sidebar::-webkit-scrollbar-track {
+.bali3d-explorer .destination-sidebar::-webkit-scrollbar-track {
     background: #eaeaea;
     border-radius: 8px;
 }
 
-.destination-sidebar h2 {
+.bali3d-explorer .destination-sidebar h2 {
     font-size: 1.4rem;
     color: var(--accent-blue);
     margin-bottom: 1.2rem;
     letter-spacing: 0.5px;
 }
 
-.categories ul {
+.bali3d-explorer .categories ul {
     list-style: none;
     padding-left: 0;
 }
 
-.categories li {
+.bali3d-explorer .categories li {
     margin-bottom: 0.7rem;
 }
 
-.categories a {
+.bali3d-explorer .categories a {
     display: block;
     padding: 0.8rem 1.2rem;
     border-radius: 8px;
@@ -163,18 +168,18 @@ main {
     cursor: pointer;
 }
 
-.categories a:hover,
-.categories a.active {
+.bali3d-explorer .categories a:hover,
+.bali3d-explorer .categories a.active {
     background: linear-gradient(90deg, #eaf6fb 60%, #f5f2ed 100%);
     color: var(--accent-blue);
     box-shadow: 0 2px 8px 0 rgba(58, 124, 165, 0.09);
 }
 
-.categories a:focus {
+.bali3d-explorer .categories a:focus {
     outline: none;
 }
 
-.map-container {
+.bali3d-explorer .map-container {
     flex: 1 1 0;
     min-width: 0;
     height: 100vh;
@@ -184,31 +189,31 @@ main {
     width: auto;
 }
 
-#map {
+.bali3d-explorer #map {
     width: 100%;
     height: 100%;
 }
 
-.maplibregl-canvas-container {
+.bali3d-explorer .maplibregl-canvas-container {
     width: 100%;
     height: 100%;
 }
 
-.maplibregl-canvas {
+.bali3d-explorer .maplibregl-canvas {
     width: 100% !important;
     height: 100% !important;
     display: block !important;
 }
 
-.destination-marker {
+.bali3d-explorer .destination-marker {
     transition: transform 0.3s ease;
 }
 
-.destination-marker:hover {
+.bali3d-explorer .destination-marker:hover {
     transform: rotate(-45deg) scale(1.2) !important;
 }
 
-.destination-popup {
+.bali3d-explorer .destination-popup {
     max-width: 250px;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -216,13 +221,13 @@ main {
     font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
-.maplibregl-popup-content {
+.bali3d-explorer .maplibregl-popup-content {
     padding: 15px;
     border-radius: 8px;
     background-color: var(--primary-white);
 }
 
-.maplibregl-popup-close-button {
+.bali3d-explorer .maplibregl-popup-close-button {
     color: var(--text-dark);
     font-size: 20px;
     padding: 5px;
@@ -230,29 +235,29 @@ main {
     top: 5px;
 }
 
-.maplibregl-popup-content h3 {
+.bali3d-explorer .maplibregl-popup-content h3 {
     margin: 0 0 5px 0;
     color: var(--accent-blue);
     font-size: 16px;
     border-bottom: none;
 }
 
-.maplibregl-popup-content p {
+.bali3d-explorer .maplibregl-popup-content p {
     margin: 0;
     font-size: 12px;
     color: var(--text-medium);
 }
 
-.maplibregl-popup-content p.category {
+.bali3d-explorer .maplibregl-popup-content p.category {
     color: var(--accent-gold);
     font-weight: 500;
 }
 
-.maplibregl-popup-content p.distance {
+.bali3d-explorer .maplibregl-popup-content p.distance {
     margin-top: 5px;
 }
 
-.map-controls {
+.bali3d-explorer .map-controls {
     position: absolute;
     top: 150px;
     right: 18px;
@@ -262,7 +267,7 @@ main {
     z-index: 1000;
 }
 
-.control-btn {
+.bali3d-explorer .control-btn {
     background: #fff;
     border: 1px solid var(--border);
     border-radius: 8px;
@@ -279,12 +284,12 @@ main {
     font-size: 1.5rem;
 }
 
-.control-btn svg {
+.bali3d-explorer .control-btn svg {
     width: 24px;
     height: 24px;
 }
 
-.control-btn:active,
+.bali3d-explorer .control-btn:active,
 .control-btn:focus {
     background: #f5fbfd;
     box-shadow: 0 4px 12px var(--shadow);
@@ -292,21 +297,21 @@ main {
     outline: none;
 }
 
-.maplibregl-ctrl,
-.maplibregl-ctrl-top-right,
-.maplibregl-ctrl-group,
-.maplibregl-ctrl-fullscreen {
+.bali3d-explorer .maplibregl-ctrl,
+.bali3d-explorer .maplibregl-ctrl-top-right,
+.bali3d-explorer .maplibregl-ctrl-group,
+.bali3d-explorer .maplibregl-ctrl-fullscreen {
     z-index: 4000 !important;
 }
 
-.maplibregl-ctrl.maplibregl-ctrl-group {
+.bali3d-explorer .maplibregl-ctrl.maplibregl-ctrl-group {
     position: absolute !important;
     top: 16px !important;
     right: 48px !important;
     box-shadow: 0 2px 8px var(--shadow);
 }
 
-.maplibregl-ctrl-fullscreen {
+.bali3d-explorer .maplibregl-ctrl-fullscreen {
     background: #fff;
     border-radius: 8px;
     border: 1px solid var(--border);
@@ -321,12 +326,12 @@ main {
     z-index: 3001 !important;
 }
 
-.search-container {
+.bali3d-explorer .search-container {
     position: relative;
     margin-bottom: 1.5rem;
 }
 
-.search-container input {
+.bali3d-explorer .search-container input {
     width: 100%;
     padding: 0.8rem 2.7rem 0.8rem 1rem;
     border: 1.5px solid var(--text-light);
@@ -337,13 +342,13 @@ main {
     transition: border 0.2s, box-shadow 0.2s;
 }
 
-.search-container input:focus {
+.bali3d-explorer .search-container input:focus {
     border-color: var(--accent-blue);
     outline: none;
     box-shadow: 0 4px 16px var(--shadow);
 }
 
-.search-btn {
+.bali3d-explorer .search-btn {
     position: absolute;
     top: 50%;
     right: 1rem;
@@ -362,7 +367,7 @@ main {
     width: 2rem;
 }
 
-.category-section {
+.bali3d-explorer .category-section {
     background: transparent;
     box-shadow: none;
     margin: 0;
@@ -372,7 +377,7 @@ main {
     min-height: 0;
 }
 
-.destination-item {
+.bali3d-explorer .destination-item {
     display: flex;
     align-items: center;
     padding: 0.8rem 2.5rem 0.8rem 1rem;
@@ -382,11 +387,11 @@ main {
     margin-bottom: 0.5rem;
 }
 
-.destination-item:hover {
+.bali3d-explorer .destination-item:hover {
     background-color: rgba(58, 124, 165, 0.1);
 }
 
-.destination-thumb {
+.bali3d-explorer .destination-thumb {
     width: 60px;
     height: 60px;
     border-radius: 4px;
@@ -396,16 +401,16 @@ main {
     flex-shrink: 0;
 }
 
-.destination-info h4 {
+.bali3d-explorer .destination-info h4 {
     margin-bottom: 0.2rem;
 }
 
-.destination-info .distance {
+.bali3d-explorer .destination-info .distance {
     font-size: 0.8rem;
     color: var(--text-medium);
 }
 
-.info-panel {
+.bali3d-explorer .info-panel {
     position: absolute;
     top: 3.5rem;
     right: 4.5rem;
@@ -424,18 +429,18 @@ main {
     display: none;
 }
 
-.info-content {
+.bali3d-explorer .info-content {
     padding: 1.5rem;
     background: transparent;
 }
 
-.info-panel.active {
+.bali3d-explorer .info-panel.active {
     display: block;
     opacity: 1;
     pointer-events: auto;
 }
 
-.close-btn {
+.bali3d-explorer .close-btn {
     position: absolute;
     top: 0.6rem;
     right: 1.8rem;
@@ -451,19 +456,19 @@ main {
     transition: background 0.15s;
 }
 
-.close-btn:hover {
+.bali3d-explorer .close-btn:hover {
     background: var(--primary-light);
 }
 
-.info-tabs {
+.bali3d-explorer .info-tabs {
     margin-top: 2.5rem;
 }
 
-.ai-itinerary-btn {
+.bali3d-explorer .ai-itinerary-btn {
     display: none;
 }
 
-.info-tab-btn {
+.bali3d-explorer .info-tab-btn {
     flex: 1 1 0;
     background: none;
     border: none;
@@ -478,29 +483,29 @@ main {
     border-radius: 8px 8px 0 0;
 }
 
-.info-tab-btn.active {
+.bali3d-explorer .info-tab-btn.active {
     color: var(--accent-blue);
     border-bottom: 2.5px solid var(--accent-blue);
     background: var(--primary-light);
 }
 
-.info-tab-content {
+.bali3d-explorer .info-tab-content {
     min-height: 120px;
 }
 
-.info-content[style*="display: none"] {
+.bali3d-explorer .info-content[style*="display: none"] {
     display: none !important;
 }
 
-.info-header {
+.bali3d-explorer .info-header {
     margin-bottom: 1rem;
 }
 
-.info-header h2 {
+.bali3d-explorer .info-header h2 {
     margin-bottom: 0.5rem;
 }
 
-.info-image {
+.bali3d-explorer .info-image {
     width: 100%;
     height: 200px;
     background-size: cover;
@@ -509,38 +514,38 @@ main {
     margin-bottom: 1rem;
 }
 
-.info-detail {
+.bali3d-explorer .info-detail {
     margin-bottom: 1.5rem;
 }
 
-.info-detail h3 {
+.bali3d-explorer .info-detail h3 {
     margin-bottom: 0.5rem;
 }
 
-.info-detail p {
+.bali3d-explorer .info-detail p {
     margin-bottom: 0.5rem;
 }
 
-.info-detail ul {
+.bali3d-explorer .info-detail ul {
     list-style: none;
     margin-left: 1rem;
 }
 
-.info-detail li {
+.bali3d-explorer .info-detail li {
     margin-bottom: 0.3rem;
     position: relative;
 }
 
-.info-detail li::before {
+.bali3d-explorer .info-detail li::before {
     content: '•';
     position: absolute;
     left: -1rem;
     color: var(--accent-blue);
 }
 
-.destination-sidebar,
-.sidebar-content,
-.map-container {
+.bali3d-explorer .destination-sidebar,
+.bali3d-explorer .sidebar-content,
+.bali3d-explorer .map-container {
     height: 100vh;
     min-height: 0;
     max-height: 100vh;
@@ -552,7 +557,7 @@ main {
 .mobile-menu-toggle {
   display: none;
   position: fixed;
-  top: 50px;
+  top: 65px;
   left: 16px;
   z-index: 2001;
   width: 44px;
@@ -584,7 +589,7 @@ main {
   .mobile-menu-toggle {
     display: flex;
   }
-  .destination-sidebar {
+  .bali3d-explorer .destination-sidebar {
     /* Ensure sidebar overlays content in mobile */
     position: fixed !important;
     top: 0;
@@ -601,11 +606,11 @@ main {
     box-shadow: 0 2px 16px rgba(0,0,0,0.10);
     overflow-y: auto;
   }
-  body.menu-open .destination-sidebar,
-  .destination-sidebar.expanded {
+  body.menu-open .bali3d-explorer .destination-sidebar,
+  .bali3d-explorer .destination-sidebar.expanded {
     transform: translateY(0);
   }
-  .search-container {
+  .bali3d-explorer .search-container {
     margin-top: 64px; /* Push search below burger menu */
   }
 }
@@ -614,7 +619,7 @@ main {
     main {
         flex-direction: column;
     }
-    .destination-sidebar {
+    .bali3d-explorer .destination-sidebar {
         position: fixed;
         top: 0;
         left: 0;
@@ -631,16 +636,16 @@ main {
         transform: translateY(-100%);
         transition: transform 0.3s cubic-bezier(.4,0,.2,1);
     }
-    .destination-sidebar.expanded,
-    body.menu-open .destination-sidebar {
+    .bali3d-explorer .destination-sidebar.expanded,
+    body.menu-open .bali3d-explorer .destination-sidebar {
         transform: translateY(0);
         overflow-y: auto;
     }
     
-    .map-container {
+    .bali3d-explorer .map-container {
         height: 100vh;
     }
-    .info-panel {
+    .bali3d-explorer .info-panel {
         width: 100vw;
         left: 0;
         right: 0;
@@ -648,7 +653,7 @@ main {
 }
 
 @media (min-width: 769px) {
-    .destination-sidebar {
+    .bali3d-explorer .destination-sidebar {
         position: relative;
         top: 0;
         left: 0;
@@ -663,7 +668,7 @@ main {
         border-right: 1px solid var(--shadow);
         border-bottom: none;
     }
-    .map-container {
+    .bali3d-explorer .map-container {
         margin-left: 0;
         width: 100%;
     }
@@ -682,7 +687,7 @@ main {
         flex-direction: column;
     }
     
-    .destination-sidebar {
+    .bali3d-explorer .destination-sidebar {
         width: 100%;
         height: 100vh;
         max-height: 100vh;
@@ -692,22 +697,22 @@ main {
         transition: transform 0.3s ease;
         overflow-y: auto;
     }
-    .destination-sidebar:not(.expanded) {
+    .bali3d-explorer .destination-sidebar:not(.expanded) {
         transform: translateY(-100%);
     }
-    .destination-sidebar.expanded {
+    .bali3d-explorer .destination-sidebar.expanded {
         overflow-y: auto;
     }
-    body.menu-open .destination-sidebar,
-    .destination-sidebar.expanded {
+    body.menu-open .bali3d-explorer .destination-sidebar,
+    .bali3d-explorer .destination-sidebar.expanded {
         transform: translateY(0);
     }
     
-    .map-container {
+    .bali3d-explorer .map-container {
         height: calc(100vh - var(--header-height) - var(--sidebar-mobile-height));
     }
     
-    .info-panel {
+    .bali3d-explorer .info-panel {
         width: 100%;
         left: 5%;
         right: 5%;
@@ -724,7 +729,7 @@ main {
         --sidebar-width: 220px;
     }
     
-    .info-panel {
+    .bali3d-explorer .info-panel {
         width: 450px;
     }
 }
@@ -739,12 +744,12 @@ main {
         font-size: 1.2rem;
     }
     
-    .destination-thumb {
+    .bali3d-explorer .destination-thumb {
         width: 50px;
         height: 50px;
     }
     
-    .info-image {
+    .bali3d-explorer .info-image {
         height: 150px;
     }
 }
@@ -775,99 +780,157 @@ main {
   opacity: 0.5;
 }
 
-/* --- AI Itinerary Pretty Styles --- */
-.ai-itinerary-card {
-  background: var(--primary-white);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  box-shadow: 0 2px 8px var(--shadow);
-  margin: 2rem 0;
-  padding: 1.5rem 2rem;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+/* --- AI Itinerary Styles --- */
+.bali3d-explorer .ai-itinerary-container {
+  padding: 0.5rem;
 }
-.ai-itinerary-title {
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-bottom: 0.7rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-.ai-itinerary-icon {
-  font-size: 1.3rem;
-  vertical-align: middle;
-}
-.ai-tour-overview {
-  font-size: 1.05rem;
-  color: var(--text-medium);
-  margin-bottom: 1.2rem;
-}
-.ai-tour-stops {
-  margin-bottom: 1.2rem;
-}
-.ai-stop {
-  border-left: 4px solid var(--accent-blue);
-  margin-bottom: 1.1rem;
-  padding-left: 1.1rem;
-}
-.ai-stop-header {
-  display: flex;
-  align-items: center;
-  gap: 0.7rem;
-  margin-bottom: 0.2rem;
-}
-.ai-stop-time {
-  color: var(--accent-blue);
-  font-weight: 600;
-  font-size: 1.07rem;
-  display: flex;
-  align-items: center;
-  gap: 0.2rem;
-}
-.ai-stop-time-icon {
-  font-size: 1.1rem;
-  margin-right: 0.2rem;
-}
-.ai-stop-title {
-  font-size: 1.08rem;
-}
-.ai-stop-details {
-  margin-left: 0.2rem;
-  margin-top: 0.1rem;
-  margin-bottom: 0.2rem;
-  color: var(--text-dark);
-}
-.ai-stop-details li {
-  margin-bottom: 0.2rem;
-  list-style-type: disc;
-  margin-left: 1.2rem;
-}
-.ai-tour-highlights {
-  background: var(--primary-light);
-  border-left: 3px solid var(--accent-gold);
-  padding: 0.8rem 1.2rem;
-  border-radius: 8px;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
-}
-.ai-tour-highlights strong {
-  color: var(--accent-gold);
-  font-weight: 600;
-}
-.ai-tour-highlights ul {
-  margin: 0.4rem 0 0 0.4rem;
-  padding-left: 1.3rem;
-}
-.ai-tour-highlights li {
-  margin-bottom: 0.2rem;
-}
-/* --- End AI Itinerary Pretty Styles --- */
 
-@media (max-width: 700px) {
-  .ai-itinerary-card {
-    padding: 1rem 0.5rem 1rem 0.5rem;
-    max-width: 99vw;
-  }
+.bali3d-explorer .ai-itinerary-heading {
+  color: var(--accent-blue);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.bali3d-explorer .ai-tour-card {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+  background-color: var(--primary-white);
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
+.bali3d-explorer .ai-tour-title {
+  color: var(--accent-blue);
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.bali3d-explorer .ai-tour-type-badge {
+  display: inline-block;
+  background: var(--primary-light);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.bali3d-explorer .ai-tour-overview {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.bali3d-explorer .ai-tour-overview-label {
+  color: var(--text-medium);
+}
+
+.bali3d-explorer .ai-itinerary-section {
+  margin-bottom: 1.5rem;
+}
+
+.bali3d-explorer .ai-itinerary-section-title {
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.5rem;
+}
+
+.bali3d-explorer .ai-stops-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.bali3d-explorer .ai-stop-item {
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  border-left: 3px solid var(--accent-blue);
+}
+
+.bali3d-explorer .ai-stop-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.bali3d-explorer .ai-stop-time {
+  font-weight: bold;
+  color: var(--accent-blue);
+  margin-right: 0.5rem;
+}
+
+.bali3d-explorer .ai-stop-location {
+  font-weight: bold;
+}
+
+.bali3d-explorer .ai-stop-description {
+  color: var(--text-medium);
+}
+
+.bali3d-explorer .ai-highlights-section {
+  background: var(--primary-light);
+  padding: 1rem;
+  border-radius: 6px;
+  margin-top: 1rem;
+}
+
+.bali3d-explorer .ai-highlights-title {
+  color: var(--accent-gold);
+  margin-bottom: 0.5rem;
+}
+
+.bali3d-explorer .ai-highlights-list {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.bali3d-explorer .ai-highlight-item {
+  margin-bottom: 0.3rem;
+}
+
+/* Loading state */
+.bali3d-explorer .ai-loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  text-align: center;
+}
+
+.bali3d-explorer .ai-spinner {
+  border: 4px solid var(--primary-light);
+  border-top: 4px solid var(--accent-blue);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 1rem;
+  animation: spin 1s linear infinite;
+}
+
+.bali3d-explorer .ai-loading-text {
+  color: var(--text-medium);
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Error state */
+.bali3d-explorer .ai-error-container {
+  color: #e74c3c;
+  text-align: center;
+  padding: 2rem;
+  background: #fef5f5;
+  border-radius: 8px;
+  margin: 1rem;
+}
+
+.bali3d-explorer .ai-error-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.bali3d-explorer .ai-error-title {
+  margin-bottom: 0.5rem;
 }
