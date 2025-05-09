@@ -19,7 +19,7 @@ class ThreeLibreConfig {
   init(containerId) {
     if (this.isInitialized) return;
 
-    console.log('Initializing MapLibre...');
+    //console.log('Initializing MapLibre...');
     
     try {
       // Check if maplibregl is available
@@ -80,16 +80,16 @@ class ThreeLibreConfig {
             this.map.getCanvas().getContext('webgl'),
             { defaultLights: true }
           );
-          console.log('Threebox initialized:', this.threebox);
+          //console.log('Threebox initialized:', this.threebox);
         } else {
           console.error('Threebox library is not loaded. Please check your script imports.');
         }
-        console.log('Map loaded successfully');
+        //console.log('Map loaded successfully');
         // Add clustered markers for all destinations
         this.addClusteredMarkers();
         this.isInitialized = true;
-        console.log('Map initialization complete');
-        console.log('Event listeners attached:', this.map._listeners);
+        //console.log('Map initialization complete');
+        //console.log('Event listeners attached:', this.map._listeners);
       });
 
       // Add custom controls
@@ -130,10 +130,10 @@ class ThreeLibreConfig {
       // Add event listeners
       this.map.on('click', (e) => this.handleMapClick(e));
       this.map.on('dragstart', () => {
-        console.log('Map drag started');
+        //console.log('Map drag started');
       });
       this.map.on('dragend', () => {
-        console.log('Map drag ended');
+        //console.log('Map drag ended');
       });
       this.map.on('move', () => {
         // Could add throttled performance logging here if needed
@@ -314,7 +314,7 @@ class ThreeLibreConfig {
    */
   handleMapClick(e) {
     // This is handled by the marker click events
-    console.log('Map clicked at:', e.lngLat);
+    //console.log('Map clicked at:', e.lngLat);
   }
 
   /**
@@ -399,6 +399,10 @@ class ThreeLibreConfig {
       }
       return;
     }
+    
+    // Dispatch an event to populate AI itinerary
+    const itineraryEvent = new CustomEvent('populateAIItineraryWithDestination', { detail: destination });
+    document.dispatchEvent(itineraryEvent);
     // Fly to the destination
     this.map.flyTo({
       center: destination.coordinates,

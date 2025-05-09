@@ -150,6 +150,11 @@ class UIControls {
     document.addEventListener('showDestinationInfo', (e) => {
       this.showDestinationInfo(e.detail);
     });
+  
+    // Listen for AI itinerary population event
+    document.addEventListener('populateAIItineraryWithDestination', (e) => {
+      this.populateAIItineraryWithDestination(e.detail);
+    });
 
     // Window resize event
     window.addEventListener('resize', () => {
