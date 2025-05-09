@@ -290,6 +290,12 @@ class ThreeLibreConfig {
       // Show info panel or popup for destination
       const destination = destinations.find(d => d.id === feature.properties.id);
       if (destination) {
+        // Update UI controls' lastSelectedDestination property
+        if (typeof uiControls !== 'undefined') {
+          uiControls.lastSelectedDestination = destination;
+          // Show destination info in the info panel
+          uiControls.showDestinationInfo(destination);
+        }
         this.navigateToDestination(destination);
       }
     });
