@@ -2,7 +2,7 @@
 /*
 Plugin Name: Bali 3D Explorer
 Description: Interactive 3D map explorer for Bali, with AI itinerary generation.
-Version: 3.0
+Version: 3.2
 Author: Trisna Widia - Sakala Resort Bali
 */
 
